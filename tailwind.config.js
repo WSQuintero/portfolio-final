@@ -6,8 +6,8 @@ export default {
       colors: {
         bghome: '#000B0C',
         bghometwo: '#001314',
-        parraf: '#C6C6C6',
-        title: '#A3A3A3',
+        parraf: '#A3A3A3',
+        title: '#C6C6C6',
         titlecolor: '#A4D9E9',
         titlecolordark: 'rgb(21, 179, 179)'
       }
