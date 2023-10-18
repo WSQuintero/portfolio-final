@@ -10,6 +10,17 @@ export default {
         title: '#C6C6C6',
         titlecolor: '#A4D9E9',
         titlecolordark: 'rgb(21, 179, 179)'
+      },
+      fontFamily: {
+        cambria: [
+          'Cambria',
+          'Cochin',
+          'Georgia',
+          'Times',
+          'Times New Roman',
+          'serif'
+        ],
+        bevan: ['Bevan', 'serif']
       }
     }
   },
