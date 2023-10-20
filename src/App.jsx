@@ -6,9 +6,9 @@ function App () {
   return (
     <>
       <header></header>
-      <main className='h-[100vh] w-full font-cambria'>
+      <main className='min-h-[100vh] w-full font-cambria bg-bghome'>
         <Home />
-        <Skills/>
+        <Skills />
         <section className='flex w-full h-full justify-between bg-bghome '></section>
         <section className='flex w-full h-full justify-between bg-bghome '></section>
         <section className='flex w-full h-full justify-between bg-bghometwo  '></section>

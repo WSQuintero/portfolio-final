@@ -1,82 +1,100 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logos } from '../../db/logos'
+import './Skills.css'
 
 function Skills () {
+  const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
   const [actualSkillRight, SetActualSkillRight] = useState('')
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
+  const skillSection = useRef(null)
+  const n = 11 // número de círculos
+  const r = 220 // radio
+  const circleSize = 10 // Tamaño de los círculos
+  let angulo = 0
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setCirclesIsActive(true)
+        console.log('isIntersecting')
+      } else {
+        setCirclesIsActive(false)
+        console.log('notIntersecting')
+      }
+    })
+  })
+
+  function checkOverlap (observer, setActualSkill) {
+    const circles = Array(...elements.current.children)
+
+    circles.forEach((circle) => {
+      const elementToCheck = observer.current
+      const targetElement = circle
+
+      const elementRect = elementToCheck.getBoundingClientRect()
+      const targetRect = targetElement.getBoundingClientRect()
+
+      // Verifica si los elementos se superponen en el eje horizontal
+      const isOverlapX =
+        elementRect.left < targetRect.right &&
+        elementRect.right > targetRect.left
+
+      // Verifica si los elementos se superponen en el eje vertical
+      const isOverlapY =
+        elementRect.top < targetRect.bottom &&
+        elementRect.bottom > targetRect.top
+
+      if (isOverlapX && isOverlapY) {
+        setActualSkill(circle.querySelector('img').getAttribute('alt'))
+      }
+    })
+  }
+
+  function animarCirculos () {
+    const circles = Array(...elements.current.children)
+
+    angulo += 0.003 // Movimiento más lento
+    const angleIncrement = (2 * Math.PI) / n
+
+    // Obtiene el centro del contenedor
+    const containerWidth = elements.current.offsetWidth
+    const containerHeight = elements.current.offsetHeight
+
+    circles.forEach((element, i) => {
+      const angleOffset = angleIncrement * i
+
+      // Calcula las coordenadas en relación al centro del contenedor
+      const x =
+        containerWidth / 2 + r * Math.cos(angulo + angleOffset) - circleSize / 2
+      const y =
+        containerHeight / 2 +
+        r * Math.sin(angulo + angleOffset) -
+        circleSize / 2
+
+      element.style.transform = `translate(${x}px, ${y}px)`
+    })
+
+    if (circlesIsActive) {
+      requestAnimationFrame(animarCirculos)
+      setInterval(() => {
+        checkOverlap(observerLeft, SetActualSkillLeft, circles)
+        checkOverlap(observerRight, SetActualSkillRight, circles)
+      }, 2300)
+    }
+  }
 
   useEffect(() => {
-    const circles = Array(...elements.current.children)
-    const n = 11 // número de círculos
-    const r = 220 // radio
-    const circleSize = 10 // Tamaño de los círculos
-
-    let angulo = 0
-
-    function checkOverlap (observer, setActualSkill) {
-      circles.forEach((circle) => {
-        const elementToCheck = observer.current // Puedes elegir el círculo que quieras comprobar
-        const targetElement = circle // Puedes elegir el círculo de destino
-
-        const elementRect = elementToCheck.getBoundingClientRect()
-        const targetRect = targetElement.getBoundingClientRect()
-
-        // Verifica si los elementos se superponen en el eje horizontal
-        const isOverlapX =
-          elementRect.left < targetRect.right &&
-          elementRect.right > targetRect.left
-
-        // Verifica si los elementos se superponen en el eje vertical
-        const isOverlapY =
-          elementRect.top < targetRect.bottom &&
-          elementRect.bottom > targetRect.top
-
-        if (isOverlapX && isOverlapY) {
-          setActualSkill(circle.querySelector('img').getAttribute('alt'))
-        }
-      })
-    }
-
-    function animarCirculos () {
-      angulo += 0.003 // Movimiento más lento
-      const angleIncrement = (2 * Math.PI) / n
-
-      // Obtiene el centro del contenedor
-      const containerWidth = elements.current.offsetWidth
-      const containerHeight = elements.current.offsetHeight
-
-      circles.forEach((element, i) => {
-        const angleOffset = angleIncrement * i
-
-        // Calcula las coordenadas en relación al centro del contenedor
-        const x =
-          containerWidth / 2 +
-          r * Math.cos(angulo + angleOffset) -
-          circleSize / 2
-        const y =
-          containerHeight / 2 +
-          r * Math.sin(angulo + angleOffset) -
-          circleSize / 2
-
-        element.style.transform = `translate(${x}px, ${y}px)`
-      })
-
-      requestAnimationFrame(animarCirculos)
-    }
-
+    observer.observe(skillSection.current)
     animarCirculos()
-
-    setInterval(() => {
-      checkOverlap(observerLeft, SetActualSkillLeft)
-      checkOverlap(observerRight, SetActualSkillRight)
-    }, 2000)
-  }, [])
+  }, [circlesIsActive])
 
   return (
-    <section className='flex w-full h-full justify-center items-center bg-bghome p-3'>
+    <section
+      className='h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1'
+      ref={skillSection}>
       <div className='relative border border-titlecolordark flex justify-center items-center w-full h-full overflow-hidden '>
         <p className='border-b border-titlecolordark text-titlecolordark  w-[300px] h-[50px] font-bevan text-center text-3xl'>
           {actualSkillLeft.toUpperCase()}
@@ -85,7 +103,7 @@ function Skills () {
           <div
             className='absolute left-0 w-[47px] h-[26px] '
             ref={observerLeft}></div>
-          <figure className='absolute  w-[300px] h-[300px] border-2 hover:scale-125 ease-in-out duration-1000 transition-transform border-titlecolordark rounded-full p-5 flex justify-center items-center'>
+          <figure className='absolute rotate w-[300px] h-[300px] border-2 hover:scale-125 ease-in-out duration-1000 transition-transform border-titlecolordark rounded-full p-5 flex justify-center items-center'>
             <img src='/svg/react.svg' alt='logo react' />
           </figure>
           <div
@@ -95,15 +113,17 @@ function Skills () {
             className='relative flex  justify-center items-center mt-[10px] ml-[10px]'
             ref={elements}>
             {Object.values(logos).map((ur, index) => (
-              <figure
-                className='absolute w-[100px] h-[100px] rounded-[50%]  flex justify-center items-center bg-gray-300 object-cover '
-                key={index}>
-                <img
-                  src={ur}
-                  alt={Object.keys(logos)[index]}
-                  className='w-[60%]'
-                />
-              </figure>
+              <React.Fragment key={index}>
+                {circlesIsActive && (
+                  <figure className='absolute w-[100px] h-[100px] rounded-[50%]  flex justify-center items-center bg-gray-300 object-cover '>
+                    <img
+                      src={ur}
+                      alt={Object.keys(logos)[index]}
+                      className='w-[60%]'
+                    />
+                  </figure>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>

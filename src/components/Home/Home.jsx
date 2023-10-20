@@ -3,7 +3,7 @@ import './Home.css'
 
 function Home () {
   return (
-    <section className=' w-full h-full bg-bghome p-3 flex justify-center items-center'>
+    <section className=' w-full h-[100vh] bg-bghome p-3 flex justify-center items-center'>
       <div className='p-10 border border-titlecolordark flex justify-center items-center  w-full h-full background '>
         <div className='flex justify-center items-center h-full p-5 border-t border-b border-gray-400/50 gap-10'>
           <div className='w-1/3 flex flex-col items-start justify-center gap-3 h-full '>
