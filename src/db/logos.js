@@ -5,7 +5,7 @@ export const logos = {
   firebase: '/svg/firebase.svg',
   javascript: '/svg/javascript.svg',
   git: '/svg/git.svg',
-  github: '/svg/github.svg',
+  'git-hub': '/svg/github.svg',
   illustrator: '/svg/illustrator.svg',
   photoshop: '/svg/photoshop.svg',
   sass: '/svg/sass.svg',
