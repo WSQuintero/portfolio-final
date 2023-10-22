@@ -1,16 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logos } from '../../db/logos'
 import './Skills.css'
+import { Certificates } from '../Certificates/Certificates'
 
 function Skills () {
   const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
   const [actualSkillRight, SetActualSkillRight] = useState('')
+  const [cetificatesOpen, setCetificatesOpen] = useState('false')
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
   const skillSection = useRef(null)
-  const n = 11 // número de círculos
+  const n = Object.values(logos).length // número de círculos
   const r = 220 // radio
   const circleSize = 10 // Tamaño de los círculos
   let angulo = 0
@@ -91,11 +93,14 @@ function Skills () {
     animarCirculos()
   }, [circlesIsActive])
 
+  const openCertificates = () => {
+    setCetificatesOpen(true)
+  }
   return (
     <section
-      className='h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1'
+      className='h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1 '
       ref={skillSection}>
-      <div className='relative border border-titlecolordark flex justify-center items-center w-full h-full overflow-hidden '>
+      <div className='relative border border-titlecolordark flex justify-center items-center w-full h-full overflow-hidden background-js'>
         <p className='border-b border-titlecolordark text-titlecolordark  w-[300px] h-[50px] font-bevan text-center text-3xl'>
           {actualSkillLeft.toUpperCase()}
         </p>
@@ -127,10 +132,20 @@ function Skills () {
             ))}
           </div>
         </div>
-        <p className='border-b border-gray-300 text-gray-300  w-[300px] h-[50px] font-bevan text-center text-3xl'>
-          {actualSkillRight.toUpperCase()}
-        </p>
+        <div className='flex flex-col gap-5 mt-5'>
+          <p className='border-b border-titlecolordark text-titlecolordark  w-[300px] h-[50px] font-bevan text-center text-3xl'>
+            {actualSkillRight.toUpperCase()}
+          </p>
+          <button
+            className='bg-white h-[30px] rounded-2xl font-semibold text-bghometwo'
+            onClick={openCertificates}>
+            Certificados
+          </button>
+        </div>
       </div>
+      {cetificatesOpen && (
+        <Certificates setCetificatesOpen={setCetificatesOpen} />
+      )}
     </section>
   )
 }
