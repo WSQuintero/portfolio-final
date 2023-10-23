@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logos } from '../../db/logos'
 import './Skills.css'
-import { Certificates } from '../Certificates/Certificates'
+// import { Projects } from '../Projects/Projects'
 
 function Skills () {
   const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
   const [actualSkillRight, SetActualSkillRight] = useState('')
-  const [cetificatesOpen, setCetificatesOpen] = useState('false')
+  const [cetificatesOpen, setCetificatesOpen] = useState(false)
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
@@ -143,9 +143,9 @@ function Skills () {
           </button>
         </div>
       </div>
-      {cetificatesOpen && (
+      {/* {cetificatesOpen && (
         <Certificates setCetificatesOpen={setCetificatesOpen} />
-      )}
+      )} */}
     </section>
   )
 }
