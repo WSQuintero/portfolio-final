@@ -18,10 +18,16 @@ function Projects ({ setCetificatesOpen }) {
     })
   }, [])
   return (
-    <div className=' w-full h-[100vh] p-3 bg-gradient-radial relative'>
-      <div className=' border border-titlecolordark flex justify-center items-center w-full h-full  relative'>
-        <h3 className='text-titlecolordark font-bold text-6xl  absolute top-7 border-b-2 border-titlecolordark pb-5'>
-          Proyectos
+    <div className=' w-full h-[100vh] p-3 bg-gradient-radial relative '>
+      <div className=' border border-titlecolordark flex justify-center items-center w-full h-full relative overflow-hidden'>
+        <img
+          src='/img/ai_Mesa de trabajo 1.png'
+          alt='fondo ai'
+          className='absolute mix-blend-lighten opacity-10'
+        />
+
+        <h3 className=' font-bold text-5xl  absolute top-7 bg-bghometwo/60  w-full  text-gray-200 p-5 bg-blend-multiply text-center'>
+          PROYECTOS
         </h3>
         <Swiper
           effect={'cube'}

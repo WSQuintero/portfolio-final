@@ -28,8 +28,8 @@ function Contact () {
               </figure>
             </div>
             <div className='w-9/12 h-full flex justify-center items-center p-10 flex-col background'>
-              <h3 className='text-titlecolordark font-bold text-5xl mb-10  '>
-                Contáctame
+              <h3 className='text-titlecolordark font-bold text-4xl mb-10 w-full text-center bg-bghometwo/60 '>
+                CONTÁCTAME
               </h3>
               <form
                 action='https://formspree.io/f/xrgwpvgz'
@@ -95,7 +95,7 @@ function Contact () {
           </>
             )
           : (
-          <div className="flex flex-col justify-center items-center gap-5">
+          <div className='flex flex-col justify-center items-center gap-5'>
             <p className='text-blue-400 text-4xl w-[500px] text-center'>
               Has enviado tu información correctamente, ¡muchas gracias!
             </p>

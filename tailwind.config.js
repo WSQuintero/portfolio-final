@@ -24,7 +24,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial':
-          'radial-gradient(circle, rgba(231,231,231,1) 0%, rgba(0,10,22,1) 40%, rgba(0,1,2,1) 100%)'
+          'radial-gradient(circle, #37969c 0%, #000000 50%, #001213 100%)'
       }
     }
   },

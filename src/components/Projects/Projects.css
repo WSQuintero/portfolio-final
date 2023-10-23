@@ -23,7 +23,7 @@
 transform: scale(1);
 }
 .swiper-wrapper {
-  transition: transform 500ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 .my-wrapper {
   transform: rotateY(-35deg) !important;
@@ -35,7 +35,7 @@ transform: scale(1);
   margin: 0 auto;
 }
 .swiper-cube .swiper-cube-shadow:before {
-  background: #001824 !important;
+  background: #000000 !important;
 }
 
 .swiper-pagination {
