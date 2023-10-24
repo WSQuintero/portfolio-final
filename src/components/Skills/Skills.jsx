@@ -7,7 +7,7 @@ function Skills () {
   const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
   const [actualSkillRight, SetActualSkillRight] = useState('')
-  const [cetificatesOpen, setCetificatesOpen] = useState(false)
+  // const [cetificatesOpen, setCetificatesOpen] = useState(false)
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
@@ -29,7 +29,7 @@ function Skills () {
     })
   })
 
-  function checkOverlap (observer, setActualSkill) {
+  const checkOverlap = (observer, setActualSkill) => {
     const circles = Array(...elements.current.children)
 
     circles.forEach((circle) => {
@@ -55,10 +55,10 @@ function Skills () {
     })
   }
 
-  function animarCirculos () {
+  const animateCircles = () => {
     const circles = Array(...elements.current.children)
 
-    angulo += 0.003 // Movimiento más lento
+    angulo += 0.005 // Movimiento más lento
     const angleIncrement = (2 * Math.PI) / n
 
     // Obtiene el centro del contenedor
@@ -80,26 +80,30 @@ function Skills () {
     })
 
     if (circlesIsActive) {
-      requestAnimationFrame(animarCirculos)
+      requestAnimationFrame(animateCircles)
       setInterval(() => {
         checkOverlap(observerLeft, SetActualSkillLeft, circles)
         checkOverlap(observerRight, SetActualSkillRight, circles)
-      }, 2300)
+      }, 100)
     }
   }
 
   useEffect(() => {
     observer.observe(skillSection.current)
-    animarCirculos()
+  }, [])
+
+  useEffect(() => {
+    animateCircles()
   }, [circlesIsActive])
 
-  const openCertificates = () => {
-    setCetificatesOpen(true)
-  }
+  // const openCertificates = () => {
+  //   setCetificatesOpen(true)
+  // }
   return (
     <section
       className='h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1 '
-      ref={skillSection}>
+      ref={skillSection}
+      id="skills">
       <div className='relative border border-titlecolordark flex justify-center items-center w-full h-full overflow-hidden background-js'>
         <p className='border-b border-titlecolordark text-titlecolordark  w-[300px] h-[50px] font-bevan text-center text-3xl'>
           {actualSkillLeft.toUpperCase()}
@@ -138,7 +142,8 @@ function Skills () {
           </p>
           <button
             className='bg-white h-[30px] rounded-2xl font-semibold text-bghometwo'
-            onClick={openCertificates}>
+            // onClick={openCertificates}>
+          >
             Certificados
           </button>
         </div>

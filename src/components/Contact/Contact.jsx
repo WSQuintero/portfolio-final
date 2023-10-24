@@ -13,7 +13,7 @@ function Contact () {
   }, [state.succeeded])
 
   return (
-    <section className='w-full h-[100vh] bg-bghome p-3 flex justify-center items-center  '>
+    <section className='w-full h-[100vh] bg-bghome p-3 flex justify-center items-center  ' id="contact">
       <div className=' border border-titlecolordark flex justify-center items-center w-full h-full relative '>
         {!state.succeeded
           ? (
@@ -23,7 +23,7 @@ function Contact () {
                 <img
                   src='/img/traje.png'
                   alt='imagen personal'
-                  className='h-[98%]'
+                  className='w-full'
                 />
               </figure>
             </div>

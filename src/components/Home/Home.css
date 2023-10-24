@@ -3,13 +3,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-blend-mode:multiply;
 }
 
 .test {
   text-transform: uppercase;
   color: white;
   text-align: center;
-  animation: neonGlow 4s infinite alternate
+  animation: neonGlow 1.2s infinite alternate
     cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 

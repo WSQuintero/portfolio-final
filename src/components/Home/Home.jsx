@@ -3,9 +3,11 @@ import './Home.css'
 
 function Home () {
   return (
-    <section className=' w-full h-[100vh] bg-bghome p-3 flex justify-center items-center'>
-      <div className='p-10 border border-titlecolordark flex justify-center items-center  w-full h-full  '>
-        <div className='flex justify-center items-center h-full p-5 border-t border-b border-gray-400/50 gap-10 background'>
+    <section
+      className=' w-full h-[100vh] bg-bghome p-3 flex justify-center items-center'
+      id='home'>
+      <div className='p-10 border border-titlecolordark flex justify-center items-center  w-full h-full background  '>
+        <div className='flex justify-center items-center h-full p-5 border-t border-b border-gray-400/50 gap-10 '>
           <div className='w-1/3 flex flex-col items-start justify-between gap-3 h-[300px] '>
             <h1 className='text-titlecolor text-6xl whitespace-break-spaces w-full font-bevan test text-start'>
               Santiago Quintero
@@ -41,9 +43,11 @@ function Home () {
                 </a>
               </li>
             </ul>
-            <button className='border border-titlecolordark p-2 text-titlecolordark w-[120px] bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+            <a
+              href='#contact'
+              className='border border-titlecolordark p-2 text-titlecolordark w-[120px] text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
               Contactarme
-            </button>
+            </a>
           </div>
           <div className='w-1/3 flex flex-col items-center justify-center border-r border-l border-gray-300/20'>
             <img
@@ -65,9 +69,11 @@ function Home () {
               Conocimientos avanzados en desarrollo front-end, diseño,
               programación y aspectos técnicos de sistemas en general.
             </p>
-            <button className='border border-titlecolordark p-2 text-titlecolordark w-[120px] bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+            <a
+              href='#projects'
+              className='border border-titlecolordark p-2 text-titlecolordark w-[120px] text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
               Proyectos
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  transition: transform 200ms ease-in-out;
+  transition: transform 100ms ease-in;
 }
 .swiper-slide img:hover {
   transform: scale(1.1);
@@ -23,11 +23,11 @@
 transform: scale(1);
 }
 .swiper-wrapper {
-  transition: transform 300ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 .my-wrapper {
   transform: rotateY(-35deg) !important;
-  transition: transform 500ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 .swiper-cube-shadow {
   transform: translate3d(0px, 280px, -250px) rotateX(90deg) rotateZ(0deg)
