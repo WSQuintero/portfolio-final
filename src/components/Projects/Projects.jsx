@@ -22,7 +22,6 @@ function Projects ({ setCetificatesOpen }) {
       wrapper.classList.remove('my-wrapper')
     })
   }, [])
-  console.log(projectName)
   return (
     <section
       className=' w-full h-[100vh] p-3 bg-gradient-radial relative  '

@@ -7,13 +7,18 @@ function Skills () {
   const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
   const [actualSkillRight, SetActualSkillRight] = useState('')
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth)
+  const [radio, setRadio] = useState(null)
+
   // const [cetificatesOpen, setCetificatesOpen] = useState(false)
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
   const skillSection = useRef(null)
   const n = Object.values(logos).length // número de círculos
-  const r = 220 // radio
+  useEffect(() => {
+    setRadio(innerWidth < 644 ? 120 : 220) // radio
+  }, [innerWidth])
   const circleSize = 10 // Tamaño de los círculos
   let angulo = 0
 
@@ -21,10 +26,8 @@ function Skills () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setCirclesIsActive(true)
-        console.log('isIntersecting')
       } else {
         setCirclesIsActive(false)
-        console.log('notIntersecting')
       }
     })
   })
@@ -70,10 +73,12 @@ function Skills () {
 
       // Calcula las coordenadas en relación al centro del contenedor
       const x =
-        containerWidth / 2 + r * Math.cos(angulo + angleOffset) - circleSize / 2
+        containerWidth / 2 +
+        radio * Math.cos(angulo + angleOffset) -
+        circleSize / 2
       const y =
         containerHeight / 2 +
-        r * Math.sin(angulo + angleOffset) -
+        radio * Math.sin(angulo + angleOffset) -
         circleSize / 2
 
       element.style.transform = `translate(${x}px, ${y}px)`
@@ -90,29 +95,32 @@ function Skills () {
 
   useEffect(() => {
     observer.observe(skillSection.current)
+    window.addEventListener('resize', () => {
+      setInnerWidth(window.innerWidth)
+    })
   }, [])
 
   useEffect(() => {
     animateCircles()
-  }, [circlesIsActive])
+  }, [circlesIsActive, innerWidth])
 
   // const openCertificates = () => {
   //   setCetificatesOpen(true)
   // }
   return (
     <section
-      className='h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1 '
+      className='sm:h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1 '
       ref={skillSection}
-      id="skills">
-      <div className='relative border border-titlecolordark flex justify-center items-center w-full h-full overflow-hidden background-js'>
+      id='skills'>
+      <div className='relative border border-titlecolordark flex sm:flex-row flex-col justify-center items-center w-full h-full overflow-hidden background-js'>
         <p className='border-b border-titlecolordark text-titlecolordark  w-[300px] h-[50px] font-bevan text-center text-3xl'>
           {actualSkillLeft.toUpperCase()}
         </p>
-        <div className='relative  flex justify-center items-center  w-[600px] h-full overflow-hidden '>
+        <div className='relative  flex justify-center items-center w-full h-[300px] sm:h-full sm:w-[600px] overflow-hidden '>
           <div
             className='absolute left-0 w-[47px] h-[26px] '
             ref={observerLeft}></div>
-          <figure className='absolute rotate w-[300px] h-[300px] border-2 hover:scale-125 ease-in-out duration-1000 transition-transform border-titlecolordark rounded-full p-5 flex justify-center items-center'>
+          <figure className='absolute rotate w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] border-2 hover:scale-125 ease-in-out duration-1000 transition-transform border-titlecolordark rounded-full p-5 flex justify-center items-center'>
             <img src='/svg/react.svg' alt='logo react' />
           </figure>
           <div
@@ -124,7 +132,7 @@ function Skills () {
             {Object.values(logos).map((ur, index) => (
               <React.Fragment key={index}>
                 {circlesIsActive && (
-                  <figure className='absolute w-[100px] h-[100px] rounded-[50%]  flex justify-center items-center bg-gray-300 object-cover '>
+                  <figure className='absolute w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] rounded-[50%]  flex justify-center items-center bg-gray-300 object-cover '>
                     <img
                       src={ur}
                       alt={Object.keys(logos)[index]}
