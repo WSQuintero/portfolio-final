@@ -13,13 +13,15 @@ function Contact () {
   }, [state.succeeded])
 
   return (
-    <section className='w-full h-[100vh] bg-bghome p-3 flex justify-center items-center  ' id="contact">
+    <section
+      className='w-full h-[100vh] bg-bghome p-3 flex justify-center items-center  '
+      id='contact'>
       <div className=' border border-titlecolordark flex justify-center items-center w-full h-full relative '>
         {!state.succeeded
           ? (
           <>
-            <div className='w-6/12 h-full '>
-              <figure className='object-cover h-full flex items-end'>
+            <div className=' hidden xl:flex w-6/12 h-full '>
+              <figure className='object-cover h-full xl:flex items-end hidden'>
                 <img
                   src='/img/traje.png'
                   alt='imagen personal'
@@ -27,7 +29,7 @@ function Contact () {
                 />
               </figure>
             </div>
-            <div className='w-9/12 h-full flex justify-center items-center p-10 flex-col background'>
+            <div className=' w-full xl:w-9/12 h-full flex justify-center items-center p-10 flex-col background'>
               <h3 className='text-titlecolordark font-bold text-4xl mb-10 w-full text-center bg-bghometwo/60 '>
                 CONTÁCTAME
               </h3>

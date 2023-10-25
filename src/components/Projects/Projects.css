@@ -19,8 +19,8 @@
 .swiper-slide img:hover {
   transform: scale(1.1);
 }
-.swiper-slide img:active{
-transform: scale(1);
+.swiper-slide img:active {
+  transform: scale(1);
 }
 .swiper-wrapper {
   transition: transform 500ms ease-in-out;
@@ -50,4 +50,22 @@ transform: scale(1);
 .swiper-3d .swiper-slide-shadow-left {
   width: 100% !important;
   height: 100% !important;
+}
+.click {
+  animation: click 500ms ease-in-out infinite;
+}
+@keyframes click {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper {
+    width: 300px;
+    height: 220px;
+  }
 }

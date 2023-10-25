@@ -8,7 +8,7 @@ import './App.css'
 function App () {
   return (
     <>
-      <header className='flex justify-end fixed top-0 text-gray-200 w-full h-[65px] z-40 bg-black/30 items-center'>
+      <header className='flex justify-center xl:justify-end fixed top-0 text-gray-200 w-full h-[65px] z-40 bg-black/30 items-center'>
         <NavBar />
       </header>
       <main className='min-h-[100vh] w-full font-cambria bg-bghome z-10'>
