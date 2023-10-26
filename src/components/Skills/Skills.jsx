@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logos } from '../../db/logos'
 import './Skills.css'
+import { Certificates } from '../Certificates/Certificates'
 // import { Projects } from '../Projects/Projects'
 
 function Skills () {
@@ -10,7 +11,7 @@ function Skills () {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth)
   const [radio, setRadio] = useState(null)
 
-  // const [cetificatesOpen, setCetificatesOpen] = useState(false)
+  const [cetificatesOpen, setCetificatesOpen] = useState(false)
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
@@ -104,9 +105,9 @@ function Skills () {
     animateCircles()
   }, [circlesIsActive, innerWidth])
 
-  // const openCertificates = () => {
-  //   setCetificatesOpen(true)
-  // }
+  const openCertificates = () => {
+    setCetificatesOpen(true)
+  }
   return (
     <section
       className='min-h-[100vh] sm:h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1 '
@@ -149,16 +150,15 @@ function Skills () {
             {actualSkillRight.toUpperCase()}
           </p>
           <button
-            className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo'
-            // onClick={openCertificates}>
-          >
+            className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo hidden xl:block'
+            onClick={openCertificates}>
             Certificados
           </button>
         </div>
       </div>
-      {/* {cetificatesOpen && (
+      {cetificatesOpen && (
         <Certificates setCetificatesOpen={setCetificatesOpen} />
-      )} */}
+      )}
     </section>
   )
 }

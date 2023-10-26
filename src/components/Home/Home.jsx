@@ -12,8 +12,8 @@ function Home () {
             <h1 className='text-titlecolor text-4xl xl:text-6xl whitespace-break-spaces text-center xl:w-full font-bevan test xl:text-start'>
               Santiago Quintero
             </h1>
-            <div className='lg:w-[60px] w-full bg-titlecolordark h-[3px] ml-2 mt-2 z-50 mb-10'/>
-            <ul className='w-[120px] hidden xl:inline z-0 mt-2'>
+            <div className='lg:w-[60px] w-full bg-titlecolordark h-[3px] ml-2  z-50 '/>
+            <ul className='w-[120px] hidden xl:inline z-0 '>
               <li className='text-parraf flex w-full text-lg justify-between items-center'>
                 <span>
                   <a href='https://github.com/WSQuintero' target='_about:blank'>

@@ -14,6 +14,7 @@ function Projects ({ setCetificatesOpen }) {
   const [projectLink, setProjectLink] = useState('')
   const [projectRepo, setProjectRepo] = useState('')
   const [isClickImg, setIsClickImg] = useState(false)
+
   useEffect(() => {
     const wrapper = document.querySelector('.swiper-wrapper')
     wrapper.classList.add('my-wrapper')
@@ -21,6 +22,7 @@ function Projects ({ setCetificatesOpen }) {
       wrapper.classList.remove('my-wrapper')
     }
   }, [isClickImg])
+
   return (
     <section
       className=' w-full min-h-[100vh] h-full p-3 bg-gradient-radial relative  '
@@ -34,11 +36,14 @@ function Projects ({ setCetificatesOpen }) {
         <h3 className=' font-bold text-5xl  xl:absolute top-7 bg-bghometwo/60  w-full  text-gray-200 p-5 bg-blend-multiply text-center'>
           PROYECTOS
         </h3>
-        {!projectName && (
+        {!isClickImg && (
           <img
             src='/svg/click.svg'
             alt='click'
-            className='w-[60px] absolute z-50 xl:hidden click'
+            className='w-[60px] absolute z-50 xl:hidden click cursor-pointer'
+            onClick={() => {
+              setIsClickImg(true)
+            }}
           />
         )}
         <div className='flex w-full h-full justify-between items-center xl:flex-row flex-col'>
@@ -71,8 +76,15 @@ function Projects ({ setCetificatesOpen }) {
                       setProjectDescription(project.description)
                       setProjectLink(project.link)
                       setProjectRepo(project.repo)
+                      setIsClickImg(true)
                     }}
-                    onClick={() => { setIsClickImg(true) }}
+                    onClick={() => {
+                      setIsClickImg(true)
+                    }}
+                    data-name={project.project}
+                    data-description={project.description}
+                    data-link={project.link}
+                    data-repo={project.repo}
                   />
                 </SwiperSlide>
               ))}
