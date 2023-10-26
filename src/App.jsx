@@ -4,11 +4,19 @@ import { Contact } from './components/Contact/Contact'
 import { Projects } from './components/Projects/Projects'
 import { NavBar } from './components/NavBar/NavBar'
 import { useEffect, useState } from 'react'
+import { InitialAnimate } from './components/InitialAnimate/InitialAnimate'
 import './App.css'
 
 function App () {
   const [isBurguerMenu, setIsBurguerMenu] = useState(false)
   const [innerWidth, SetInnerWidth] = useState(window.innerWidth)
+  const [initialAnimate, setInitialAnimate] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setInitialAnimate(true)
+    }, 2000)
+  }, [])
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -28,22 +36,30 @@ function App () {
 
   return (
     <>
-      <header
-        className={`flex justify-center sm:justify-end fixed top-0 text-gray-200 w-full ${
-          isBurguerMenu ? 'h-[100vh] bg-bghome' : 'h-[65px] bg-black/70'
-        } sm:h-[65px] z-50 bg-bghome xl:bg-black/30 items-center`}>
-        <NavBar
-          isBurguerMenu={isBurguerMenu}
-          setIsBurguerMenu={setIsBurguerMenu}
-          innerWidth={innerWidth}
-        />
-      </header>
-      <main className='min-h-[100vh] w-full font-cambria bg-bghome z-0'>
-        <Home />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
+      {!initialAnimate
+        ? (
+        <InitialAnimate />
+          )
+        : (
+        <>
+          <header
+            className={`flex justify-center sm:justify-end fixed top-0 text-gray-200 w-full ${
+              isBurguerMenu ? 'h-[100vh] bg-bghome' : 'h-[65px] bg-black/70'
+            } sm:h-[65px] z-50 bg-bghome xl:bg-black/30 items-center`}>
+            <NavBar
+              isBurguerMenu={isBurguerMenu}
+              setIsBurguerMenu={setIsBurguerMenu}
+              innerWidth={innerWidth}
+            />
+          </header>
+          <main className='min-h-[100vh] w-full font-cambria bg-bghome z-0'>
+            <Home />
+            <Skills />
+            <Projects />
+            <Contact />
+          </main>
+        </>
+          )}
     </>
   )
 }
