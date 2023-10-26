@@ -37,39 +37,39 @@ const principalStudies = [
 const imagesStudies = [
   {
     original: '/img/sena.jpg',
-    thumbnail: '/img/sena.jpg'
+    thumbnail: '/img/senamini.jpg'
   },
   {
     original: '/img/tecnicoDiseño.jpg',
-    thumbnail: '/img/tecnicoDiseño.jpg'
+    thumbnail: '/img/tecnicoDiseñomini.jpg'
   },
   {
     original: '/img/tecnologoDiseño.jpg',
-    thumbnail: '/img/tecnologoDiseño.jpg'
+    thumbnail: '/img/tecnologoDiseñomini.jpg'
   },
   {
     original: '/img/profesional.jpg',
-    thumbnail: '/img/profesional.jpg'
+    thumbnail: '/img/profesionalmini.jpg'
   },
   {
     original: '/img/htmlcss.jpg',
-    thumbnail: '/img/htmlcss.jpg'
+    thumbnail: '/img/htmlcssmini.jpg'
   },
   {
     original: '/img/javascript.jpg',
-    thumbnail: '/img/javascript.jpg'
+    thumbnail: '/img/javascriptmini.jpg'
   },
   {
     original: '/img/tailwind.jpg',
-    thumbnail: '/img/tailwind.jpg'
+    thumbnail: '/img/tailwindmini.jpg'
   },
   {
     original: '/img/diplomareact.jpg',
-    thumbnail: '/img/diplomareact.jpg'
+    thumbnail: '/img/diplomareactmini.jpg'
   },
   {
     original: '/img/todosalau.jpg',
-    thumbnail: '/img/todosalau.jpg'
+    thumbnail: '/img/todosalaumini.jpg'
   }
 ]
 
