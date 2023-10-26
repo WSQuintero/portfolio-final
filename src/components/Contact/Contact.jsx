@@ -40,7 +40,7 @@ function Contact () {
                 className='flex flex-col gap-2 w-full h-[70%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6'>
                 <input
                   type='text'
-                  className='text-lg w-full p-4 h-1/5 bg-gray-800/50'
+                  className='text-sm xl:text-lg w-full p-2 h-[35px] bg-gray-800/50'
                   placeholder='Nombre'
                   name='name'
                   id='name'
@@ -54,7 +54,7 @@ function Contact () {
                 <div className='flex justify-between h-1/5 relative w-full'>
                   <input
                     type='email'
-                    className='text-lg w-[60%] p-4 full bg-gray-800/50'
+                    className='text-sm xl:text-lg  w-[60%] p-4 full bg-gray-800/50'
                     placeholder='Correo electrónico'
                     name='email'
                     id='email'
@@ -67,15 +67,15 @@ function Contact () {
                   />
                   <input
                     type='text'
-                    className='text-lg w-[30%] p-4 bg-gray-800/50'
-                    placeholder='telefono'
+                    className='text-sm xl:text-lg w-[30%] p-4 bg-gray-800/50'
+                    placeholder='Telefono'
                     name='tel'
                     required
                   />
                   <ValidationError field='tel' errors={state.errors} />
                 </div>
                 <textarea
-                  className='text-lg  h-2/5 p-4 w-full bg-gray-800/50'
+                  className='text-sm xl:text-lg   h-2/5 p-4 w-full bg-gray-800/50'
                   placeholder='Deja tu mensaje aquí'
                   name='message'
                   id='message'
@@ -87,7 +87,7 @@ function Contact () {
                   errors={state.errors}
                 />
                 <button
-                  className='w-[200px] h-1/5 inline  bg-[#5B5B5B] text-[#CECECE] text-xl bg-gray-300/50 rounded-2xl'
+                  className='w-[100px] h-[30px] inline  bg-[#5B5B5B] hover:bg-titlecolordark text-[#CECECE] text-xl bg-gray-300/50 rounded-2xl'
                   type='submit'
                   disabled={state.submitting}>
                   Enviar

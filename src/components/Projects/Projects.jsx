@@ -91,7 +91,7 @@ function Projects ({ setCetificatesOpen }) {
             </Swiper>
           </div>
           <div className='flex flex-col justify-center items-center h-full w-full xl:w-1/3 p-3 pl-10 gap-3 bottom-5 xl:bottom-auto'>
-            <p className='sm:text-md 2xl:text-xl text-white z-50  sm:w-[300px] 2xl:w-[400px] '>
+            <p className='sm:text-md 2xl:text-xl text-white z-20  sm:w-[300px] 2xl:w-[400px] '>
               {projectDescription}
             </p>
             <div className='flex gap-3 w-full justify-around p-10'>
@@ -99,7 +99,7 @@ function Projects ({ setCetificatesOpen }) {
                 <a
                   href={projectLink}
                   target='about:blank'
-                  className='border border-titlecolordark p-2 cursor-pointer z-50 rounded-xl text-titlecolordark w-2/4 text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                  className='border border-titlecolordark p-2 cursor-pointer z-20 rounded-xl text-titlecolordark w-2/4 text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                   Visitar
                 </a>
               )}
@@ -107,7 +107,7 @@ function Projects ({ setCetificatesOpen }) {
                 <a
                   href={projectRepo}
                   target='about:blank'
-                  className='border border-titlecolordark p-2 w-2/4 cursor-pointer z-50 rounded-xl text-titlecolordark  text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                  className='border border-titlecolordark p-2 w-2/4 cursor-pointer z-20 rounded-xl text-titlecolordark  text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                   ver repositorio
                 </a>
               )}

@@ -150,7 +150,7 @@ function Skills () {
             {actualSkillRight.toUpperCase()}
           </p>
           <button
-            className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo hidden xl:block'
+            className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo '
             onClick={openCertificates}>
             Certificados
           </button>
