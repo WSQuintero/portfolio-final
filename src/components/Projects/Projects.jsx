@@ -85,6 +85,7 @@ function Projects ({ setCetificatesOpen }) {
                     data-description={project.description}
                     data-link={project.link}
                     data-repo={project.repo}
+                    alt='project'
                   />
                 </SwiperSlide>
               ))}
