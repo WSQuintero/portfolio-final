@@ -18,6 +18,15 @@ export const projects = [
     tec: ['/js (2).svg', '/React.svg', '/tailwind.svg', '/Firebase_Logo.svg']
   },
   {
+    img: '/img/weather.jpg ',
+    project: 'World Weather ',
+    description:
+      '"World Weather" es una aplicación web que te permite obtener información actualizada sobre el clima de cualquier ubicación en el mundo. Utiliza React como framework front-end para construir la interfaz de usuario dinámica y atractiva. La estilización de la aplicación se logra con SASS, lo que le proporciona un diseño atractivo y personalizado. ',
+    repo: 'https://github.com/WSQuintero/world_weather',
+    link: 'https://world-weather-taupe.vercel.app/',
+    tec: ['/html.svg', '/sass.svg', '/js (2).svg', '/React.svg']
+  },
+  {
     img: '/img/questions.jpg',
     project: 'QuestionsCreator',
     description:
@@ -53,4 +62,5 @@ export const projects = [
     link: 'https://wsquintero.github.io/listaDeTareas/',
     tec: ['/html.svg', '/css.svg', '/js (2).svg', '/React.svg']
   }
+
 ]
