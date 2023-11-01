@@ -62,5 +62,4 @@ export const projects = [
     link: 'https://wsquintero.github.io/listaDeTareas/',
     tec: ['/html.svg', '/css.svg', '/js (2).svg', '/React.svg']
   }
-
 ]
