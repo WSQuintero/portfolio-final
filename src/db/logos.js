@@ -9,5 +9,6 @@ export const logos = {
   illustrator: '/svg/illustrator.svg',
   photoshop: '/svg/photoshop.svg',
   sass: '/svg/sass.svg',
-  tailwind: '/svg/tailwind.svg'
+  tailwind: '/svg/tailwind.svg',
+  redux: '/svg/redux-logo.svg'
 }

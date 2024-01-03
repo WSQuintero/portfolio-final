@@ -1,12 +1,19 @@
 export const projects = [
   {
-    img: '/img/a-silent.jpg',
-    project: 'A silent voice',
+    img: '/img/chatu.jpg ',
+    project: 'Chatu',
     description:
-      'Un sitio web en React dedicado a la película "A Silent Voice" que muestra imágenes e información sobre la película.',
-    repo: 'https://github.com/WSQuintero/AsilentVoiceProject',
-    link: 'https://asilent-voice-project.vercel.app/',
-    tec: ['/js (2).svg', '/React.svg']
+      'Este proyecto es un chat en tiempo real con React y Redux para el frontend, Tailwind para estilos, Express y Socket.io para el backend. Permite autenticación segura, mensajería instantánea, gestión de amigos y recepción de mensajes sin conexión. repositorio backend https://github.com/WSQuintero/Chatu-backend',
+    repo: 'https://github.com/WSQuintero/Chatu',
+    link: 'https://chatu-two.vercel.app/',
+    tec: [
+      '/html.svg',
+      '/css.svg',
+      '/js (2).svg',
+      '/React.svg',
+      '/firebase.svg',
+      '/redux-logo.svg'
+    ]
   },
   {
     img: '/img/shop.jpg',
@@ -16,6 +23,15 @@ export const projects = [
     repo: 'https://github.com/WSQuintero/Eshop-React',
     link: 'https://eshop-react-eight.vercel.app/',
     tec: ['/js (2).svg', '/React.svg', '/tailwind.svg', '/Firebase_Logo.svg']
+  },
+  {
+    img: '/img/a-silent.jpg',
+    project: 'A silent voice',
+    description:
+      'Un sitio web en React dedicado a la película "A Silent Voice" que muestra imágenes e información sobre la película.',
+    repo: 'https://github.com/WSQuintero/AsilentVoiceProject',
+    link: 'https://asilent-voice-project.vercel.app/',
+    tec: ['/js (2).svg', '/React.svg']
   },
   {
     img: '/img/weather.jpg ',

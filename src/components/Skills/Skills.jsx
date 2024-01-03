@@ -1,113 +1,24 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { logos } from '../../db/logos'
-import './Skills.css'
 import { Certificates } from '../Certificates/Certificates'
-// import { Projects } from '../Projects/Projects'
+import { useAnimateSkills } from '../../customHooks/useAnimateSkills'
+import './Skills.css'
 
 function Skills () {
-  const [circlesIsActive, setCirclesIsActive] = useState(false)
-  const [actualSkillLeft, SetActualSkillLeft] = useState('')
-  const [actualSkillRight, SetActualSkillRight] = useState('')
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth)
-  const [radio, setRadio] = useState(null)
-
   const [cetificatesOpen, setCetificatesOpen] = useState(false)
+
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
   const skillSection = useRef(null)
-  const n = Object.values(logos).length // número de círculos
-  useEffect(() => {
-    setRadio(innerWidth < 1279 ? 120 : 220) // radio
-  }, [innerWidth])
-  const circleSize = 10 // Tamaño de los círculos
-  let angulo = 0
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setCirclesIsActive(true)
-      } else {
-        setCirclesIsActive(false)
-      }
-    })
+  const { circlesIsActive, actualSkillLeft, actualSkillRight } = useAnimateSkills({
+    elements,
+    observerRight,
+    observerLeft,
+    skillSection
   })
 
-  const checkOverlap = (observer, setActualSkill) => {
-    const circles = Array(...elements.current.children)
-
-    circles.forEach((circle) => {
-      const elementToCheck = observer.current
-      const targetElement = circle
-
-      const elementRect = elementToCheck.getBoundingClientRect()
-      const targetRect = targetElement.getBoundingClientRect()
-
-      // Verifica si los elementos se superponen en el eje horizontal
-      const isOverlapX =
-        elementRect.left < targetRect.right &&
-        elementRect.right > targetRect.left
-
-      // Verifica si los elementos se superponen en el eje vertical
-      const isOverlapY =
-        elementRect.top < targetRect.bottom &&
-        elementRect.bottom > targetRect.top
-
-      if (isOverlapX && isOverlapY) {
-        setActualSkill(circle.querySelector('img').getAttribute('alt'))
-      }
-    })
-  }
-
-  const animateCircles = () => {
-    const circles = Array(...elements.current.children)
-
-    angulo += 0.005 // Movimiento más lento
-    const angleIncrement = (2 * Math.PI) / n
-
-    // Obtiene el centro del contenedor
-    const containerWidth = elements.current.offsetWidth
-    const containerHeight = elements.current.offsetHeight
-
-    circles.forEach((element, i) => {
-      const angleOffset = angleIncrement * i
-
-      // Calcula las coordenadas en relación al centro del contenedor
-      const x =
-        containerWidth / 2 +
-        radio * Math.cos(angulo + angleOffset) -
-        circleSize / 2
-      const y =
-        containerHeight / 2 +
-        radio * Math.sin(angulo + angleOffset) -
-        circleSize / 2
-
-      element.style.transform = `translate(${x}px, ${y}px)`
-    })
-
-    if (circlesIsActive) {
-      requestAnimationFrame(animateCircles)
-      setInterval(() => {
-        checkOverlap(observerLeft, SetActualSkillLeft, circles)
-        checkOverlap(observerRight, SetActualSkillRight, circles)
-      }, 100)
-    }
-  }
-
-  useEffect(() => {
-    observer.observe(skillSection.current)
-    window.addEventListener('resize', () => {
-      setInnerWidth(window.innerWidth)
-    })
-  }, [])
-
-  useEffect(() => {
-    animateCircles()
-  }, [circlesIsActive, innerWidth])
-
-  const openCertificates = () => {
-    setCetificatesOpen(true)
-  }
   return (
     <section
       className='min-h-[100vh] sm:h-[100vh] flex w-full  justify-center items-center bg-bghome p-3 mt-1 '
@@ -151,7 +62,7 @@ function Skills () {
           </p>
           <button
             className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo '
-            onClick={openCertificates}>
+            onClick={() => setCetificatesOpen(true)}>
             Certificados
           </button>
         </div>

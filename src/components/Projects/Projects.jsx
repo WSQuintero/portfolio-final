@@ -8,7 +8,7 @@ import 'swiper/css/effect-cube'
 import 'swiper/css/pagination'
 import './Projects.css'
 
-function Projects ({ setCetificatesOpen }) {
+function Projects () {
   const [projectName, setProjectName] = useState('')
   const [projectDescription, setProjectDescription] = useState('')
   const [projectLink, setProjectLink] = useState('')
