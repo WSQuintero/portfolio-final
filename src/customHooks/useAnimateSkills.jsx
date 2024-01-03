@@ -10,17 +10,11 @@ function useAnimateSkills ({
   const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
   const [actualSkillRight, SetActualSkillRight] = useState('')
-
-  const n = Object.values(logos).length // número de círculos
-
   const [innerWidth, setInnerWidth] = useState(window.innerWidth)
   const [radio, setRadio] = useState(null)
 
-  useEffect(() => {
-    setRadio(innerWidth < 1279 ? 120 : 220) // radio
-  }, [innerWidth])
-
-  const circleSize = 10 // Tamaño de los círculos
+  const numCircles = Object.values(logos).length
+  const circleSize = 6
   let angulo = 0
 
   const observer = new IntersectionObserver((entries, observer) => {
@@ -34,36 +28,34 @@ function useAnimateSkills ({
   })
 
   const checkOverlap = (observer, setActualSkill) => {
-    const circles = [...elements.current.children]
+    const circles = elements.current.children
 
-    circles.forEach((circle) => {
-      const elementToCheck = observer.current
-      const targetElement = circle
+    const elementToCheck = observer.current.getBoundingClientRect()
 
-      const elementRect = elementToCheck.getBoundingClientRect()
-      const targetRect = targetElement.getBoundingClientRect()
+    const overlappedCircle = Array.from(circles).find((circle) => {
+      const targetRect = circle.getBoundingClientRect()
 
       // Verifica si los elementos se superponen en el eje horizontal
       const isOverlapX =
-        elementRect.left < targetRect.right &&
-        elementRect.right > targetRect.left
+        elementToCheck.left < targetRect.right && elementToCheck.right > targetRect.left
 
       // Verifica si los elementos se superponen en el eje vertical
       const isOverlapY =
-        elementRect.top < targetRect.bottom &&
-        elementRect.bottom > targetRect.top
+        elementToCheck.top < targetRect.bottom && elementToCheck.bottom > targetRect.top
 
-      if (isOverlapX && isOverlapY) {
-        setActualSkill(circle.querySelector('img').getAttribute('alt'))
-      }
+      return isOverlapX && isOverlapY
     })
+
+    if (overlappedCircle) {
+      setActualSkill(overlappedCircle.querySelector('img').getAttribute('alt'))
+    }
   }
 
   const animateCircles = () => {
-    const circles = [...elements.current.children]
+    const circles = Array.from(elements.current.children)
 
     angulo += 0.005 // Movimiento más lento
-    const angleIncrement = (2 * Math.PI) / n
+    const angleIncrement = (2 * Math.PI) / numCircles
 
     // Obtiene el centro del contenedor
     const containerWidth = elements.current.offsetWidth
@@ -87,25 +79,33 @@ function useAnimateSkills ({
 
     if (circlesIsActive) {
       requestAnimationFrame(animateCircles)
-      setInterval(() => {
-        checkOverlap(observerLeft, SetActualSkillLeft, circles)
-        checkOverlap(observerRight, SetActualSkillRight, circles)
+
+      setTimeout(() => {
+        checkOverlap(observerLeft, SetActualSkillLeft)
+        checkOverlap(observerRight, SetActualSkillRight)
       }, 100)
     }
   }
 
   useEffect(() => {
+    setRadio(innerWidth < 1279 ? 120 : 220) // radio
+
     observer.observe(skillSection.current)
     window.addEventListener('resize', () => {
       setInnerWidth(window.innerWidth)
     })
-  }, [])
 
-  useEffect(() => {
     animateCircles()
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', () => {
+        setInnerWidth(window.innerWidth)
+      })
+    }
   }, [circlesIsActive, innerWidth])
 
-  return { circlesIsActive, actualSkillLeft, actualSkillRight, skillSection, observerLeft }
+  return { circlesIsActive, actualSkillLeft, actualSkillRight }
 }
 
 export { useAnimateSkills }
