@@ -25,19 +25,19 @@ function Contact () {
                 <img
                   src='/img/traje.png'
                   alt='imagen personal'
-                  className='w-full'
+                  className='h-[90%]'
                 />
               </figure>
             </div>
-            <div className=' w-full xl:w-9/12 h-full flex justify-center items-center p-10 flex-col background'>
-              <h3 className='text-titlecolordark font-bold text-4xl mb-10 w-full text-center bg-bghometwo/60 '>
+            <div className=' w-full xl:w-9/12 h-full flex justify-center items-center p-5 flex-col '>
+              <h3 className='text-titlecolordark font-bold text-2xl mb-10 w-full text-center bg-bghometwo/60 '>
                 CONTÁCTAME
               </h3>
               <form
                 action='https://formspree.io/f/xrgwpvgz'
                 method='POST'
                 onSubmit={handleSubmit}
-                className='flex flex-col gap-2 w-full h-[70%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6'>
+                className='flex flex-col gap-2 w-full h-[70%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6 text-white'>
                 <input
                   type='text'
                   className='text-sm xl:text-lg w-full p-2 h-[35px] bg-gray-800/50'
@@ -51,7 +51,7 @@ function Contact () {
                   field='name'
                   errors={state.errors}
                 />
-                <div className='flex justify-between h-1/5 relative w-full'>
+                <div className='flex justify-between h-[35px] mb-5 relative w-full text-white'>
                   <input
                     type='email'
                     className='text-sm xl:text-lg  w-[60%] p-4 full bg-gray-800/50'
@@ -67,7 +67,7 @@ function Contact () {
                   />
                   <input
                     type='text'
-                    className='text-sm xl:text-lg w-[30%] p-4 bg-gray-800/50'
+                    className='text-sm xl:text-lg w-[35%] p-4 bg-gray-800/50'
                     placeholder='Telefono'
                     name='tel'
                     required
@@ -75,7 +75,7 @@ function Contact () {
                   <ValidationError field='tel' errors={state.errors} />
                 </div>
                 <textarea
-                  className='text-sm xl:text-lg   h-2/5 p-4 w-full bg-gray-800/50'
+                  className='text-sm xl:text-lg   h-2/5 p-4 w-full bg-gray-800/50 text-white'
                   placeholder='Deja tu mensaje aquí'
                   name='message'
                   id='message'
@@ -97,8 +97,8 @@ function Contact () {
           </>
             )
           : (
-          <div className='flex flex-col justify-center items-center gap-5'>
-            <p className='text-blue-400 text-4xl w-[500px] text-center'>
+          <div className='flex flex-col justify-center items-center gap-5 w-full p-5 relative overflow-hidden'>
+            <p className='text-blue-400 sm:text-4xl text-2xl text-center'>
               Has enviado tu información correctamente, ¡muchas gracias!
             </p>
             <div className='absolute bottom-0 left-0 w-full h-[100vh] z-50'>

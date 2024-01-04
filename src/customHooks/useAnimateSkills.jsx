@@ -14,7 +14,7 @@ function useAnimateSkills ({
   const [radio, setRadio] = useState(null)
 
   const numCircles = Object.values(logos).length
-  const circleSize = 6
+  const circleSize = 1
   let angulo = 0
 
   const observer = new IntersectionObserver((entries, observer) => {

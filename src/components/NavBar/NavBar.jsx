@@ -4,16 +4,23 @@ import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
 
 function NavBar ({ isBurguerMenu, setIsBurguerMenu }) {
   return (
-    <nav className='h-full xl:h-[20px] xl:w-[50%] w-full  xl:mr-5 z-50 flex flex-col justify-around items-center'>
+    <nav className={`h-full  relative border border-titlecolordark sm:border-transparent object-cover  w-full  xl:mr-5 z-50 flex flex-col  sm:flex-row ${isBurguerMenu ? 'justify-between pt-3' : 'justify-center'} sm:justify-between sm:px-10 items-center`}>
       <button
         onClick={() => {
           setIsBurguerMenu(!isBurguerMenu)
         }}
-        className='text-white flex sm:hidden'>
+        className='text-white flex sm:hidden '>
         <IconContext.Provider value={{ size: '30px' }}>
           <GiHamburgerMenu />
         </IconContext.Provider>
       </button>
+{isBurguerMenu && (
+      <div className='sm:h-[90%] h-[100px] border border-titlecolordark rounded-full p-1'>
+
+      <img src="/svg/Logo_Mesa de trabajo.svg" alt="logo" className='h-full object-cover'/>
+      </div>
+)}
+
       <BurguerMenu isBurguerMenu={isBurguerMenu} setIsBurguerMenu={setIsBurguerMenu}/>
     </nav>
   )

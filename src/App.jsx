@@ -11,9 +11,9 @@ function App () {
   const [isBurguerMenu, setIsBurguerMenu] = useState(false)
   const [innerWidth, SetInnerWidth] = useState(window.innerWidth)
   const [initialAnimate, setInitialAnimate] = useState(false)
-  const headerStyles = `flex justify-center sm:justify-end fixed top-0 text-gray-200 w-full ${
-    isBurguerMenu ? 'h-[100vh] bg-bghome' : 'h-[65px] bg-black/70'
-  } sm:h-[65px] z-50 bg-bghome xl:bg-black/30 items-center`
+  const headerStyles = `flex justify-center sm:justify-end  text-gray-200 w-full ${
+    isBurguerMenu ? 'h-[100vh] bg-bghome' : 'h-[50px] bg-bghome'
+  } sm:h-[50px] z-50   items-center`
 
   useEffect(() => {
     setTimeout(() => {

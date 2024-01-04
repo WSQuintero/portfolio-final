@@ -1,6 +1,7 @@
 export const projects = [
   {
-    img: '/img/chatu.jpg ',
+    imgMobile: '/img/chatu.jpg ',
+    imgDesktop: '/img/desktop/chatu.jpg ',
     project: 'Chatu',
     description:
       'Este proyecto es un chat en tiempo real con React y Redux para el frontend, Tailwind para estilos, Express y Socket.io para el backend. Permite autenticación segura, mensajería instantánea, gestión de amigos y recepción de mensajes sin conexión. repositorio backend https://github.com/WSQuintero/Chatu-backend',
@@ -16,7 +17,8 @@ export const projects = [
     ]
   },
   {
-    img: '/img/shop.jpg',
+    imgMobile: '/img/shop.jpg',
+    imgDesktop: '/img/desktop/shop.jpg',
     project: 'Shopie',
     description:
       'Este proyecto permite a los usuarios crear cuentas acceder al sistema mediante registro y autenticación en Firebase. Los usuarios pueden agregar productos al carrito, guardarlos en el almacenamiento local y generar órdenes de compra, las cuales son almacenadas en una base de datos tambien Firebase.',
@@ -25,7 +27,8 @@ export const projects = [
     tec: ['/js (2).svg', '/React.svg', '/tailwind.svg', '/Firebase_Logo.svg']
   },
   {
-    img: '/img/a-silent.jpg',
+    imgMobile: '/img/a-silent.jpg',
+    imgDesktop: '/img/desktop/a-silent.jpg',
     project: 'A silent voice',
     description:
       'Un sitio web en React dedicado a la película "A Silent Voice" que muestra imágenes e información sobre la película.',
@@ -34,7 +37,8 @@ export const projects = [
     tec: ['/js (2).svg', '/React.svg']
   },
   {
-    img: '/img/weather.jpg ',
+    imgMobile: '/img/weather.jpg ',
+    imgDesktop: '/img/desktop/weather.jpg ',
     project: 'World Weather ',
     description:
       '"World Weather" es una aplicación web que te permite obtener información actualizada sobre el clima de cualquier ubicación en el mundo. Utiliza React como framework front-end para construir la interfaz de usuario dinámica y atractiva. La estilización de la aplicación se logra con SASS, lo que le proporciona un diseño atractivo y personalizado. ',
@@ -43,7 +47,8 @@ export const projects = [
     tec: ['/html.svg', '/sass.svg', '/js (2).svg', '/React.svg']
   },
   {
-    img: '/img/questions.jpg',
+    imgMobile: '/img/questions.jpg',
+    imgDesktop: '/img/desktop/questions.jpg',
     project: 'QuestionsCreator',
     description:
       'Aplicación web desarrollada con React, Firebase y Tailwind que brinda a usuarios la capacidad de registrarse como profesor o estudiante. Los profesores pueden crear cuestionarios personalizados, mientras que los estudiantes realizarlos a través de códigos únicos para cada uno. Los resultados se envían automáticamente al profesor, facilitando un seguimiento efectivo del progreso académico.',
@@ -52,7 +57,8 @@ export const projects = [
     tec: ['/js (2).svg', '/React.svg', '/tailwind.svg', '/Firebase_Logo.svg']
   },
   {
-    img: '/img/movie.jpg',
+    imgMobile: '/img/movie.jpg',
+    imgDesktop: '/img/desktop/movie.jpg',
     project: 'MovieDb',
     description:
       'Proyecto de sitio web sobre películas creado utilizando HTML, CSS y JavaScript. Este proyecto tiene como objetivo permitir a los usuarios explorar los detalles de las películas, buscar por nombre, ordenar por categoría y seleccionar películas favoritas para guardarlas en el almacenamiento local del navegador. Se ha trabajado para lograr una interfaz fácil de usar.',
@@ -61,7 +67,8 @@ export const projects = [
     tec: ['/html.svg', '/css.svg', '/js (2).svg']
   },
   {
-    img: '/img/netfli.jpg',
+    imgMobile: '/img/netfli.jpg',
+    imgDesktop: '/img/desktop/netfli.jpg',
     project: 'NetflixClone',
     description:
       'Proyecto web inspirado en Netflix, desarrollado con la integración de Firebase. Este sitio replica la funcionalidad del sitio original al permitir a los usuarios crear cuentas, iniciar sesión y guardar cierta información en el almacenamiento local del navegador. Además de ofrecer una experiencia similar a Netflix, este proyecto ofrece la capacidad de ver trailers de películas.',
@@ -70,7 +77,8 @@ export const projects = [
     tec: ['/js (2).svg', '/React.svg', '/tailwind.svg', '/Firebase_Logo.svg']
   },
   {
-    img: '/img/task.jpg ',
+    imgMobile: '/img/task.jpg ',
+    imgDesktop: '/img/desktop/task.jpg ',
     project: 'TodoList',
     description:
       'Este proyecto web se encuentra desarrollado en React con el fin de permitir a los usuarios crear, eliminar y marcar tareas como completadas. Las tareas se almacenan localmente en el navegador utilizando LocalStorage, lo que permite que los datos persistan incluso después de cerrar la página. Los usuarios pueden administrar su lista de tareas de manera fácil y efectiva. ',

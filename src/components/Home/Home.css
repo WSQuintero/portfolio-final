@@ -3,7 +3,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode:multiply;
+  background-blend-mode:difference;
+
 }
 
 .test {

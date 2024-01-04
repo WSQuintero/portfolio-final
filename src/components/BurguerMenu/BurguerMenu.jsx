@@ -1,8 +1,10 @@
+import './BurguerMenu.css'
+
 function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
   return (
     <>  {isBurguerMenu && (
-      <ul className='flex sm:flex-row flex-col h-[50%] items-center justify-between w-full p-5 '>
-        <li className='border border-gray-200 text-center w-full sm:w-1/4 bg-bghome hover:border-titlecolordark hover:text-titlecolordark'>
+      <ul className='flex sm:flex-row flex-col h-[50%] sm:h-full items-center justify-around w-full xl:w-[70%] p-5 gap-3 '>
+        <li className='pages'>
           <a
             href='#home'
             className='w-full h-full inline-block'
@@ -12,7 +14,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
             Home
           </a>
         </li>
-        <li className='border border-gray-200 text-center w-full sm:w-1/4 bg-bghome hover:border-titlecolordark hover:text-titlecolordark'>
+        <li className='pages'>
           <a
             href='#skills'
             className='w-full h-full inline-block'
@@ -22,7 +24,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
             Habilidades
           </a>
         </li>
-        <li className='border border-gray-200 text-center w-full sm:w-1/4 bg-bghome hover:border-titlecolordark hover:text-titlecolordark'>
+        <li className='pages'>
           <a
             href='#projects'
             className='w-full h-full inline-block'
@@ -32,7 +34,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
             Proyectos
           </a>
         </li>
-        <li className='border border-gray-200 text-center w-full sm:w-1/4 bg-bghome hover:border-titlecolordark hover:text-titlecolordark'>
+        <li className='pages'>
           <a
             href='#contact'
             className='w-full h-full  inline-block'

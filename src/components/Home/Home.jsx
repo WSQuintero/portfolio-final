@@ -4,12 +4,12 @@ import './Home.css'
 function Home () {
   return (
     <section
-      className=' w-full xl:h-[100vh] bg-bghome p-3 flex justify-center items-center'
+      className=' w-full xl:h-[93vh] bg-bghome p-3 flex justify-center items-center'
       id='home'>
-      <div className='p-10 border border-titlecolordark flex  justify-center items-center w-full h-full background  '>
-        <div className='flex justify-center items-center h-full p-5 border-t border-b border-gray-400/50 gap-10 xl:flex-row flex-col'>
+      <div className='p-10 border border-titlecolordark flex  justify-center items-center w-full h-full   '>
+        <div className='flex justify-center items-center h-full p-5  border-b border-gray-400/50 gap-10 xl:flex-row flex-col background'>
           <div className='xl:w-1/3 flex flex-col items-start justify-between gap-3 xl:h-[300px] '>
-            <h1 className='text-titlecolor text-4xl xl:text-6xl whitespace-break-spaces text-center xl:w-full font-bevan test xl:text-start'>
+            <h1 className='text-titlecolor text-3xl xl:text-5xl whitespace-break-spaces text-center xl:w-full font-bevan test xl:text-start'>
               Santiago Quintero
             </h1>
             <div className='lg:w-[60px] w-full bg-titlecolordark h-[3px] ml-2  z-20 '/>
@@ -53,19 +53,19 @@ function Home () {
             <img
               src='/img/rostro.png'
               alt='rostro postulante'
-              className='w-full'
+              className='w-[50%] xl:w-full'
             />
           </div>
           <div className='xl:w-1/3 flex flex-col items-start  xl:h-[300px] justify-between'>
             <ul>
-              <li className='text-title text-2xl xl:text-3xl font-bevan'>
+              <li className='text-title text-sm xl:text-3xl font-bevan'>
                 Desarrollador web
               </li>
-              <li className='text-title text-xl xl:text-2xl font-bevan'>
+              <li className='text-title text-lg xl:text-2xl font-bevan'>
                 Diseñador visual
               </li>
             </ul>
-            <p className='text-parraf text-xl mt-5 xl:mt-auto'>
+            <p className='text-parraf text-sm sm:text-lg mt-5 xl:mt-auto'>
               Conocimientos avanzados en desarrollo front-end, diseño,
               programación y aspectos técnicos de sistemas en general.
             </p>
