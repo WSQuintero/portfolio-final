@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { InitialAnimate } from './components/InitialAnimate/InitialAnimate'
 import './App.css'
 
-function App () {
+function App() {
   const [isBurguerMenu, setIsBurguerMenu] = useState(false)
   const [innerWidth, SetInnerWidth] = useState(window.innerWidth)
   const [initialAnimate, setInitialAnimate] = useState(false)
@@ -39,14 +39,11 @@ function App () {
 
   return (
     <>
-      {!initialAnimate
-        ? (
+      {!initialAnimate ? (
         <InitialAnimate />
-          )
-        : (
+      ) : (
         <>
-          <header
-            className={headerStyles}>
+          <header className={headerStyles}>
             <NavBar
               isBurguerMenu={isBurguerMenu}
               setIsBurguerMenu={setIsBurguerMenu}
@@ -60,7 +57,7 @@ function App () {
             <Contact />
           </main>
         </>
-          )}
+      )}
     </>
   )
 }
