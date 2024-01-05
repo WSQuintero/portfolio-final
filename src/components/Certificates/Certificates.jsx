@@ -13,7 +13,7 @@ function Certificates ({ setCetificatesOpen }) {
   }, [])
 
   return (
-    <div className='background bg-white absolute w-full h-[100vh] p-5 '>
+    <div className='  absolute bg-bghome w-full h-[100vh] p-5 z-50'>
       <button
         onClick={() => setCetificatesOpen(false)}
         className='text-2xl w-[50px] h-[50px] flex justify-center items-center  text-titlecolordark  hover:text-gray-200 z-50 absolute right-5 xl:right-20 border-2 border-titlecolor rounded-full bg-white top-10 font-bold font-sans'>

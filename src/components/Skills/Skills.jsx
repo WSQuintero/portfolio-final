@@ -4,13 +4,12 @@ import { Certificates } from '../Certificates/Certificates'
 import { useAnimateSkills } from '../../customHooks/useAnimateSkills'
 import './Skills.css'
 
-function Skills () {
+function Skills ({ skillSection }) {
   const [cetificatesOpen, setCetificatesOpen] = useState(false)
 
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
-  const skillSection = useRef(null)
 
   const { circlesIsActive, actualSkillLeft, actualSkillRight } =
     useAnimateSkills({
@@ -22,29 +21,33 @@ function Skills () {
 
   return (
     <section
-      className='min-h-[100vh] sm:h-[100vh] flex w-full xl:flex-col justify-center items-center bg-bghome p-3 mt-1 '
-      ref={skillSection}
+      className='h-[100vh] sm:h-[100vh] flex w-full xl:flex-col justify-center items-center bg-bghome p-3  '
+
       id='skills'>
-      <div className='flex flex-col border border-titlecolordark w-full'>
-      <h3 className='text-white font-bold text-2xl  w-full text-center bg-bghometwo/60 mt-5 '>
+      <div
+         className='flex flex-col border border-titlecolordark w-full h-full'>
+      <h3 className='text-white font-bold text-2xl  w-full text-center bg-bghometwo/60 mt-5 '
+      >
         HABILIDADES
       </h3>
-      <div className='relative  flex xl:flex-row flex-col justify-center items-center w-full xl:h-[90vh] overflow-hidden background-js'>
+      <div className='relative  flex xl:flex-row flex-col justify-center items-center w-full h-full overflow-hidden background-js'
+      ref={skillSection}
+      >
       <p className='border-b border-titlecolordark text-titlecolordark mb-5  xl:pb-10 w-[300px] xl:h-[50px] font-bevan text-center text-xl xl:text-3xl p-5 xl:mt-0'>
           {actualSkillLeft.toUpperCase()}
         </p>
         <div className='relative mb-5 flex justify-center items-center w-full h-[300px] xl:h-full xl:w-[600px] overflow-hidden '>
           <div
-            className='absolute xl:left-0 top-0 xl:top-auto w-[47px] h-[26px] '
+            className='absolute xl:left-0 top-0 xl:top-auto w-[50px] sm:w-[200px] h-[26px] '
             ref={observerLeft}></div>
           <figure className='absolute rotate w-[150px] h-[150px] xl:w-[300px] xl:h-[300px] border-2 hover:scale-125 ease-in-out duration-1000 transition-transform border-titlecolordark rounded-full p-5 flex justify-center items-center'>
             <img src='/svg/react.svg' alt='logo react' />
           </figure>
           <div
-            className='absolute xl:right-0 bottom-0 xl:bottom-auto w-[47px] h-[26px] '
+            className='absolute xl:right-20 bottom-0 xl:bottom-auto w-[50px] sm:w-[200px]  h-[26px] '
             ref={observerRight}></div>
           <div
-            className='relative flex h-auto justify-center items-center mt-[20px] ml-[10px]'
+            className='relative flex h-auto justify-center items-center mt-[16px] ml-[15px]'
             ref={elements}>
             {Object.values(logos).map((ur, index) => (
               <React.Fragment key={index}>

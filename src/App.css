@@ -5,3 +5,30 @@ body{
 *{
   box-sizing: border-box;
 }
+
+.animation {
+  animation: open-menu 500ms ease-in-out;
+  visibility: visible;
+}
+
+@keyframes open-menu {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.close-animation {
+  animation: close-menu 500ms ease-in-out;
+}
+
+@keyframes close-menu {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}

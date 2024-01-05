@@ -3,23 +3,47 @@ import { Skills } from './components/Skills/Skills'
 import { Contact } from './components/Contact/Contact'
 import { Projects } from './components/Projects/Projects'
 import { NavBar } from './components/NavBar/NavBar'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { InitialAnimate } from './components/InitialAnimate/InitialAnimate'
+import { IconContext } from 'react-icons'
+import { TbArrowBigLeftLines, TbArrowBigRightLines } from 'react-icons/tb'
 import './App.css'
 
-function App() {
+function App () {
   const [isBurguerMenu, setIsBurguerMenu] = useState(false)
   const [innerWidth, SetInnerWidth] = useState(window.innerWidth)
   const [initialAnimate, setInitialAnimate] = useState(false)
-  const headerStyles = `flex justify-center sm:justify-end  text-gray-200 w-full ${
-    isBurguerMenu ? 'h-[100vh] bg-bghome' : 'h-[50px] bg-bghome'
-  } sm:h-[50px] z-50   items-center`
+  const [isOpenHeader, setIsOpenHeader] = useState(true)
+  const skillSection = useRef(null)
+
+  const headerStyles = ` flex justify-center sm:justify-end  text-gray-200 w-full ${
+    isBurguerMenu ? 'h-[90vh] bg-bghome' : 'h-[30px] bg-bghome'
+  } sm:h-[80px] z-40   items-center fixed sm:pr-20 ${
+    isOpenHeader ? 'animation' : 'close-animation -translate-x-full '
+  }`
 
   useEffect(() => {
     setTimeout(() => {
       setInitialAnimate(true)
     }, 2000)
-  }, [])
+
+    if (window.innerWidth < 800) {
+      setIsOpenHeader(true)
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (window.innerWidth > 640) {
+            setIsOpenHeader(false)
+          }
+        }
+      })
+    })
+    if (skillSection.current) {
+      observer.observe(skillSection.current)
+    }
+  }, [initialAnimate])
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -37,12 +61,39 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+
+  }, [])
   return (
     <>
-      {!initialAnimate ? (
+      {!initialAnimate
+        ? (
         <InitialAnimate />
-      ) : (
+          )
+        : (
         <>
+          {window.innerWidth >= 640 && (
+            <button
+              className='w-[100px] h-[100px] rounded-full border-4 z-50 grid place-content-center border-titlecolordark fixed top-2 right-2 bg-bghome '
+              onClick={() => {
+                setIsOpenHeader(!isOpenHeader)
+              }}>
+              {isOpenHeader
+                ? (
+                <IconContext.Provider
+                  value={{ size: '40px', color: 'rgb(21, 179, 179)' }}>
+                  <TbArrowBigRightLines />
+                </IconContext.Provider>
+                  )
+                : (
+                <IconContext.Provider
+                  value={{ size: '40px', color: 'rgb(21, 179, 179)' }}>
+                  <TbArrowBigLeftLines />
+                </IconContext.Provider>
+                  )}
+            </button>
+          )}
+
           <header className={headerStyles}>
             <NavBar
               isBurguerMenu={isBurguerMenu}
@@ -50,14 +101,15 @@ function App() {
               innerWidth={innerWidth}
             />
           </header>
+
           <main className='min-h-[100vh] w-full font-cambria bg-bghome z-0'>
             <Home />
-            <Skills />
+            <Skills skillSection={skillSection} />
             <Projects />
             <Contact />
           </main>
         </>
-      )}
+          )}
     </>
   )
 }

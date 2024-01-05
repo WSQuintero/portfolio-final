@@ -14,7 +14,7 @@ function useAnimateSkills ({
   const [radio, setRadio] = useState(null)
 
   const numCircles = Object.values(logos).length
-  const circleSize = 1
+  const circleSize = 15.2
   let angulo = 0
 
   const observer = new IntersectionObserver((entries, observer) => {
@@ -88,7 +88,7 @@ function useAnimateSkills ({
   }
 
   useEffect(() => {
-    setRadio(innerWidth < 1279 ? 120 : 220) // radio
+    setRadio(innerWidth < 1279 ? 120 : 200) // radio
 
     observer.observe(skillSection.current)
     window.addEventListener('resize', () => {

@@ -20,16 +20,7 @@ function Contact () {
         {!state.succeeded
           ? (
           <>
-            <div className=' hidden xl:flex w-6/12 h-full '>
-              <figure className='object-cover h-full xl:flex items-end hidden'>
-                <img
-                  src='/img/traje.png'
-                  alt='imagen personal'
-                  className='h-[90%]'
-                />
-              </figure>
-            </div>
-            <div className=' w-full xl:w-9/12 h-full flex justify-center items-center p-5 flex-col '>
+            <div className=' w-[80%] h-full flex justify-center items-center p-5 flex-col '>
               <h3 className='text-titlecolordark font-bold text-2xl mb-10 w-full text-center bg-bghometwo/60 '>
                 CONTÁCTAME
               </h3>
