@@ -16,9 +16,9 @@ function App () {
   const [isOpenHeader, setIsOpenHeader] = useState(true)
   const skillSection = useRef(null)
 
-  const headerStyles = ` flex justify-center xl:justify-end  text-gray-200 w-full ${
+  const headerStyles = ` flex justify-center lg:justify-end  text-gray-200 w-full ${
     isBurguerMenu ? 'h-[90vh] bg-bghome' : 'h-[40px] bg-bghome'
-  } xl:h-[80px] z-40   items-center fixed xl:pr-20 ${
+  } lg:h-[80px] z-40   items-center fixed lg:pr-20 ${
     isOpenHeader ? 'animation' : 'close-animation -translate-x-full '
   }`
 
@@ -27,14 +27,14 @@ function App () {
       setInitialAnimate(true)
     }, 2000)
 
-    if (window.innerWidth < 1280) {
+    if (window.innerWidth < 1024) {
       setIsOpenHeader(true)
     }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (window.innerWidth > 1280) {
+          if (window.innerWidth > 1024) {
             setIsOpenHeader(false)
           }
         }
@@ -48,13 +48,13 @@ function App () {
   useEffect(() => {
     window.addEventListener('resize', () => {
       SetInnerWidth(window.innerWidth)
-      if (window.innerWidth < 1280) {
+      if (window.innerWidth < 1024) {
         setIsBurguerMenu(false)
       } else {
         setIsBurguerMenu(true)
       }
     })
-    if (window.innerWidth < 1280) {
+    if (window.innerWidth < 1024) {
       setIsBurguerMenu(false)
     } else {
       setIsBurguerMenu(true)
@@ -72,7 +72,7 @@ function App () {
           )
         : (
         <>
-          {window.innerWidth >= 1280 && (
+          {window.innerWidth >= 1024 && (
             <button
               className='w-[100px] h-[100px] rounded-full border-4 z-50 grid place-content-center border-titlecolordark fixed top-2 right-2 bg-bghome '
               onClick={() => {

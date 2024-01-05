@@ -21,7 +21,7 @@ function Contact () {
           ? (
           <>
             <div className=' w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col '>
-              <h3 className='font-bevan  text-xl  xl:absolute top-7 bg-bghometwo/60 w-full text-gray-200 p-2 bg-blend-multiply text-center'>
+              <h3 className='font-bevan  text-xl  xl:absolute top-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
                 CONTÁCTAME
               </h3>
               <form

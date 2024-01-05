@@ -44,7 +44,7 @@ function Projects () {
       className='w-full h-[100vh]  bg-gradient-radial relative p-3'
       id='projects'>
       <div className='border border-titlecolordark flex xl:flex-row flex-col justify-center items-center w-full  relative overflow-hidden h-full'>
-        <h3 className='font-bevan  text-xl  mt-7 xl:absolute top-7 bg-bghometwo/60 w-full text-gray-200 p-2 bg-blend-multiply text-center'>
+        <h3 className='font-bevan  text-xl  mt-7 xl:absolute top-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
           PROYECTOS
         </h3>
         <div className='flex w-full h-full justify-center items-center xl:flex-row flex-col xl:mt-10 '>
@@ -65,7 +65,7 @@ function Projects () {
                 <SwiperSlide key={project.project}>
                   <img
                     src={
-                      window.innerWidth < 1280
+                      window.innerWidth < 1024
                         ? project.imgMobile
                         : project.imgDesktop
                     }

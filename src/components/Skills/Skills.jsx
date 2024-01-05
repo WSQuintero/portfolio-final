@@ -24,7 +24,7 @@ function Skills ({ skillSection }) {
       className='h-[100vh] sm:h-[100vh] flex w-full xl:flex-col justify-center items-center bg-bghome p-3  '
       id='skills'>
       <div className='flex flex-col border border-titlecolordark w-full h-full'>
-        <h3 className='font-bevan text-xl mt-7 bg-bghometwo/60 w-full text-gray-200 p-2 bg-blend-multiply text-center'>
+        <h3 className='font-bevan text-xl mt-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
           HABILIDADES
         </h3>
         <div

@@ -26,7 +26,7 @@ function Home ({ observerRef }) {
               <li className='text-title text-xl font-bevan w-full'>
                 Desarrollador front-end
               </li>
-              <li className='text-title/70 text-lg xl:text-xl font-bevan'>
+              <li className=' text-titlecolor text-lg xl:text-xl font-bevan'>
                 Diseñador visual
               </li>
             </ul>
