@@ -20,15 +20,15 @@ function Contact () {
         {!state.succeeded
           ? (
           <>
-            <div className=' w-[80%] h-full flex justify-center items-center p-5 flex-col '>
-              <h3 className='text-titlecolordark font-bold text-2xl mb-10 w-full text-center bg-bghometwo/60 '>
+            <div className=' w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col '>
+              <h3 className='font-bevan  text-xl  xl:absolute top-7 bg-bghometwo/60 w-full text-gray-200 p-2 bg-blend-multiply text-center'>
                 CONTÁCTAME
               </h3>
               <form
                 action='https://formspree.io/f/xrgwpvgz'
                 method='POST'
                 onSubmit={handleSubmit}
-                className='flex flex-col gap-2 w-full h-[70%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6 text-white'>
+                className='flex flex-col gap-2 w-full h-[75%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6 mt-10 text-white'>
                 <input
                   type='text'
                   className='text-sm xl:text-lg w-full p-2 h-[35px] bg-gray-800/50'
@@ -78,7 +78,7 @@ function Contact () {
                   errors={state.errors}
                 />
                 <button
-                  className='w-[100px] h-[30px] inline  bg-[#5B5B5B] hover:bg-titlecolordark text-[#CECECE] text-xl bg-gray-300/50 rounded-2xl'
+                  className='w-[100px] h-[30px] inline  bg-[#5B5B5B] hover:bg-titlecolordark text-[#CECECE] text-md mt-5 bg-gray-300/50 rounded-2xl font-bevan'
                   type='submit'
                   disabled={state.submitting}>
                   Enviar
@@ -89,7 +89,7 @@ function Contact () {
             )
           : (
           <div className='flex flex-col justify-center items-center gap-5 w-full p-5 relative overflow-hidden'>
-            <p className='text-blue-400 sm:text-4xl text-2xl text-center'>
+            <p className='text-blue-400 sm:text-4xl text-2xl text-center font-bevan'>
               Has enviado tu información correctamente, ¡muchas gracias!
             </p>
             <div className='absolute bottom-0 left-0 w-full h-[100vh] z-50'>

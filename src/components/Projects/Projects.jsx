@@ -41,19 +41,14 @@ function Projects () {
 
   return (
     <section
-      className='w-full min-h-[100vh] h-full p-3 bg-gradient-radial relative'
+      className='w-full h-[100vh]  bg-gradient-radial relative p-3'
       id='projects'>
-      <div className='border border-titlecolordark flex xl:flex-row flex-col justify-center items-center w-full min-h-[100vh] relative overflow-hidden'>
-        <img
-          src='/img/ai_Mesa de trabajo 1.png'
-          alt='fondo ai'
-          className='absolute mix-blend-lighten opacity-10'
-        />
-        <h3 className='font-bold text-2xl xl:absolute top-7 bg-bghometwo/60 w-full text-gray-200 p-5 bg-blend-multiply text-center'>
+      <div className='border border-titlecolordark flex xl:flex-row flex-col justify-center items-center w-full  relative overflow-hidden h-full'>
+        <h3 className='font-bevan  text-xl  mt-7 xl:absolute top-7 bg-bghometwo/60 w-full text-gray-200 p-2 bg-blend-multiply text-center'>
           PROYECTOS
         </h3>
-        <div className='flex w-full h-[30%] justify-center items-center xl:flex-row flex-col mt-10'>
-          <div className='relative xl:w-2/3 w-full h-full flex mt-5 xl:ml-5 justify-center items-center rounded-2xl overflow-hidden object-cover'>
+        <div className='flex w-full h-full justify-center items-center xl:flex-row flex-col xl:mt-10 '>
+          <div className='relative xl:w-2/3 w-full h-full flex  xl:ml-5 justify-center items-center rounded-2xl overflow-hidden object-cover'>
             <Swiper
               ref={swiperRef}
               spaceBetween={30}
@@ -70,7 +65,7 @@ function Projects () {
                 <SwiperSlide key={project.project}>
                   <img
                     src={
-                      window.innerWidth < 640
+                      window.innerWidth < 1280
                         ? project.imgMobile
                         : project.imgDesktop
                     }
@@ -87,22 +82,22 @@ function Projects () {
             </Swiper>
           </div>
           {projectName && projectDescription && (
-            <div className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3 bottom-5 xl:bottom-auto xl:mt-10'>
+            <div className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3  xl:mt-10 '>
               <>
-                <h3 className='text-3xl text-titlecolor xl:text-4xl flex justify-center items-center text-center bg-black/50 w-full'>
+                <h3 className='text-xl text-titlecolor xl:text-2xl flex justify-center items-center text-center bg-black/50 w-full font-bevan '>
                   {projectName}
                 </h3>
-                <p className='sm:text-sm 2xl:text-xl text-white z-20 xl:w-[300px] 2xl:w-[400px] p-5 '>
+                <p className='sm:text-sm 2xl:text-xl text-white z-20 xl:w-full px-6  h-[70%] '>
                   {projectDescription}
                 </p>
               </>
 
-              <div className='flex gap-3 w-full justify-around p-10'>
+              <div className='flex  w-full justify-around xl:gap-3 xl:p-5'>
                 {projectLink && (
                   <a
                     href={projectLink}
                     target='about:blank'
-                    className='border border-titlecolordark p-2 cursor-pointer z-20 rounded-xl text-titlecolordark w-2/4 text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                    className='border border-titlecolordark p-2 cursor-pointer z-20 xl:rounded-xl text-titlecolordark w-2/4 text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                     Visitar
                   </a>
                 )}
@@ -110,7 +105,7 @@ function Projects () {
                   <a
                     href={projectRepo}
                     target='about:blank'
-                    className='border border-titlecolordark p-2 w-2/4 cursor-pointer z-20 rounded-xl text-titlecolordark text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                    className='border border-titlecolordark p-2 w-2/4 cursor-pointer z-20 xl:rounded-xl text-titlecolordark text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                     ver repositorio
                   </a>
                 )}
