@@ -104,8 +104,8 @@ function App () {
 
           <main className='min-h-[100vh] w-full font-cambria bg-bghome z-0 '>
             <Home />
-            <Skills skillSection={skillSection} />
-            <Projects />
+            <Projects skillSection={skillSection}/>
+            <Skills />
             <Contact />
           </main>
         </>

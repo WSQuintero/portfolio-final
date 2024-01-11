@@ -14,6 +14,16 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
             Home
           </a>
         </li>
+        <li >
+          <a
+            href='#projects'
+            className='pages px-40 w-full max-w-[300px] lg:px-[70px]'
+            onClick={() => {
+              setIsBurguerMenu(innerWidth > 1024)
+            }}>
+            Proyectos
+          </a>
+        </li>
         <li
         >
           <a
@@ -23,16 +33,6 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
               setIsBurguerMenu(innerWidth > 1024)
             }}>
             Habilidades
-          </a>
-        </li>
-        <li >
-          <a
-            href='#projects'
-            className='pages px-40 w-full max-w-[300px] lg:px-[70px]'
-            onClick={() => {
-              setIsBurguerMenu(innerWidth > 1024)
-            }}>
-            Proyectos
           </a>
         </li>
         <li >

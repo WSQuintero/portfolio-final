@@ -8,12 +8,14 @@ import 'swiper/css/pagination'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
+import { TecProjects } from '../TecProjects/TecProjects'
 
-function Projects () {
+function Projects ({ skillSection }) {
   const [projectName, setProjectName] = useState('')
   const [projectDescription, setProjectDescription] = useState('')
   const [projectLink, setProjectLink] = useState('')
   const [projectRepo, setProjectRepo] = useState('')
+  const [projectTec, setProjectTec] = useState(null)
 
   const swiperRef = useRef(null)
 
@@ -29,10 +31,12 @@ function Projects () {
         setProjectDescription(img.dataset.description || '')
         setProjectLink(img.dataset.link || '')
         setProjectRepo(img.dataset.repo || '')
+        setProjectTec(img.dataset.tec || [])
       }
     }
 
     swiperInstance.on('slideChange', handleSlideChange)
+    console.log(skillSection)
 
     return () => {
       swiperInstance.off('slideChange', handleSlideChange)
@@ -47,7 +51,9 @@ function Projects () {
         <h3 className='font-bevan  text-xl  mt-7 xl:absolute top-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
           PROYECTOS
         </h3>
-        <div className='flex w-full h-full justify-center items-center xl:flex-row flex-col xl:mt-10 '>
+        <div
+          className='flex w-full h-full justify-center items-center xl:flex-row flex-col xl:mt-10 '
+          ref={skillSection}>
           <div className='relative xl:w-2/3 w-full h-full flex  xl:ml-5 justify-center items-center rounded-2xl overflow-hidden object-cover'>
             <Swiper
               ref={swiperRef}
@@ -73,6 +79,7 @@ function Projects () {
                     data-description={project.description}
                     data-link={project.link}
                     data-repo={project.repo}
+                    data-tec={project.tec}
                     alt='project'
                     className='object-cover w-[450px] max-h-[400px] rounded-2xl'
                     loading='lazy'
@@ -81,7 +88,7 @@ function Projects () {
               ))}
             </Swiper>
           </div>
-          {projectName && projectDescription && (
+          {projectName && projectDescription && projectTec && (
             <div className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3  xl:mt-10 '>
               <>
                 <h3 className='text-xl text-titlecolor xl:text-2xl flex justify-center items-center text-center bg-black/50 w-full font-bevan '>
@@ -89,6 +96,7 @@ function Projects () {
                 </h3>
                 <p className='sm:text-sm 2xl:text-xl text-white z-20 xl:w-full px-6  h-[70%] '>
                   {projectDescription}
+                  <TecProjects tecs={projectTec} />
                 </p>
               </>
 

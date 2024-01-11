@@ -5,7 +5,7 @@ function useAnimateSkills ({
   elements,
   observerRight,
   observerLeft,
-  skillSection
+  skillSectionTwo
 }) {
   const [circlesIsActive, setCirclesIsActive] = useState(false)
   const [actualSkillLeft, SetActualSkillLeft] = useState('')
@@ -90,7 +90,7 @@ function useAnimateSkills ({
   useEffect(() => {
     setRadio(innerWidth < 1279 ? 120 : 200) // radio
 
-    observer.observe(skillSection.current)
+    observer.observe(skillSectionTwo.current)
     window.addEventListener('resize', () => {
       setInnerWidth(window.innerWidth)
     })

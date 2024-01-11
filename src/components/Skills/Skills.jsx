@@ -4,19 +4,19 @@ import { Certificates } from '../Certificates/Certificates'
 import { useAnimateSkills } from '../../customHooks/useAnimateSkills'
 import './Skills.css'
 
-function Skills ({ skillSection }) {
+function Skills () {
   const [cetificatesOpen, setCetificatesOpen] = useState(false)
 
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
-
+  const skillSectionTwo = useRef(null)
   const { circlesIsActive, actualSkillLeft, actualSkillRight } =
     useAnimateSkills({
       elements,
       observerRight,
       observerLeft,
-      skillSection
+      skillSectionTwo
     })
 
   return (
@@ -29,7 +29,8 @@ function Skills ({ skillSection }) {
         </h3>
         <div
           className='relative  flex xl:flex-row flex-col justify-center items-center w-full h-full overflow-hidden background-js'
-          ref={skillSection}>
+          ref={skillSectionTwo}
+          >
           <p className='border-b border-titlecolordark text-titlecolordark mb-5  xl:pb-10 w-[300px] xl:h-[50px] font-bevan text-center text-md xl:text-3xl p-5 xl:mt-0'>
             {actualSkillLeft.toUpperCase()}
           </p>
