@@ -36,7 +36,6 @@ function Projects ({ skillSection }) {
     }
 
     swiperInstance.on('slideChange', handleSlideChange)
-    console.log(skillSection)
 
     return () => {
       swiperInstance.off('slideChange', handleSlideChange)
