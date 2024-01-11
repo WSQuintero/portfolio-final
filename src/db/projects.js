@@ -8,7 +8,6 @@ export const projects = [
     repo: 'https://github.com/WSQuintero/Chatu',
     link: 'https://chatu-two.vercel.app/',
     tec: [
-      '/svg/html.svg',
       '/svg/css.svg',
       '/svg/javascript.svg',
       '/svg/react.svg',
@@ -21,11 +20,26 @@ export const projects = [
   {
     imgMobile: '/img/shop.jpg',
     imgDesktop: '/img/desktop/shop.jpg',
-    project: 'Shopie',
+    project: 'Shopi',
     description:
-      'Este proyecto permite a los usuarios crear cuentas, acceder al sistema mediante registro y autenticación en Firebase. Los usuarios pueden agregar productos al carrito, guardarlos en el almacenamiento local y generar órdenes de compra, las cuales son almacenadas en una base de datos también Firebase.',
+      'Este proyecto permite a los usuarios crear cuentas, acceder al sistema mediante registro y autenticación en Firebase, agregar productos al carrito, guardarlos en el almacenamiento local y generar órdenes de compra que son almacenadas en una base de datos también Firebase.',
     repo: 'https://github.com/WSQuintero/Eshop-react',
     link: 'https://eshop-react-eight.vercel.app/',
+    tec: [
+      '/svg/javascript.svg',
+      '/svg/react.svg',
+      '/svg/tailwind.svg',
+      '/svg/firebase.svg'
+    ]
+  },
+  {
+    imgMobile: '/img/questions.jpg',
+    imgDesktop: '/img/desktop/questions.jpg',
+    project: 'QuestionsCreator',
+    description:
+      'Aplicación web desarrollada con react, Firebase y Tailwind que brinda a usuarios la capacidad de registrarse como profesor o estudiante. Los profesores pueden crear cuestionarios personalizados, mientras que los estudiantes pueden realizarlos a través de códigos únicos para cada uno. Los resultados se envían automáticamente al profesor, facilitando un seguimiento efectivo del progreso académico.',
+    repo: 'https://github.com/WSQuintero/QuestionsCreator',
+    link: 'https://questions-creator.vercel.app/',
     tec: [
       '/svg/javascript.svg',
       '/svg/react.svg',
@@ -56,21 +70,6 @@ export const projects = [
       '/svg/sass.svg',
       '/svg/javascript.svg',
       '/svg/react.svg'
-    ]
-  },
-  {
-    imgMobile: '/img/questions.jpg',
-    imgDesktop: '/img/desktop/questions.jpg',
-    project: 'QuestionsCreator',
-    description:
-      'Aplicación web desarrollada con react, Firebase y Tailwind que brinda a usuarios la capacidad de registrarse como profesor o estudiante. Los profesores pueden crear cuestionarios personalizados, mientras que los estudiantes pueden realizarlos a través de códigos únicos para cada uno. Los resultados se envían automáticamente al profesor, facilitando un seguimiento efectivo del progreso académico.',
-    repo: 'https://github.com/WSQuintero/QuestionsCreator',
-    link: 'https://questions-creator.vercel.app/',
-    tec: [
-      '/svg/javascript.svg',
-      '/svg/react.svg',
-      '/svg/tailwind.svg',
-      '/svg/firebase.svg'
     ]
   },
   {

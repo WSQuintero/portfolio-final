@@ -1,14 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useEffect, useRef, useState } from 'react'
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
+import { Autoplay, EffectCube, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { projects } from '../../db/projects'
+import { TecProjects } from '../TecProjects/TecProjects'
 
 import './Projects.css'
 import 'swiper/css/pagination'
 import 'swiper/css'
-import 'swiper/css/effect-fade'
+import 'swiper/css/effect-cube'
 import 'swiper/css/navigation'
-import { TecProjects } from '../TecProjects/TecProjects'
 
 function Projects ({ skillSection }) {
   const [projectName, setProjectName] = useState('')
@@ -53,17 +53,19 @@ function Projects ({ skillSection }) {
         <div
           className='flex w-full h-full justify-center items-center xl:flex-row flex-col xl:mt-10 '
           ref={skillSection}>
-          <div className='relative xl:w-2/3 w-full h-full flex  xl:ml-5 justify-center items-center rounded-2xl overflow-hidden object-cover'>
+          <div className='relative xl:w-2/3 w-full h-full flex  xl:ml-5 justify-center items-center rounded-2xl overflow-hidden object-cover  font-open-san'>
             <Swiper
               ref={swiperRef}
-              spaceBetween={30}
-              effect={'fade'}
+              spaceBetween={100}
+              effect={'cube'}
               navigation={true}
               pagination={{
                 clickable: true
               }}
+              speed={1200}
+              easing="easeInOutQuart"
               autoplay={true}
-              modules={[EffectFade, Navigation, Pagination, Autoplay]}
+              modules={[EffectCube, Navigation, Pagination, Autoplay]}
               loading='lazy'
               className='mySwiper h-auto'>
               {projects.map((project) => (
@@ -90,16 +92,16 @@ function Projects ({ skillSection }) {
           {projectName && projectDescription && projectTec && (
             <div className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3  xl:mt-10 '>
               <>
-                <h3 className='text-xl text-titlecolor xl:text-2xl flex justify-center items-center text-center bg-black/50 w-full font-bevan '>
+                <h3 className='text-xl text-titlecolor xl:text-xl flex justify-center items-center text-center bg-black/50 w-full font-bevan '>
                   {projectName}
                 </h3>
-                <p className='sm:text-sm 2xl:text-xl text-white z-20 xl:w-full px-6  h-[70%] '>
+                <p className='sm:text-sm 2xl:text-xl text-parraf z-20 xl:w-full px-6  h-[70%] font-open-san'>
                   {projectDescription}
                   <TecProjects tecs={projectTec} />
                 </p>
               </>
 
-              <div className='flex  w-full justify-around xl:gap-3 xl:p-5'>
+              <div className='flex  w-full justify-around xl:gap-3 xl:p-5 font-open-san'>
                 {projectLink && (
                   <a
                     href={projectLink}

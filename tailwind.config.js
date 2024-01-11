@@ -20,7 +20,8 @@ export default {
           'Times New Roman',
           'serif'
         ],
-        bevan: ['Bevan', 'serif']
+        bevan: ['Bevan', 'serif'],
+        'open-san': ['Open Sans', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial':

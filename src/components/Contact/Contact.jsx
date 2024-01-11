@@ -28,10 +28,10 @@ function Contact () {
                 action='https://formspree.io/f/xrgwpvgz'
                 method='POST'
                 onSubmit={handleSubmit}
-                className='flex flex-col gap-2 w-full h-[75%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6 mt-10 text-white'>
+                className='flex flex-col gap-2 w-full h-[75%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6 mt-10 text-white  font-open-san'>
                 <input
                   type='text'
-                  className='text-sm xl:text-lg w-full p-2 h-[35px] bg-gray-800/50'
+                  className='text-sm xl:text-md w-full p-2 h-[35px] bg-gray-800/50 pl-5'
                   placeholder='Nombre'
                   name='name'
                   id='name'
@@ -45,7 +45,7 @@ function Contact () {
                 <div className='flex justify-between h-[35px] mb-5 relative w-full text-white'>
                   <input
                     type='email'
-                    className='text-sm xl:text-lg  w-[60%] p-4 full bg-gray-800/50'
+                    className='text-sm xl:text-md  w-[60%] p-4 full bg-gray-800/50'
                     placeholder='Correo electrónico'
                     name='email'
                     id='email'
@@ -58,7 +58,7 @@ function Contact () {
                   />
                   <input
                     type='text'
-                    className='text-sm xl:text-lg w-[35%] p-4 bg-gray-800/50'
+                    className='text-sm xl:text-md w-[35%] p-4 bg-gray-800/50'
                     placeholder='Telefono'
                     name='tel'
                     required
@@ -66,7 +66,7 @@ function Contact () {
                   <ValidationError field='tel' errors={state.errors} />
                 </div>
                 <textarea
-                  className='text-sm xl:text-lg   h-2/5 p-4 w-full bg-gray-800/50 text-white'
+                  className='text-sm xl:text-md   h-2/5 p-4 w-full bg-gray-800/50 text-white'
                   placeholder='Deja tu mensaje aquí'
                   name='message'
                   id='message'
@@ -78,7 +78,7 @@ function Contact () {
                   errors={state.errors}
                 />
                 <button
-                  className='w-[100px] h-[30px] inline  bg-[#5B5B5B] hover:bg-titlecolordark text-[#CECECE] text-md mt-5 bg-gray-300/50 rounded-2xl font-bevan'
+                  className='w-[100px] h-[30px] inline  bg-[#5B5B5B] hover:bg-titlecolordark text-[#CECECE] text-lg mt-5 bg-gray-300/50 rounded-2xl font-open-san font-bold'
                   type='submit'
                   disabled={state.submitting}>
                   Enviar
@@ -89,7 +89,7 @@ function Contact () {
             )
           : (
           <div className='flex flex-col justify-center items-center gap-5 w-full p-5 relative overflow-hidden'>
-            <p className='text-blue-400 sm:text-4xl text-2xl text-center font-bevan'>
+            <p className='text-blue-400 sm:text-4xl text-2xl text-center  font-open-san'>
               Has enviado tu información correctamente, ¡muchas gracias!
             </p>
             <div className='absolute bottom-0 left-0 w-full h-[100vh] z-50'>

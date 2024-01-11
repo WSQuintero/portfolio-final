@@ -67,7 +67,7 @@ function Skills () {
               {actualSkillRight.toUpperCase()}
             </p>
             <button
-              className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo '
+              className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo font-open-san'
               onClick={() => setCetificatesOpen(true)}>
               Certificados
             </button>

@@ -7,10 +7,10 @@ function Home ({ observerRef }) {
       className=' w-full h-[100vh] bg-bghome  flex flex-col justify-center items-center'
       id='home'>
       <div className=' border border-titlecolordark flex  flex-col  justify-center items-center w-11/12 h-[97%] xl:w-[98%]  '>
-        <div className='flex justify-center xl:justify-around items-center  h-[85%] xl:h-[75%] xl:mt-10  gap-10 xl:flex-row flex-col '>
+        <div className='flex justify-center xl:justify-around items-center  h-[85%] xl:h-[75%] xl:mt-10  w-full xl:flex-row flex-col '>
           <div className=' flex flex-col items-center justify-center gap-3 w-full xl:w-[50%] '>
             <div className='flex flex-col items-center justify-center border-r border-l border-gray-300/20 background p-5 '>
-              <h1 className='w-full text-titlecolor text-xl xl:text-3xl whitespace-break-spaces  font-bevan test '>
+              <h1 className='w-full text-titlecolor text-xl xl:text-4xl whitespace-break-spaces  font-bevan test border-b border-parraf p-3'>
                 Santiago Quintero
               </h1>
               <img
@@ -21,16 +21,16 @@ function Home ({ observerRef }) {
             </div>
           </div>
 
-          <div className='flex flex-col items-start justify-around   h-full xl:h-[70%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px]'>
+          <div className='flex flex-col items-start justify-around   h-full xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px]'>
             <ul>
-              <li className='text-title text-xl font-bevan w-full'>
+              <li className='text-title text-2xl font-bevan w-full'>
                 Desarrollador front-end
               </li>
               <li className=' text-titlecolor text-lg xl:text-xl font-bevan'>
                 Diseñador visual
               </li>
             </ul>
-            <p className='text-parraf text-lg w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0'>
+            <p className='text-parraf text-lg w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
             Fuertes habilidades en JavaScript, React, y tecnologías modernas como Tailwind CSS y Redux.
             Puedo construir sitios web totalmente funcionales con un diseño atractivo y efectivo
             </p>
