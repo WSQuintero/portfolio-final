@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useEffect, useRef, useState } from 'react'
-import { Autoplay, EffectCube, EffectFade, Navigation, Pagination } from 'swiper/modules'
+import { Autoplay, EffectCube, Navigation, Pagination } from 'swiper/modules'
 import { projects } from '../../db/projects'
 import { TecProjects } from '../TecProjects/TecProjects'
 
@@ -46,14 +46,14 @@ function Projects ({ skillSection }) {
     <section
       className='w-full h-[100vh]  bg-gradient-radial relative p-3'
       id='projects'>
-      <div className='border border-titlecolordark flex xl:flex-row flex-col justify-center items-center w-full  relative overflow-hidden h-full'>
-        <h3 className='font-bevan  text-xl  mt-7 xl:absolute top-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
+      <div className='relative flex flex-col items-center justify-center w-full h-full overflow-hidden border border-titlecolordark xl:flex-row'>
+        <h3 className='w-full p-2 text-xl text-center font-bevan mt-7 xl:absolute top-7 bg-bghometwo/60 text-titlecolor bg-blend-multiply'>
           PROYECTOS
         </h3>
         <div
-          className='flex w-full h-full justify-center items-center xl:flex-row flex-col xl:mt-10 '
+          className='flex flex-col items-center justify-center w-full h-full xl:flex-row xl:mt-10 '
           ref={skillSection}>
-          <div className='relative xl:w-2/3 w-full h-full flex  xl:ml-5 justify-center items-center rounded-2xl overflow-hidden object-cover  font-open-san'>
+          <div className='relative flex items-center justify-center object-cover w-full h-full overflow-hidden xl:w-2/3 xl:ml-5 rounded-2xl font-open-san'>
             <Swiper
               ref={swiperRef}
               spaceBetween={100}
@@ -67,7 +67,7 @@ function Projects ({ skillSection }) {
               autoplay={true}
               modules={[EffectCube, Navigation, Pagination, Autoplay]}
               loading='lazy'
-              className='mySwiper h-auto'>
+              className='h-auto mySwiper'>
               {projects.map((project) => (
                 <SwiperSlide key={project.project}>
                   <img
@@ -92,7 +92,7 @@ function Projects ({ skillSection }) {
           {projectName && projectDescription && projectTec && (
             <div className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3  xl:mt-10 '>
               <>
-                <h3 className='text-xl text-titlecolor xl:text-xl flex justify-center items-center text-center bg-black/50 w-full font-bevan '>
+                <h3 className='flex items-center justify-center w-full text-xl text-center text-titlecolor xl:text-xl bg-black/50 font-bevan '>
                   {projectName}
                 </h3>
                 <p className='sm:text-sm 2xl:text-xl text-parraf z-20 xl:w-full px-6  h-[70%] font-open-san'>
@@ -101,12 +101,12 @@ function Projects ({ skillSection }) {
                 </p>
               </>
 
-              <div className='flex  w-full justify-around xl:gap-3 xl:p-5 font-open-san'>
+              <div className='flex justify-around w-full xl:gap-3 xl:p-5 font-open-san'>
                 {projectLink && (
                   <a
                     href={projectLink}
                     target='about:blank'
-                    className='border border-titlecolordark p-2 cursor-pointer z-20 xl:rounded-xl text-titlecolordark w-2/4 text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                    className='z-20 w-2/4 p-2 text-center border cursor-pointer border-titlecolordark xl:rounded-xl text-titlecolordark bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                     Visitar
                   </a>
                 )}
@@ -114,7 +114,7 @@ function Projects ({ skillSection }) {
                   <a
                     href={projectRepo}
                     target='about:blank'
-                    className='border border-titlecolordark p-2 w-2/4 cursor-pointer z-20 xl:rounded-xl text-titlecolordark text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                    className='z-20 w-2/4 p-2 text-center border cursor-pointer border-titlecolordark xl:rounded-xl text-titlecolordark bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                     ver repositorio
                   </a>
                 )}

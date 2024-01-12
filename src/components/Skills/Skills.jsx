@@ -29,8 +29,7 @@ function Skills () {
         </h3>
         <div
           className='relative  flex xl:flex-row flex-col justify-center items-center w-full h-full overflow-hidden background-js'
-          ref={skillSectionTwo}
-          >
+          ref={skillSectionTwo}>
           <p className='border-b border-titlecolordark text-titlecolordark mb-5  xl:pb-10 w-[300px] xl:h-[50px] font-bevan text-center text-md xl:text-3xl p-5 xl:mt-0'>
             {actualSkillLeft.toUpperCase()}
           </p>

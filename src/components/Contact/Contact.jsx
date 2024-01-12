@@ -16,12 +16,12 @@ function Contact () {
     <section
       className='w-full h-[100vh] bg-bghome p-3 flex justify-center items-center  '
       id='contact'>
-      <div className=' border border-titlecolordark flex justify-center items-center w-full h-full relative '>
+      <div className='relative flex items-center justify-center w-full h-full border border-titlecolordark'>
         {!state.succeeded
           ? (
           <>
             <div className=' w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col '>
-              <h3 className='font-bevan  text-xl  xl:absolute top-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
+              <h3 className='w-full p-2 text-xl text-center font-bevan xl:absolute top-7 bg-bghometwo/60 text-titlecolor bg-blend-multiply'>
                 CONTÁCTAME
               </h3>
               <form
@@ -66,7 +66,7 @@ function Contact () {
                   <ValidationError field='tel' errors={state.errors} />
                 </div>
                 <textarea
-                  className='text-sm xl:text-md   h-2/5 p-4 w-full bg-gray-800/50 text-white'
+                  className='w-full p-4 text-sm text-white xl:text-md h-2/5 bg-gray-800/50'
                   placeholder='Deja tu mensaje aquí'
                   name='message'
                   id='message'
@@ -88,15 +88,15 @@ function Contact () {
           </>
             )
           : (
-          <div className='flex flex-col justify-center items-center gap-5 w-full p-5 relative overflow-hidden'>
-            <p className='text-blue-400 sm:text-4xl text-2xl text-center  font-open-san'>
+          <div className='relative flex flex-col items-center justify-center w-full gap-5 p-5 overflow-hidden'>
+            <p className='text-2xl text-center text-blue-400 sm:text-4xl font-open-san'>
               Has enviado tu información correctamente, ¡muchas gracias!
             </p>
             <div className='absolute bottom-0 left-0 w-full h-[100vh] z-50'>
               {showConfetti && <Confetti />}
             </div>
             <button
-              className='cursor-pointer z-50 bg-bghome border border-gray-200 text-gray-200 p-3 rounded-2xl '
+              className='z-50 p-3 text-gray-200 border border-gray-200 cursor-pointer bg-bghome rounded-2xl '
               onClick={() => location.reload()}>
               Recargar
             </button>

@@ -6,7 +6,7 @@ function InitialAnimate () {
       <img
         src='/img/logo.png'
         alt='logo'
-        className=' w-4/5 sm:w-1/4 2xl:w-2/5   '
+        className='w-4/5 sm:w-1/4 2xl:w-2/5'
       />
     </div>
   )

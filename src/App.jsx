@@ -61,9 +61,7 @@ function App () {
     }
   }, [])
 
-  useEffect(() => {
-
-  }, [])
+  useEffect(() => {}, [])
   return (
     <>
       {!initialAnimate
@@ -104,7 +102,7 @@ function App () {
 
           <main className='min-h-[100vh] w-full font-cambria bg-bghome z-0 '>
             <Home />
-            <Projects skillSection={skillSection}/>
+            <Projects skillSection={skillSection} />
             <Skills />
             <Contact />
           </main>
