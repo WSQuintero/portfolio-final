@@ -16,21 +16,21 @@ function Home ({ observerRef }) {
               <img
                 src='/img/rostro.png'
                 alt='rostro postulante'
-                className='mt-4 xl:mt-0 w-[60%] '
+                className='mt-4 xl:mt-0 w-[60%] sm:w-full xl:w-[60%] '
               />
             </div>
           </div>
 
           <div className='flex flex-col items-start justify-around   h-full xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px]'>
             <ul>
-              <li className='w-full text-xl text-title sm:text-2xl font-bevan'>
+              <li className='w-full text-lg text-title sm:text-2xl font-bevan'>
                 Desarrollador front-end
               </li>
               <li className='text-lg text-titlecolor xl:text-xl font-bevan'>
                 Diseñador visual
               </li>
             </ul>
-            <p className='text-parraf text-lg w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
+            <p className='text-parraf text-md sm:text-xl w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
               Fuertes habilidades en JavaScript, React, y tecnologías modernas
               como Tailwind CSS y Redux. Puedo construir sitios web totalmente
               funcionales con un diseño atractivo y efectivo

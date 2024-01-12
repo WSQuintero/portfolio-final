@@ -19,6 +19,22 @@ function Projects ({ skillSection }) {
 
   const swiperRef = useRef(null)
 
+  const swiperParams = {
+    spaceBetween: 40,
+    effect: 'cube',
+    navigation: true,
+    pagination: {
+      clickable: true
+    },
+    speed: 1200,
+    easing: 'easeInOutQuart',
+    autoplay: {
+      delay: 10000 // Ajusta el tiempo de delay según tus necesidades (en milisegundos)
+    },
+    modules: [EffectCube, Navigation, Pagination, Autoplay],
+    loading: 'lazy',
+    className: 'h-auto mySwiper'
+  }
   useEffect(() => {
     const swiperInstance = swiperRef.current.swiper
 
@@ -53,20 +69,10 @@ function Projects ({ skillSection }) {
         <div
           className='flex flex-col items-center justify-center w-full h-full xl:flex-row xl:mt-10 '
           ref={skillSection}>
-          <div className='relative flex items-center justify-center object-cover w-full h-full overflow-hidden xl:w-2/3 xl:ml-5 rounded-2xl font-open-san'>
+          <div className={`relative flex items-center justify-center object-cover w-full ${window.innerHeight >= 1024 && window.innerHeight > window.innerWidth ? 'h-full' : 'h-[300px]'} xl:h-full overflow-hidden xl:w-2/3 xl:ml-5 rounded-2xl font-open-san`}>
             <Swiper
               ref={swiperRef}
-              spaceBetween={100}
-              effect={'cube'}
-              navigation={true}
-              pagination={{
-                clickable: true
-              }}
-              speed={1200}
-              easing="easeInOutQuart"
-              autoplay={true}
-              modules={[EffectCube, Navigation, Pagination, Autoplay]}
-              loading='lazy'
+            {...swiperParams}
               className='h-auto mySwiper'>
               {projects.map((project) => (
                 <SwiperSlide key={project.project}>
@@ -95,7 +101,7 @@ function Projects ({ skillSection }) {
                 <h3 className='flex items-center justify-center w-full text-xl text-center text-titlecolor xl:text-xl bg-black/50 font-bevan '>
                   {projectName}
                 </h3>
-                <p className='sm:text-sm 2xl:text-xl text-parraf z-20 xl:w-full px-6  h-[70%] font-open-san'>
+                <p className='text-sm sm:text-lg 2xl:text-xl text-parraf z-20 xl:w-full px-3 xl:px-6  h-full font-open-san'>
                   {projectDescription}
                   <TecProjects tecs={projectTec} />
                 </p>

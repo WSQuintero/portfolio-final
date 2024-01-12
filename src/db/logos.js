@@ -10,5 +10,5 @@ export const logos = {
   photoshop: '/svg/photoshop.svg',
   sass: '/svg/sass.svg',
   tailwind: '/svg/tailwind.svg',
-  redux: '/svg/redux-logo.svg'
+  redux: '/svg/redux.svg'
 }

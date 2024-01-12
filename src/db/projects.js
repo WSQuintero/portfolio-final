@@ -4,7 +4,7 @@ export const projects = [
     imgDesktop: '/img/desktop/chatu.jpg',
     project: 'Chatu',
     description:
-      'Este proyecto es un chat en tiempo real con react y Redux para el frontend, Tailwind para estilos, Express y Socket.io para el backend. Permite autenticación segura, mensajería instantánea, gestión de amigos y recepción de mensajes sin conexión. Repositorio del backend: https://github.com/WSQuintero/Chatu-backend',
+      'Proyecto de chat en tiempo real con React y Redux para el frontend, Tailwind para estilos, Express y Socket.io para el backend. [Repositorio del backend](https://github.com/WSQuintero/Chatu-backend)',
     repo: 'https://github.com/WSQuintero/Chatu',
     link: 'https://chatu-two.vercel.app/',
     tec: [
@@ -12,9 +12,7 @@ export const projects = [
       '/svg/javascript.svg',
       '/svg/react.svg',
       '/svg/firebase.svg',
-      '/svg/redux-logo.svg',
-      '/svg/node.svg',
-      '/svg/tailwind.svg'
+      '/svg/redux.svg'
     ]
   },
   {
@@ -22,7 +20,7 @@ export const projects = [
     imgDesktop: '/img/desktop/shop.jpg',
     project: 'Shopi',
     description:
-      'Este proyecto permite a los usuarios crear cuentas, acceder al sistema mediante registro y autenticación en Firebase, agregar productos al carrito, guardarlos en el almacenamiento local y generar órdenes de compra que son almacenadas en una base de datos también Firebase.',
+      'Permite a los usuarios crear cuentas, acceder al sistema mediante registro y autenticación en Firebase, agregar productos al carrito, guardarlos en el almacenamiento local y generar órdenes de compra. ',
     repo: 'https://github.com/WSQuintero/Eshop-react',
     link: 'https://eshop-react-eight.vercel.app/',
     tec: [
@@ -37,7 +35,7 @@ export const projects = [
     imgDesktop: '/img/desktop/questions.jpg',
     project: 'QuestionsCreator',
     description:
-      'Aplicación web desarrollada con react, Firebase y Tailwind que brinda a usuarios la capacidad de registrarse como profesor o estudiante. Los profesores pueden crear cuestionarios personalizados, mientras que los estudiantes pueden realizarlos a través de códigos únicos para cada uno. Los resultados se envían automáticamente al profesor, facilitando un seguimiento efectivo del progreso académico.',
+      'Aplicación web con React, Firebase y Tailwind que permite a usuarios registrarse como profesores o estudiantes. Profesores crean cuestionarios, estudiantes los realizan con códigos únicos. ',
     repo: 'https://github.com/WSQuintero/QuestionsCreator',
     link: 'https://questions-creator.vercel.app/',
     tec: [
@@ -50,9 +48,9 @@ export const projects = [
   {
     imgMobile: '/img/a-silent.jpg',
     imgDesktop: '/img/desktop/a-silent.jpg',
-    project: 'A silent voice',
+    project: 'A Silent Voice',
     description:
-      'Un sitio web en react dedicado a la película "A Silent Voice" que muestra imágenes e información sobre la película.',
+      'Sitio web en React dedicado a la película "A Silent Voice" que muestra imágenes e información sobre la película. ',
     repo: 'https://github.com/WSQuintero/AsilentVoiceProject',
     link: 'https://asilent-voice-project.vercel.app/',
     tec: ['/svg/javascript.svg', '/svg/react.svg']
@@ -62,7 +60,7 @@ export const projects = [
     imgDesktop: '/img/desktop/weather.jpg',
     project: 'World Weather',
     description:
-      '"World Weather" es una aplicación web que te permite obtener información actualizada sobre el clima de cualquier ubicación en el mundo. Utiliza react como framework front-end para construir la interfaz de usuario dinámica y atractiva. La estilización de la aplicación se logra con SASS, lo que le proporciona un diseño atractivo y personalizado.',
+      '"World Weather" es una aplicación web que proporciona información actualizada sobre el clima de cualquier ubicación en el mundo. Utiliza React y SASS para la estilización.',
     repo: 'https://github.com/WSQuintero/world_weather',
     link: 'https://world-weather-taupe.vercel.app/',
     tec: [
@@ -77,7 +75,7 @@ export const projects = [
     imgDesktop: '/img/desktop/movie.jpg',
     project: 'MovieDb',
     description:
-      'Proyecto de sitio web sobre películas creado utilizando HTML, CSS y JavaScript. Este proyecto tiene como objetivo permitir a los usuarios explorar los detalles de las películas, buscar por nombre, ordenar por categoría y seleccionar películas favoritas para guardarlas en el almacenamiento local del navegador. Se ha trabajado para lograr una interfaz fácil de usar.',
+      'Proyecto de sitio web sobre películas creado con HTML, CSS y JavaScript. Permite explorar detalles de películas, buscar por nombre, ordenar por categoría y guardar películas favoritas en el almacenamiento local del navegador. ',
     repo: 'https://github.com/WSQuintero/API_DB_Movie',
     link: 'https://wsquintero.github.io/API_DB_Movie/',
     tec: ['/svg/html.svg', '/svg/css.svg', '/svg/javascript.svg']
