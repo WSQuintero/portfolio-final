@@ -24,10 +24,10 @@ body {
   background-size: cover;
 }
 
-.swiper-slide img {
+/* .swiper-slide img {
   display: block;
   width: 100%;
-}
+} */
 
 @keyframes fade-in-once {
   from {
