@@ -9,7 +9,7 @@ function ProjectGallery ({ swiperRef, showVideo, handleMouseLeave, handleHoverIm
     <Swiper
     ref={swiperRef}
     {...swiperParams}
-    className='h-[88%] xl:h-full mySwiper  flex justify-center items-center w-full'>
+    className='h-[88%] xl:h-full mySwiper  flex justify-center items-center w-full '>
     {projects.map((project) => (
       <SwiperSlide key={project.project} onMouseLeave={handleMouseLeave} onClick={handleHoverImg} onMouseOver={handleHoverImg}>
         {!showVideo
