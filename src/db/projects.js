@@ -13,7 +13,8 @@ export const projects = [
       '/svg/react.svg',
       '/svg/firebase.svg',
       '/svg/redux.svg'
-    ]
+    ],
+    video: '/video/chatu.mp4'
   },
   {
     imgMobile: '/img/shop.jpg',
@@ -28,7 +29,8 @@ export const projects = [
       '/svg/react.svg',
       '/svg/tailwind.svg',
       '/svg/firebase.svg'
-    ]
+    ],
+    video: '/video/shopi.mp4'
   },
   {
     imgMobile: '/img/questions.jpg',
@@ -43,7 +45,8 @@ export const projects = [
       '/svg/react.svg',
       '/svg/tailwind.svg',
       '/svg/firebase.svg'
-    ]
+    ],
+    video: '/video/questions.mp4'
   },
   {
     imgMobile: '/img/a-silent.jpg',
@@ -53,7 +56,8 @@ export const projects = [
       'Sitio web en React dedicado a la película "A Silent Voice" que muestra imágenes e información sobre la película. ',
     repo: 'https://github.com/WSQuintero/AsilentVoiceProject',
     link: 'https://asilent-voice-project.vercel.app/',
-    tec: ['/svg/javascript.svg', '/svg/react.svg']
+    tec: ['/svg/javascript.svg', '/svg/react.svg'],
+    video: '/video/silent.mp4'
   },
   {
     imgMobile: '/img/weather.jpg',
@@ -68,7 +72,8 @@ export const projects = [
       '/svg/sass.svg',
       '/svg/javascript.svg',
       '/svg/react.svg'
-    ]
+    ],
+    video: '/video/weather.mp4'
   },
   {
     imgMobile: '/img/movie.jpg',
@@ -78,6 +83,7 @@ export const projects = [
       'Proyecto de sitio web sobre películas creado con HTML, CSS y JavaScript. Permite explorar detalles de películas, buscar por nombre, ordenar por categoría y guardar películas favoritas en el almacenamiento local del navegador. ',
     repo: 'https://github.com/WSQuintero/API_DB_Movie',
     link: 'https://wsquintero.github.io/API_DB_Movie/',
-    tec: ['/svg/html.svg', '/svg/css.svg', '/svg/javascript.svg']
+    tec: ['/svg/html.svg', '/svg/css.svg', '/svg/javascript.svg'],
+    video: '/video/movie.mp4'
   }
 ]

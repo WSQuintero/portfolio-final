@@ -29,3 +29,17 @@ body {
   width: 100%;
 }
 
+@keyframes fade-in-once {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-once {
+  animation: fade-in-once 500ms ease-in-out forwards;
+}
+
+
