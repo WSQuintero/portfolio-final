@@ -1,12 +1,9 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import { logos } from '../../db/logos'
-import { Certificates } from '../Certificates/Certificates'
 import { useAnimateSkills } from '../../customHooks/useAnimateSkills'
 import './Skills.css'
 
 function Skills () {
-  const [cetificatesOpen, setCetificatesOpen] = useState(false)
-
   const elements = useRef(null)
   const observerRight = useRef(null)
   const observerLeft = useRef(null)
@@ -21,12 +18,11 @@ function Skills () {
 
   return (
     <section
-      className='h-[100vh] sm:h-[100vh] flex w-full xl:flex-col justify-center items-center bg-bghome p-3  '
+      className='h-auto mt-20 sm:h-[100vh] flex flex-col w-[80%] xl:flex-col justify-center items-center  p-3  '
       id='skills'>
-      <div className='flex flex-col border border-titlecolordark w-full h-full'>
-        <h3 className='font-bevan text-xl mt-7 bg-bghometwo/60 w-full  text-titlecolor p-2 bg-blend-multiply text-center'>
-          HABILIDADES
-        </h3>
+            <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor'>
+          Habilidades
+        </h2>
         <div
           className='relative  flex xl:flex-row flex-col justify-center items-center w-full h-full overflow-hidden background-js'
           ref={skillSectionTwo}>
@@ -65,17 +61,9 @@ function Skills () {
             <p className='xl:border-b border-t xl:border-t-transparent border-titlecolordark text-titlecolordark  w-[300px] p-5 xl:h-[50px]  xl:pb-10 font-bevan text-center text-md xl:text-3xl'>
               {actualSkillRight.toUpperCase()}
             </p>
-            <button
-              className='bg-white h-[30px] rounded-2xl font-semibold mb-5 xl:mb-0 text-bghometwo font-open-san'
-              onClick={() => setCetificatesOpen(true)}>
-              Certificados
-            </button>
           </div>
         </div>
-      </div>
-      {cetificatesOpen && (
-        <Certificates setCetificatesOpen={setCetificatesOpen} />
-      )}
+
     </section>
   )
 }

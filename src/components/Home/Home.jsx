@@ -4,24 +4,23 @@ import './Home.css'
 function Home ({ observerRef }) {
   return (
     <section
-      className=' w-full h-[100vh] bg-bghome  flex flex-col justify-center items-center'
+      className=' w-[80%] h-auto lg:h-[100vh]  flex flex-col justify-around items-center'
       id='home'>
-      <div className=' border border-titlecolordark flex  flex-col  justify-center items-center w-11/12 h-[97%] xl:w-[98%]  '>
-        <div className='flex justify-center xl:justify-around items-center  h-[85%] xl:h-[75%] xl:mt-10  w-full xl:flex-row flex-col '>
-          <div className=' flex flex-col items-center justify-center gap-3 w-full xl:w-[50%] '>
-            <div className='flex flex-col items-center justify-center p-5 border-l border-r border-gray-300/20 background '>
-              <h1 className='w-full p-3 text-xl border-b text-titlecolor xl:text-4xl whitespace-break-spaces font-bevan test border-parraf'>
+        <div className='flex justify- gap-20 lg:justify-between items-center   mt-20  w-full lg:flex-row flex-col  h-auto'>
+          <div className=' flex flex-col items-left justify-around gap-3 w-[50%] min-w-[300px] h-[30%]  '>
+            <div className='flex flex-col items-center justify-between border-l border-r border-gray-300/20   '>
+              <h1 className='w-full p-2 text-xl border-b text-titlecolor xl:text-4xl whitespace-break-spaces font-bevan test border-parraf'>
                 Santiago Quintero
               </h1>
               <img
                 src='/img/rostro.png'
                 alt='rostro postulante'
-                className='mt-4 xl:mt-0 w-[60%] sm:w-full xl:w-[60%] '
+                className=' xl:mt-0 w-[60%] sm:w-full xl:w-[60%]  max-w-[300px] min-w-[250px] '
               />
             </div>
           </div>
 
-          <div className='flex flex-col items-start justify-around   h-full xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px]'>
+          <div className='flex flex-col items-start justify-around   h-[30%] xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px]'>
             <ul>
               <li className='w-full text-lg text-title sm:text-2xl font-bevan'>
                 Desarrollador front-end
@@ -30,7 +29,7 @@ function Home ({ observerRef }) {
                 Diseñador visual
               </li>
             </ul>
-            <p className='text-parraf text-md sm:text-xl w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
+            <p className='text-parraf text-md  w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
               Fuertes habilidades en JavaScript, React, y tecnologías modernas
               como Tailwind CSS y Redux. Puedo construir sitios web totalmente
               funcionales con un diseño atractivo y efectivo
@@ -39,21 +38,21 @@ function Home ({ observerRef }) {
             <div className='flex w-full  items-center h-[40px] mt-3 xl:mt-auto gap-2'>
               <a
                 href='#projects'
-                className='border h-[40px] border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto text-titlecolordark w-[120px] text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                className='border h-[40px] border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto text-titlecolordark w-[120px] text-center  hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                 Proyectos
               </a>
               <a
                 href='#contact'
-                className='border h-[40px] border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto text-titlecolordark w-[120px] text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
+                className='border h-[40px] border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto text-titlecolordark w-[120px] text-center  hover:bg-gray-200 hover:text-bghometwo hover:font-bold'>
                 Contáctame
               </a>
-              <div className='w-[50%] text-center bg-bghome  h-[40px] mt-5 xl:mt-0'>
+              <div className='w-[50%] text-center   h-[40px] mt-5 xl:mt-0'>
                 <ul className='flex flex-row items-center justify-center w-full gap-3 xl:h-full'>
                   <li>
                     <a
                       href='https://github.com/WSQuintero'
                       target='_about:blank'
-                      className='border border-titlecolordark  rounded-xl  xl:mt-auto text-titlecolordark  text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold h-[40px] flex justify-center items-center'>
+                      className='border border-titlecolordark  rounded-xl  xl:mt-auto text-titlecolordark  text-center  hover:bg-gray-200 hover:text-bghometwo hover:font-bold h-[40px] flex justify-center items-center'>
                       <img
                         src='/svg/github.svg'
                         alt='logo github'
@@ -68,7 +67,7 @@ function Home ({ observerRef }) {
                     <a
                       href='https://www.linkedin.com/in/webdevsantiagoquintero/'
                       target='_about:blank'
-                      className='border border-titlecolordark  rounded-xl  flex justify-center items-center xl:mt-auto text-titlecolordark  text-center bg-bghome hover:bg-gray-200 hover:text-bghometwo hover:font-bold h-[40px]'>
+                      className='border border-titlecolordark  rounded-xl  flex justify-center items-center xl:mt-auto text-titlecolordark  text-center  hover:bg-gray-200 hover:text-bghometwo hover:font-bold h-[40px]'>
                       <img
                         src='/svg/linkedin.svg'
                         alt='logo likedin'
@@ -84,7 +83,6 @@ function Home ({ observerRef }) {
             </div>
           </div>
         </div>
-      </div>
     </section>
   )
 }

@@ -9,12 +9,12 @@ function ProjectGallery ({ swiperRef, showVideo, handleMouseLeave, handleHoverIm
     <Swiper
     ref={swiperRef}
     {...swiperParams}
-    className='h-[88%] xl:h-full mySwiper  flex justify-center items-center w-full '>
+    className='h-[88%] xl:h-full mySwiper  flex justify-center items-center w-full rounded-3xl  '>
     {projects.map((project) => (
       <SwiperSlide key={project.project} onMouseLeave={handleMouseLeave} onClick={handleHoverImg} onMouseOver={handleHoverImg}>
         {!showVideo
           ? (
-            <div className=' flex justify-center items-center relative w-full h-full'>
+            <div className=' flex justify-center items-center relative w-full  overflow-hidden rounded-3xl '>
 
               <img
                 src={
@@ -28,7 +28,7 @@ function ProjectGallery ({ swiperRef, showVideo, handleMouseLeave, handleHoverIm
                 data-repo={project.repo}
                 data-tec={project.tec}
                 alt='project'
-                className='object-contain h-full rounded-2xl animate-fade-in-once z-0 object-center  '
+                className='object-cover h-full w-full rounded-3xl animate-fade-in-once z-0   '
                 loading='lazy'
               />
               {window.innerWidth < 1040 && showHand &&
@@ -55,8 +55,8 @@ function ProjectGallery ({ swiperRef, showVideo, handleMouseLeave, handleHoverIm
             data-tec={project.tec}
             alt='project'
             onMouseLeave={handleMouseLeave}
-            className='object-contain w-full h-full rounded-2xl animate-fade-in-once '
-          >
+            className='object-contain h-full  rounded-3xl animate-fade-in-once z-0   '
+            >
             <source src={project.video} type='video/mp4' />
             Tu navegador no soporta el tag de video.
           </video>

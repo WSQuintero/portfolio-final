@@ -9,11 +9,10 @@
   100%{
     transform: rotate(-360deg) ;
   }
-  
+
 }
 
 .background-js{
-  background-image: url("/img/fondo-js.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -14,16 +14,15 @@ function Contact () {
 
   return (
     <section
-      className='w-full h-[100vh] bg-bghome p-3 flex justify-center items-center  '
+      className='w-full h-[100vh]  p-3 flex justify-center items-center  '
       id='contact'>
-      <div className='relative flex items-center justify-center w-full h-full border border-titlecolordark'>
         {!state.succeeded
           ? (
           <>
             <div className=' w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col '>
-              <h3 className='w-full p-2 text-xl text-center font-bevan xl:absolute top-7 bg-bghometwo/60 text-titlecolor bg-blend-multiply'>
-                CONTÁCTAME
-              </h3>
+            <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor'>
+                Contáctame
+              </h2>
               <form
                 action='https://formspree.io/f/xrgwpvgz'
                 method='POST'
@@ -102,7 +101,6 @@ function Contact () {
             </button>
           </div>
             )}
-      </div>
     </section>
   )
 }

@@ -5,7 +5,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
     <>
       {' '}
       {isBurguerMenu && (
-        <ul className='flex lg:flex-row flex-col  lg:h-full items-center justify-around w-full lg:w-[70%] p-3 gap-3 '>
+        <ul className='flex lg:flex-row flex-col  lg:h-full items-center justify-around w-full lg:w-[70%] p-3 gap-3 text-nowrap '>
           <li>
             <a
               href='#home'
@@ -24,6 +24,16 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                 setIsBurguerMenu(innerWidth > 1024)
               }}>
               Proyectos
+            </a>
+          </li>
+          <li>
+            <a
+              href='#about-me'
+              className='pages  w-[200px] '
+              onClick={() => {
+                setIsBurguerMenu(innerWidth > 1024)
+              }}>
+              Sobre mí
             </a>
           </li>
           <li>

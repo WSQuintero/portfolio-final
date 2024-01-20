@@ -9,11 +9,11 @@ function ProjectInformation ({
 }) {
   return (
     <>  {projectName && projectDescription && projectTec && (
-      <aside className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3  mt-10 '>
+      <aside className='flex flex-col justify-center items-center h-[50%] w-full xl:w-1/3 gap-3  mt-20 text-pretty z-50 '>
           <h3 className='flex items-center justify-center w-full text-xl text-center text-titlecolor xl:text-xl bg-black/50 font-bevan '>
             {projectName}
           </h3>
-          <p className='text-sm sm:text-lg 2xl:text-xl text-parraf z-20 xl:w-full px-3 xl:px-6  h-full font-open-san'>
+          <p className='text-parraf z-20 xl:w-full px-3 xl:px-6  h-full font-open-san'>
             {projectDescription}
             <TecProjects tecs={projectTec} />
           </p>

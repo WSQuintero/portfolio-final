@@ -8,6 +8,7 @@ import { InitialAnimate } from './components/InitialAnimate/InitialAnimate'
 import { IconContext } from 'react-icons'
 import { TbArrowBigLeftLines, TbArrowBigRightLines } from 'react-icons/tb'
 import './App.css'
+import EducationSection from './components/EducationSection/EducationSection'
 
 function App () {
   const [isBurguerMenu, setIsBurguerMenu] = useState(false)
@@ -100,9 +101,10 @@ function App () {
             />
           </header>
 
-          <main className='min-h-[100vh] w-full font-cambria bg-bghome z-0 '>
+          <main className='min-h-[100vh] w-full font-cambria dark:bg-bghometwo flex flex-col justify-center items-center   z-0 '>
             <Home />
             <Projects skillSection={skillSection} />
+            <EducationSection/>
             <Skills />
             <Contact />
           </main>

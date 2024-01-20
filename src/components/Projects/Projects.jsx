@@ -20,7 +20,7 @@ function Projects ({ skillSection }) {
   const [showHand, setShowHand] = useState(true)
   const swiperRef = useRef(null)
 
-  const galleryContainer = 'relative flex items-center justify-center xl:w-[70%] w-full   xl:h-[430px] mt-3  xl:ml-5 rounded-2xl font-open-san '
+  const galleryContainer = 'relative flex items-center justify-center xl:w-[60%] w-full   xl:h-full  xl:ml-5 rounded-2xl font-open-san '
 
   useListenVideo({ setShowVideo, setShowHand })
   useShowVideo({
@@ -59,15 +59,14 @@ function Projects ({ skillSection }) {
 
   return (
     <section
-      className='w-full h-[100vh]  bg-gradient-radial relative p-3'
+      className='w-[80%] min-h-[50vh]  relative p-3 flex flex-col justify-start items-center'
       onMouseOver={handleMouseLeave}
       id='projects'>
-      <div className='relative flex flex-col items-center justify-center w-full h-full  border border-titlecolordark xl:flex-row'>
-        <h3 className='w-full p-2 text-xl text-center font-bevan mt-7 xl:absolute top-7 bg-bghometwo/60 text-titlecolor bg-blend-multiply'>
-          PROYECTOS
-        </h3>
+            <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
+          Proyectos
+        </h2>
         <div
-          className='flex flex-col items-center justify-center xl:mt-5 w-full h-full xl:flex-row  '
+          className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start'} xl:flex-row  w-full overflow-hidden lg:h-full`}
           ref={skillSection}>
           <div className={galleryContainer}>
             <ProjectGallery
@@ -86,7 +85,6 @@ function Projects ({ skillSection }) {
             projectLink={projectLink}
           />
         </div>
-      </div>
     </section>
   )
 }

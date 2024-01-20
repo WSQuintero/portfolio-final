@@ -13,7 +13,7 @@ function Certificates ({ setCetificatesOpen }) {
   }, [])
 
   return (
-    <div className='   bg-bghome w-full h-[100vh] p-5 z-50 absolute'>
+    <div className='   bg-bghome w-full h-[100vh] p-5 z-50 fixed top-0'>
       <button
         onClick={() => setCetificatesOpen(false)}
         className='text-2xl w-[50px] h-[50px] flex justify-center items-center  text-titlecolordark  hover:text-gray-200 z-50 absolute right-5 xl:right-20 border-2 border-titlecolor rounded-full bg-white top-10 font-bold font-sans'>
@@ -23,6 +23,7 @@ function Certificates ({ setCetificatesOpen }) {
         items={imagesStudies}
         additionalClass='image-gallery'
         thumbnailPosition={isMobileVersion ? 'bottom' : 'left'}
+        className="rounded-3xl"
       />
     </div>
   )
