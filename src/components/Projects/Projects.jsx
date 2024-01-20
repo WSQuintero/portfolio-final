@@ -66,7 +66,7 @@ function Projects ({ skillSection }) {
           Proyectos
         </h2>
         <div
-          className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start'} xl:flex-row  w-full overflow-hidden lg:h-full`}
+          className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start lg:justify-center mt-10'} xl:flex-row  w-full overflow-hidden lg:h-full`}
           ref={skillSection}>
           <div className={galleryContainer}>
             <ProjectGallery

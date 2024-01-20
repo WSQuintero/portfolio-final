@@ -43,7 +43,7 @@ function EducationSection () {
           />
         </div>
 
-        <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-5'>
+        <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
           Estudios{' '}
         </h2>
         <div className='mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 '>
