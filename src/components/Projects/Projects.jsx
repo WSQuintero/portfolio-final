@@ -62,7 +62,7 @@ function Projects ({ skillSection }) {
       className='w-[80%] min-h-[50vh]  relative p-3 flex flex-col justify-start items-center'
       onMouseOver={handleMouseLeave}
       id='projects'>
-            <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
+            <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
           Proyectos
         </h2>
         <div

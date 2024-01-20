@@ -6,9 +6,9 @@ import { NavBar } from './components/NavBar/NavBar'
 import { useEffect, useRef, useState } from 'react'
 import { InitialAnimate } from './components/InitialAnimate/InitialAnimate'
 import { IconContext } from 'react-icons'
-import { TbArrowBigLeftLines, TbArrowBigRightLines } from 'react-icons/tb'
-import './App.css'
 import EducationSection from './components/EducationSection/EducationSection'
+import { IoMdMenu } from 'react-icons/io'
+import './App.css'
 
 function App () {
   const [isBurguerMenu, setIsBurguerMenu] = useState(false)
@@ -20,7 +20,9 @@ function App () {
   const headerStyles = ` flex justify-center lg:justify-end  text-gray-200 w-full ${
     isBurguerMenu ? 'h-[90vh] bg-bghome' : 'h-[40px] bg-bghome'
   } lg:h-[80px] z-40   items-center fixed lg:pr-20 ${
-    isOpenHeader ? 'animation' : 'close-animation -translate-x-full '
+    isOpenHeader
+      ? 'animation'
+      : 'close-animation -translate-x-full font-open-sans '
   }`
 
   useEffect(() => {
@@ -71,27 +73,17 @@ function App () {
           )
         : (
         <>
-          {window.innerWidth >= 1024 && (
+
             <button
-              className='w-[100px] h-[100px] rounded-full border-4 z-50 grid place-content-center border-titlecolordark fixed top-2 right-2 bg-bghome '
+              className='w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghome '
               onClick={() => {
                 setIsOpenHeader(!isOpenHeader)
               }}>
-              {isOpenHeader
-                ? (
-                <IconContext.Provider
-                  value={{ size: '40px', color: 'rgb(21, 179, 179)' }}>
-                  <TbArrowBigRightLines />
-                </IconContext.Provider>
-                  )
-                : (
-                <IconContext.Provider
-                  value={{ size: '40px', color: 'rgb(21, 179, 179)' }}>
-                  <TbArrowBigLeftLines />
-                </IconContext.Provider>
-                  )}
+              <IconContext.Provider
+                value={{ size: '30px', color: 'rgb(21, 179, 179)' }}>
+                <IoMdMenu />
+              </IconContext.Provider>
             </button>
-          )}
 
           <header className={headerStyles}>
             <NavBar
@@ -101,10 +93,10 @@ function App () {
             />
           </header>
 
-          <main className='min-h-[100vh] w-full font-cambria dark:bg-bghometwo flex flex-col justify-center items-center   z-0 '>
+          <main className='min-h-[100vh] w-full font-opens-sans dark:bg-bghometwo flex flex-col justify-center items-center   z-0 '>
             <Home />
             <Projects skillSection={skillSection} />
-            <EducationSection/>
+            <EducationSection />
             <Skills />
             <Contact />
           </main>

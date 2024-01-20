@@ -10,25 +10,24 @@ function EducationSection () {
   return (
     <section id="about-me" className=' text-white font-open-san relative flex flex-col justify-center items-center'>
       <div className=' py-8 sm:px-6 sm:py-12  lg:py-16 flex flex-col justify-center items-center w-[80%]'>
-      <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor'>
+      <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
           Sobre mí
         </h2>
         <div className=' max-w-full  flex flex-col gap-5 lg:flex-row items-center justify-center xl:justify-between mt-5'>
           <div className='text-center lg:text-left text-pretty w-full xl:w-[70%] px-5'>
             <p className='mt-4 text-gray-300 w-full'>
               Soy Santiago Quintero. Mis primeros pasos en la programación
-              fueron con Java y C++, durante mis estudios en el técnico en
-              sistemas en 2014. Desde entonces,
+              fueron con Java y C++ durante mis estudios en 2014. Desde entonces,
               <strong className='text-titlecolordark'>
                 {' '}he venido ampliando mi dominio en JavaScript, React y otras
                 tecnologías afines.</strong> Este progreso ha sido fortalecido a través
                 de mi formación continua, destacando mis estudios posteriores en
-                el tecnólogo en gestión de proyectos web y el profesional en
+                tecnología en gestión de proyectos web y profesional en
                 diseño visual.
 
             </p>
             <p className='mt-4 text-gray-300 w-full '>
-              En mi trayectoria educativa,<strong className='text-titlecolordark'> me he destacado por mi profundo
+              En mi trayectoria educativa<strong className='text-titlecolordark'> me he destacado por mi profundo
               interés en colaborar con mis compañeros.</strong> Siempre busco soluciones
               a las preguntas que surgen, ofreciendo apoyo continuo para
               garantizar una comprensión más profunda de los conceptos
@@ -43,7 +42,8 @@ function EducationSection () {
           />
         </div>
 
-        <h2 className='text-xl py-2 px-5 font-bevan font-bold w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
+        <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-white mt-10'>
+
           Estudios{' '}
         </h2>
         <div className='mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 '>
