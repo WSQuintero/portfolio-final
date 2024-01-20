@@ -15,7 +15,7 @@ function Home ({ observerRef }) {
               <img
                 src='/img/rostro.png'
                 alt='rostro postulante'
-                className=' xl:mt-0 w-[60%] sm:w-full xl:w-[60%]  max-w-[300px] min-w-[250px] '
+                className=' xl:mt-0 w-[60%] sm:w-full xl:w-[60%]  max-w-[300px] 2xl:max-w-[600px] min-w-[250px] '
               />
             </div>
           </div>
