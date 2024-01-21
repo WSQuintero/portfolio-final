@@ -14,50 +14,42 @@ function Contact () {
 
   return (
     <section
-      className='w-full h-[100vh]  p-3 flex justify-center items-center  '
+      className='w-full h-[100vh]  p-3 flex justify-center items-center dark:bg-dark-background'
       id='contact'>
       {!state.succeeded
         ? (
         <>
           <div className=' w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col '>
-            <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
+          <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordarklight/60 mt-10'>
               Contáctame
             </h2>
             <form
               action='https://formspree.io/f/xrgwpvgz'
               method='POST'
               onSubmit={handleSubmit}
-              className='flex flex-col gap-2 w-full h-[75%] justify-center items-center  rounded-3xl bg-gray-800/50 p-6 mt-10 text-white  font-open-san'>
+              className='flex flex-col gap-2 w-full h-[75%] justify-center items-center rounded-3xl dark:bg-bghome/50 bg-titlecolorlight/10 p-6 mt-10 dark:text-bghomelight text-bghometwo  font-open-san'>
               <input
                 type='text'
-                className='text-sm xl:text-md w-full p-2 h-[35px] bg-gray-800/50 pl-5'
+                className='text-sm xl:text-md w-full p-2 h-[35px] pl-5 dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                 placeholder='Nombre'
                 name='name'
                 id='name'
                 required
               />
-              <ValidationError
-                prefix='Name'
-                field='name'
-                errors={state.errors}
-              />
-              <div className='flex justify-between h-[35px] mb-5 relative w-full text-white'>
+              <ValidationError prefix='Name' field='name' errors={state.errors} />
+              <div className='flex justify-between h-[35px] mb-5 relative w-full dark:text-bghomelight text-bghometwo'>
                 <input
                   type='email'
-                  className='text-sm xl:text-md  w-[60%] p-4 full bg-gray-800/50'
+                  className='text-sm xl:text-md w-[60%] p-4 full dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                   placeholder='Correo electrónico'
                   name='email'
                   id='email'
                   required
                 />
-                <ValidationError
-                  prefix='Email'
-                  field='email'
-                  errors={state.errors}
-                />
+                <ValidationError prefix='Email' field='email' errors={state.errors} />
                 <input
                   type='text'
-                  className='text-sm xl:text-md w-[35%] p-4 bg-gray-800/50'
+                  className='text-sm xl:text-md w-[35%] p-4 dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                   placeholder='Telefono'
                   name='tel'
                   required
@@ -65,17 +57,13 @@ function Contact () {
                 <ValidationError field='tel' errors={state.errors} />
               </div>
               <textarea
-                className='w-full p-4 text-sm text-white xl:text-md h-2/5 bg-gray-800/50'
+                className='w-full p-4 text-sm dark:text-bghomelight dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                 placeholder='Deja tu mensaje aquí'
                 name='message'
                 id='message'
                 required
               />
-              <ValidationError
-                prefix='Message'
-                field='message'
-                errors={state.errors}
-              />
+              <ValidationError prefix='Message' field='message' errors={state.errors} />
 
               <button
                 className='mt-5 inline-block rounded bg-titlecolordark px-12 py-3 text-sm font-bold text-white transition hover:bg-titlecolor hover:text-bghometwo focus:outline-none focus:ring focus:ring-yellow-400'
@@ -96,7 +84,7 @@ function Contact () {
             {showConfetti && <Confetti />}
           </div>
           <button
-            className='z-50 p-3 text-gray-200 border border-gray-200 cursor-pointer bg-bghome rounded-2xl '
+            className='z-50 p-3 text-gray-200 border border-gray-200 cursor-pointer bg-bghome dark:bg-dark-bghome rounded-2xl '
             onClick={() => location.reload()}>
             Recargar
           </button>

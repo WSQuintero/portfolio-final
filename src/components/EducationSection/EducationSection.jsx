@@ -8,14 +8,14 @@ function EducationSection () {
   const [openCertificate, setOpenCertificate] = useState(null)
 
   return (
-    <section id="about-me" className=' text-white font-open-san relative flex flex-col justify-center items-center'>
-      <div className=' py-8 sm:px-6 sm:py-12  lg:py-16 flex flex-col justify-center items-center w-[80%]'>
-      <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
+    <section id="about-me" className='dark:text-bghomelight text-bghometwo font-open-san relative flex flex-col justify-center items-center dark:bg-dark-background'>
+      <div className='py-8 sm:px-6 sm:py-12 lg:py-16 flex flex-col justify-center items-center w-[80%]'>
+      <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordarklight/60 mt-10'>
           Sobre mí
         </h2>
-        <div className=' max-w-full  flex flex-col gap-5 lg:flex-row items-center justify-center xl:justify-between mt-5'>
+        <div className='max-w-full flex flex-col gap-5 lg:flex-row items-center justify-center xl:justify-between mt-5'>
           <div className='text-center lg:text-left text-pretty w-full xl:w-[70%] px-5'>
-            <p className='mt-4 text-gray-300 w-full'>
+            <p className='mt-4 dark:text-parraf  w-full'>
               Soy Santiago Quintero. Mis primeros pasos en la programación
               fueron con Java y C++ durante mis estudios en 2014. Desde entonces,
               <strong className='text-titlecolordark'>
@@ -26,7 +26,7 @@ function EducationSection () {
                 diseño visual.
 
             </p>
-            <p className='mt-4 text-gray-300 w-full '>
+            <p className='mt-4 dark:text-gray-300 w-full '>
               En mi trayectoria educativa<strong className='text-titlecolordark'> me he destacado por mi profundo
               interés en colaborar con mis compañeros.</strong> Siempre busco soluciones
               a las preguntas que surgen, ofreciendo apoyo continuo para
@@ -42,7 +42,7 @@ function EducationSection () {
           />
         </div>
 
-        <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-white mt-10'>
+        <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordarklight/60 mt-10'>
 
           Estudios{' '}
         </h2>
@@ -50,13 +50,13 @@ function EducationSection () {
           {principalStudies.map((studie, index) => (
             <React.Fragment key={studie.studie}>
               <button
-                className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-titlecolordark/10 hover:shadow-titlecolordark/10 relative overflow-hidden'
+                className='block rounded-xl border dark:border-bghome border-bghometwo p-8 shadow-xl transition dark:hover:border-titlecolordark/10 border-titlecolordarklight/10 dark:hover:shadow-titlecolordark/10 hover:shadow-titlecolordarklight/40 relative overflow-hidden'
                 onClick={() =>
                   setOpenCertificate(principalStudies[index].diploma)
                 }>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  className='h-10 w-10 text-pink-500'
+                  className='h-10 w-10 dark:text-pink-500'
                   fill='none'
                   viewBox='0 0 24 24'
                   stroke='rgb(21, 179, 179)'>
@@ -70,12 +70,12 @@ function EducationSection () {
                   />
                 </svg>
 
-                <h2 className='mt-4 text-md font-bevan  text-white'>
+                <h2 className='mt-4 text-md font-bevan dark:text-bghomelight text-bghometwo/80'>
                   {studie.studie}
                 </h2>
 
-                <p className='mt-1 text-sm text-gray-300'>{studie.school}</p>
-                <p className='mt-1 text-sm text-gray-300'>
+                <p className='mt-1 text-sm dark:text-parraf text-parraflight'>{studie.school}</p>
+                <p className='mt-1 text-sm dark:text-parraf text-parraflight'>
                   {studie.description}
                 </p>
               </button>

@@ -20,7 +20,7 @@ function Skills () {
     <section
       className='h-auto sm:h-[100vh] flex flex-col w-[80%] xl:flex-col justify-center items-center  p-3  '
       id='skills'>
-      <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5   text-left text-titlecolor mt-10'>
+      <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordarklight/60 mt-10'>
         Habilidades
       </h2>
       <div
@@ -58,7 +58,7 @@ function Skills () {
           </div>
         </div>
         <div className='flex flex-col gap-5 mt-5'>
-          <p className='xl:border-b border-t xl:border-t-transparent border-titlecolordark text-white  w-[300px] p-5 xl:h-[50px]  xl:pb-10 font-bevan text-center text-md xl:text-xl'>
+          <p className='xl:border-b border-t xl:border-t-transparent border-titlecolordark dark:text-white text-titlecolordark  w-[300px] p-5 xl:h-[50px]  xl:pb-10 font-bevan text-center text-md xl:text-xl'>
             {actualSkillRight.toUpperCase()}
           </p>
         </div>

@@ -15,11 +15,12 @@ function App () {
   const [innerWidth, SetInnerWidth] = useState(window.innerWidth)
   const [initialAnimate, setInitialAnimate] = useState(false)
   const [isOpenHeader, setIsOpenHeader] = useState(true)
+  const [openToogleMenu, setOpenToogleMenu] = useState(false)
   const skillSection = useRef(null)
 
-  const headerStyles = ` flex justify-center lg:justify-end  text-gray-200 w-full ${
-    isBurguerMenu ? 'h-[90vh] bg-bghome' : 'h-[40px] bg-bghome'
-  } lg:h-[80px] z-40   items-center fixed lg:pr-20 ${
+  const headerStyles = ` flex justify-center lg:justify-end  dark:text-parraf w-full ${
+    isBurguerMenu ? 'h-[90vh] bg-bghomelight dark:bg-bghome' : 'h-[40px] dark:bg-bghome bg-bghomelight'
+  } lg:h-[80px] z-40 py-7  items-center fixed lg:pr-20 ${
     isOpenHeader
       ? 'animation'
       : 'close-animation -translate-x-full font-open-sans '
@@ -75,12 +76,13 @@ function App () {
         <>
 
             <button
-              className='w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghome '
-              onClick={() => {
+              className='w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordarklight dark:border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghomelight dark:bg-bghome '
+              onClick={(event) => {
+                event.stopPropagation()
                 setIsOpenHeader(!isOpenHeader)
               }}>
               <IconContext.Provider
-                value={{ size: '30px', color: 'rgb(21, 179, 179)' }}>
+                value={{ size: '30px', className: 'dark:text-titlecolordark text-titlecolordarklight' }}>
                 <IoMdMenu />
               </IconContext.Provider>
             </button>
@@ -90,11 +92,13 @@ function App () {
               isBurguerMenu={isBurguerMenu}
               setIsBurguerMenu={setIsBurguerMenu}
               innerWidth={innerWidth}
+              openToogleMenu={openToogleMenu}
+              setOpenToogleMenu={setOpenToogleMenu}
             />
           </header>
 
-          <main className='min-h-[100vh] w-full font-opens-sans dark:bg-bghometwo flex flex-col justify-center items-center   z-0 '>
-            <Home />
+          <main className='min-h-[100vh] w-full font-opens-sans text-titlecolor bg-bghomelight dark:bg-bghometwo flex flex-col justify-center items-center   z-0 '>
+            <Home openToogleMenu={openToogleMenu} />
             <Projects skillSection={skillSection} />
             <EducationSection />
             <Skills />
