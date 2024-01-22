@@ -1,4 +1,3 @@
-import { Toogle } from '../Toogle/Toogle'
 import './BurguerMenu.css'
 
 function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {

@@ -1,7 +1,6 @@
 import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
 import { IconContext } from 'react-icons'
 import { IoMdMenu } from 'react-icons/io'
-import { Toogle } from '../Toogle/Toogle'
 import clsx from 'clsx'
 
 function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
