@@ -14,7 +14,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                   <a
                     href='#home'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     Home
                   </a>
@@ -24,7 +24,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                   <a
                     href='#projects'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     Proyectos
                   </a>
@@ -34,7 +34,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                   <a
                     href='#about-me'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     sobre mí
                   </a>
@@ -44,7 +44,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                   <a
                     href='#skills'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     Habilidades
                   </a>
@@ -54,7 +54,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                   <a
                     href='#contact'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     Contáctame
                   </a>
@@ -69,7 +69,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                     href='https://github.com/WSQuintero'
                     target='_about:blank'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     GitHub
                   </a>
@@ -80,16 +80,13 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
                     href='https://www.linkedin.com/in/webdevsantiagoquintero/'
                     target='_about:blank'
                     className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                    onClick={() => setIsBurguerMenu(false)}
+                    onClick={(event) => { setIsBurguerMenu(false); event.stopPropagation() }}
                   >
                     LinkedIn
                   </a>
                 </li>
               </ul>
             </li>
-            <li className='h-full z-50 flex ml-3 items-center'>
-            <Toogle/>
-          </li>
           </ul>
         </div>
       )}

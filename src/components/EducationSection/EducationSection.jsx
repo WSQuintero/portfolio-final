@@ -14,7 +14,7 @@ function EducationSection () {
           Sobre mí
         </h2>
         <div className='max-w-full flex flex-col gap-5 lg:flex-row items-center justify-center xl:justify-between mt-5'>
-          <div className='text-center lg:text-left text-pretty w-full xl:w-[70%] px-5'>
+          <div className=' text-pretty w-full xl:w-[70%] px-5'>
             <p className='mt-4 dark:text-parraf  w-full'>
               Soy Santiago Quintero. Mis primeros pasos en la programación
               fueron con Java y C++ durante mis estudios en 2014. Desde entonces,

@@ -2,11 +2,12 @@ import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
 import { IconContext } from 'react-icons'
 import { IoMdMenu } from 'react-icons/io'
 import { Toogle } from '../Toogle/Toogle'
+import clsx from 'clsx'
 
-function NavBar ({ openToogleMenu, setOpenToogleMenu }) {
+function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
   return (
     <>
-  <div className="mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+  <div className={clsx('mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8', isOpenHeader ? 'animation' : 'close-animation -translate-x-full opacity-0 font-open-sans ', openToogleMenu && 'opacity-100 h-full')}>
   {!openToogleMenu && window.innerWidth > 1040 && (
     <a className="block text-teal-600 h-[70px] w-[70px] border border-titlecolordarklight dark:border-titlecolordark rounded-full p-3" href="/">
       <span className="sr-only">Home</span>
@@ -15,7 +16,7 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu }) {
     </a>
   )}
 
-    <div className="flex flex-1 items-center justify-end md:justify-between ">
+    <div className="flex flex-1 items-center justify-end md:justify-between h-full ">
       <nav aria-label="Global" className="hidden md:block">
         <ul className="flex items-center gap-6 text-sm">
           <li>
@@ -28,9 +29,7 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu }) {
           <li>
           <a className="text-parraflight dark:text-white transition hover:text-parraf/75" href="#skills"> Habilidades </a>
           </li>
-          <li className='h-full flex justify-center items-center'>
-            <Toogle/>
-          </li>
+
         </ul>
       </nav>
 
@@ -52,7 +51,7 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu }) {
         </div>
 
         <button
-          className="block   rounded-full border-2 z-50  place-content-center border-titlecolordarklight dark:border-titlecolordark  dark:bg-bghome bg-bghomelight  p-1 md:hidden"
+          className={clsx('block   rounded-full border-2 z-50  place-content-center border-titlecolordarklight dark:border-titlecolordark  dark:bg-bghome bg-bghomelight  p-1 md:hidden', openToogleMenu && 'absolute top-2 right-14')}
           onClick={(event) => { event.stopPropagation(); setOpenToogleMenu(!openToogleMenu) }}
         >
               <IconContext.Provider
