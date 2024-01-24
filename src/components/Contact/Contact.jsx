@@ -20,17 +20,17 @@ function Contact () {
         ? (
         <>
           <div className=' w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col '>
-          <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordarklight/60 mt-10'>
+          <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10'>
               Contáctame
             </h2>
             <form
               action='https://formspree.io/f/xrgwpvgz'
               method='POST'
               onSubmit={handleSubmit}
-              className='flex flex-col gap-2 w-full h-[75%] justify-center items-center rounded-3xl dark:bg-bghome/50 border border-bghometwo/50 dark:border-bghomelight/30 bg-titlecolorlight/10 p-6 mt-10 dark:text-bghomelight text-bghometwo  font-open-san'>
+              className='flex flex-col gap-2 w-full h-[75%] justify-center items-center rounded-3xl dark:bg-bghome/50 border border-titlecolordark dark:border-bghomelight/30 bg-titlecolorlight/10 p-6 mt-10 dark:text-bghomelight text-bghometwo  font-open-san'>
               <input
                 type='text'
-                className='text-sm xl:text-md w-full p-2 h-[35px] pl-5 dark:bg-bghome/50 border border-bghometwo/50 dark:border-bghomelight/30 bg-titlecolordark/10 placeholder:text-bghometwo dark:placeholder:text-bghomelight'
+                className='text-sm xl:text-md w-full p-2 h-[35px] pl-5 dark:bg-bghome/50 border border-titlecolordark dark:border-bghomelight/30 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                 placeholder='Nombre'
                 name='name'
                 id='name'
@@ -40,7 +40,7 @@ function Contact () {
               <div className='flex justify-between h-[35px] mb-5 relative w-full dark:text-bghomelight text-bghometwo'>
                 <input
                   type='email'
-                  className='border border-bghometwo/50 dark:border-bghomelight/30 text-sm xl:text-md w-[60%] p-4 full dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-bghometwo dark:placeholder:text-bghomelight'
+                  className='border border-titlecolordark dark:border-bghomelight/30 text-sm xl:text-md w-[60%] p-4 full dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                   placeholder='Correo electrónico'
                   name='email'
                   id='email'
@@ -49,15 +49,15 @@ function Contact () {
                 <ValidationError prefix='Email' field='email' errors={state.errors} />
                 <input
                   type='text'
-                  className='border border-bghometwo/50 dark:border-bghomelight/30 text-sm xl:text-md w-[35%] p-4 dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-bghometwo dark:placeholder:text-bghomelight'
-                  placeholder='Telefono'
+                  className='border border-titlecolordark dark:border-bghomelight/30 text-sm xl:text-md w-[35%] p-4 dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
+                  placeholder='Teléfono'
                   name='tel'
                   required
                 />
                 <ValidationError field='tel' errors={state.errors} />
               </div>
               <textarea
-                className=' border border-bghometwo/50 dark:border-bghomelight/30 w-full p-4 text-sm dark:text-bghomelight dark:bg-bghome/50 bg-titlecolordark/10 placeholder:text-bghometwo dark:placeholder:text-bghomelight'
+                className=' border border-titlecolordark dark:border-bghomelight/30 w-full p-4 text-sm dark:text-bghomelight dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                 placeholder='Deja tu mensaje aquí'
                 name='message'
                 id='message'
@@ -66,8 +66,8 @@ function Contact () {
               <ValidationError prefix='Message' field='message' errors={state.errors} />
 
               <button
-                className='mt-5 inline-block rounded bg-titlecolordark px-12 py-3 text-sm font-bold text-white transition hover:bg-titlecolor hover:text-bghometwo focus:outline-none focus:ring focus:ring-yellow-400'
-                type='submit'
+            className='dark:border-none inline-block rounded mt-10 bg-titlecolordark px-12 py-3 text-sm font-bold text-white transition border hover:border-titlecolordark hover:bg-bghomelight hover:text-titlecolordark focus:outline-none focus:ring focus:ring-yellow-400'
+            type='submit'
                 disabled={state.submitting}>
                 Enviar
               </button>

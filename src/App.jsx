@@ -43,7 +43,7 @@ function App () {
 
           <header className={headerStyles}>
           <button
-            className='w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordarklight dark:border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghomelight dark:bg-bghome '
+            className='w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordark dark:border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghomelight dark:bg-bghome '
             onClick={(event) => {
               event.stopPropagation()
               setIsOpenHeader(!isOpenHeader)
@@ -51,7 +51,7 @@ function App () {
             <IconContext.Provider
               value={{
                 size: '30px',
-                className: 'dark:text-titlecolordark text-titlecolordarklight'
+                className: 'dark:text-titlecolordark text-titlecolordark'
               }}>
               <IoMdMenu />
             </IconContext.Provider>
