@@ -37,11 +37,13 @@ function useAnimateSkills ({
 
       // Verifica si los elementos se superponen en el eje horizontal
       const isOverlapX =
-        elementToCheck.left < targetRect.right && elementToCheck.right > targetRect.left
+        elementToCheck.left < targetRect.right &&
+        elementToCheck.right > targetRect.left
 
       // Verifica si los elementos se superponen en el eje vertical
       const isOverlapY =
-        elementToCheck.top < targetRect.bottom && elementToCheck.bottom > targetRect.top
+        elementToCheck.top < targetRect.bottom &&
+        elementToCheck.bottom > targetRect.top
 
       return isOverlapX && isOverlapY
     })

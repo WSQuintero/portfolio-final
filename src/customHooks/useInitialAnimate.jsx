@@ -1,6 +1,11 @@
 import { useEffect } from 'react'
 
-function useInitialAnimate ({ setIsOpenHeader, setInitialAnimate, skillSection, initialAnimate }) {
+function useInitialAnimate ({
+  setIsOpenHeader,
+  setInitialAnimate,
+  skillSection,
+  initialAnimate
+}) {
   useEffect(() => {
     setTimeout(() => {
       setInitialAnimate(true)

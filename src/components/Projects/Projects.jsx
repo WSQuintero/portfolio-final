@@ -9,6 +9,7 @@ import 'swiper/css/pagination'
 import 'swiper/css'
 import 'swiper/css/effect-cube'
 import 'swiper/css/navigation'
+import clsx from 'clsx'
 
 function Projects ({ skillSection }) {
   const [projectName, setProjectName] = useState('')
@@ -20,7 +21,8 @@ function Projects ({ skillSection }) {
   const [showHand, setShowHand] = useState(true)
   const swiperRef = useRef(null)
 
-  const galleryContainer = 'relative flex items-center justify-center xl:w-[60%] w-full   xl:h-full  xl:ml-5 rounded-2xl font-open-san '
+  const galleryContainer =
+    clsx('relative flex items-center justify-center xl:w-[60%] w-full   xl:h-full  xl:ml-5 rounded-2xl font-open-san ')
 
   useListenVideo({ setShowVideo, setShowHand })
   useShowVideo({
@@ -59,32 +61,34 @@ function Projects ({ skillSection }) {
 
   return (
     <section
-      className='w-[80%] min-h-[50vh]  relative p-3 flex flex-col justify-start items-center'
+      className="w-[80%] min-h-[50vh]  relative p-3 flex flex-col justify-start items-center"
       onMouseOver={handleMouseLeave}
-      id='projects'>
-            <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10'>
-          Proyectos
-        </h2>
-        <div
-          className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start lg:justify-center mt-10'} mt-16 xl:flex-row  w-full overflow-hidden lg:h-full`}
-          ref={skillSection}>
-          <div className={galleryContainer}>
-            <ProjectGallery
-              swiperRef={swiperRef}
-              showVideo={showVideo}
-              handleMouseLeave={handleMouseLeave}
-              handleHoverImg={handleHoverImg}
-              showHand={showHand}
-            />
-          </div>
-          <ProjectInformation
-            projectName={projectName}
-            projectDescription={projectDescription}
-            projectTec={projectTec}
-            projectRepo={projectRepo}
-            projectLink={projectLink}
+      id="projects"
+    >
+      <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10">
+        Proyectos
+      </h2>
+      <div
+        className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start lg:justify-center mt-10'} mt-16 xl:flex-row  w-full overflow-hidden lg:h-full`}
+        ref={skillSection}
+      >
+        <div className={galleryContainer}>
+          <ProjectGallery
+            swiperRef={swiperRef}
+            showVideo={showVideo}
+            handleMouseLeave={handleMouseLeave}
+            handleHoverImg={handleHoverImg}
+            showHand={showHand}
           />
         </div>
+        <ProjectInformation
+          projectName={projectName}
+          projectDescription={projectDescription}
+          projectTec={projectTec}
+          projectRepo={projectRepo}
+          projectLink={projectLink}
+        />
+      </div>
     </section>
   )
 }
