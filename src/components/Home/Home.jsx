@@ -36,7 +36,8 @@ function Home ({ openToogleMenu }) {
               funcionales con un diseño atractivo y efectivo
             </p>
 
-            <div className='flex sm:flex-row flex-col w-full  items-center h-auto mt-3 xl:mt-auto sm:gap-2'>
+            <div className='flex sm:flex-row flex-col w-full  items-start h-auto mt-3 xl:mt-auto sm:gap-2'>
+              <div className='flex gap-2'>
               <a
                 href='#projects'
                 className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'>
@@ -47,6 +48,7 @@ function Home ({ openToogleMenu }) {
                 className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'>
                 Contáctame
               </a>
+              </div>
               <div className='w-[50%] text-center   h-[40px] mt-5 xl:mt-0'>
                 <ul className='flex flex-row items-center justify-center w-full gap-3 xl:h-full'>
                 <li>

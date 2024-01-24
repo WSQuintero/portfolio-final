@@ -42,7 +42,7 @@ function EducationSection () {
           <img
             src='/img/foto.jpg'
             alt='photo'
-            className='rounded-full w-[200px] h-[200px] '
+            className='rounded-full w-[200px] h-[200px] mt-10 sm:mt-auto '
           />
         </div>
 

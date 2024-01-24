@@ -35,14 +35,14 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
           <a
-            className='inline-block bg-titlecolordark px-8 py-2 text-sm font-bold text-white transition border hover:border-titlecolordark hover:bg-bghomelight hover:text-titlecolordark focus:outline-none focus:ring focus:ring-yellow-400 rounded-xl'
-            href="#projects"
+        className='border h-[40px] bg-titlecolordark dark:text-bghomelight text-bghomelight dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto  w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-bghomelight hover:dark:text-titlecolordark hover:text-titlecolordark   font-bold'
+        href="#projects"
           >
             Proyectos
           </a>
 
           <a
-        className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+        className='border h-[40px] hidden sm:inline-block font-bold dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
             href="#contact"
           >
             Contáctame

@@ -19,7 +19,7 @@ function ProjectInformation ({
             {projectDescription}
             <TecProjects tecs={projectTec} />
           </p>
-          <div className='flex justify-around w-full xl:gap-3 xl:p-5 font-open-san'>
+          <div className='flex gap-2 justify-center w-full xl:gap-3 xl:p-5 font-open-san'>
             {projectLink && (
               <a
                 href={projectLink}

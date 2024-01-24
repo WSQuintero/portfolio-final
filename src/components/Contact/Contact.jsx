@@ -30,7 +30,7 @@ function Contact () {
               className='flex flex-col gap-2 w-full h-[75%] justify-center items-center rounded-3xl dark:bg-bghome/50 border border-titlecolordark dark:border-bghomelight/30 bg-titlecolorlight/10 p-6 mt-10 dark:text-bghomelight text-bghometwo  font-open-san'>
               <input
                 type='text'
-                className='text-sm xl:text-md w-full p-2 h-[35px] pl-5 dark:bg-bghome/50 border border-titlecolordark dark:border-bghomelight/30 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
+                className='text-sm xl:text-md w-full p-2 h-[35px] pl-5 dark:bg-bghome/50 border border-titlecolordark/50 dark:border-bghomelight/30 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                 placeholder='Nombre'
                 name='name'
                 id='name'
@@ -40,7 +40,7 @@ function Contact () {
               <div className='flex justify-between h-[35px] mb-5 relative w-full dark:text-bghomelight text-bghometwo'>
                 <input
                   type='email'
-                  className='border border-titlecolordark dark:border-bghomelight/30 text-sm xl:text-md w-[60%] p-4 full dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
+                  className='border border-titlecolordark/50 dark:border-bghomelight/30 text-sm xl:text-md w-[60%] p-4 full dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                   placeholder='Correo electrónico'
                   name='email'
                   id='email'
@@ -49,7 +49,7 @@ function Contact () {
                 <ValidationError prefix='Email' field='email' errors={state.errors} />
                 <input
                   type='text'
-                  className='border border-titlecolordark dark:border-bghomelight/30 text-sm xl:text-md w-[35%] p-4 dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
+                  className='border border-titlecolordark/50 dark:border-bghomelight/30 text-sm xl:text-md w-[35%] p-4 dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                   placeholder='Teléfono'
                   name='tel'
                   required
@@ -57,7 +57,7 @@ function Contact () {
                 <ValidationError field='tel' errors={state.errors} />
               </div>
               <textarea
-                className=' border border-titlecolordark dark:border-bghomelight/30 w-full p-4 text-sm dark:text-bghomelight dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
+                className=' border border-titlecolordark/50 dark:border-bghomelight/30 w-full p-4 text-sm dark:text-bghomelight dark:bg-bghome/50 bg-bghomelight placeholder:text-titlecolordark dark:placeholder:text-bghomelight'
                 placeholder='Deja tu mensaje aquí'
                 name='message'
                 id='message'
