@@ -49,7 +49,7 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
           <div className='flex items-center gap-4'>
 
               <a
-                  className='border hidden sm:flex relative h-[40px] grid place-content-center rounded-xl px-[10px]  dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight  border-titlecolordark p-2  mt-5 xl:mt-auto  text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+                  className='border hidden sm:grid relative h-[40px]  place-content-center rounded-xl px-[10px]  dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight  border-titlecolordark p-2  mt-5 xl:mt-auto  text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
                   href='#contact'>
                 Contáctame
               </a>

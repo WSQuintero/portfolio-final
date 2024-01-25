@@ -5,7 +5,7 @@ function BurguerMenu ({ isBurguerMenu, setIsBurguerMenu }) {
     <>
       {' '}
       {isBurguerMenu && (
-        <div className="flow-root fixed h-[100vh] w-full top-0 dark:bg-bghome bg-bghomelight mt-14 font-open-sans ">
+        <div className="flow-root fixed h-[100vh] w-full top-0 dark:bg-bghome bg-bghomelight mt-14 font-open-sans burguer ">
           <ul className="-my-2 divide-y divide-gray-100 dark:divide-gray-800">
             <li className="py-2">
               <ul className="space-y-1">
