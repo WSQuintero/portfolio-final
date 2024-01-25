@@ -2,51 +2,34 @@ import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
 import { IconContext } from 'react-icons'
 import { IoMdMenu } from 'react-icons/io'
 import clsx from 'clsx'
+import './NavBar.css'
 
 function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
   return (
     <>
       <div
         className={clsx(
-          'mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8',
+          'mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container',
           isOpenHeader
-            ? 'animation'
+            ? 'animation opacity-100'
             : 'close-animation -translate-x-full opacity-0 font-open-sans ',
           openToogleMenu && 'opacity-100 h-full'
-        )}
-      >
-        {!openToogleMenu && window.innerWidth > 1040 && (
-          <a
-            className="block text-teal-600 h-[70px] w-[70px] border border-titlecolordark dark:border-titlecolordark rounded-full p-3"
-            href="/"
-          >
-            <span className="sr-only">Home</span>
-
-            <img
-              src="/img/logo.png"
-              alt="logo"
-              className="object-contain w-full "
-            />
-          </a>
-        )}
-
-        <div className="flex flex-1 items-center justify-end md:justify-between h-full ">
-          <nav aria-label="Global" className="hidden md:block">
-            <ul className="flex items-center gap-6 text-sm">
+        )}>
+        <div className='flex flex-1 items-center justify-end gap-5 h-full '>
+          <nav aria-label='Global' className='hidden md:block'>
+            <ul className='flex items-center gap-6 text-md '>
               <li>
                 <a
-                  className="text-parraflight dark:text-white transition hover:text-parraf/75"
-                  href="#home"
-                >
+                  className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+                  href='#home'>
                   {' '}
                   Home{' '}
                 </a>
               </li>
               <li>
                 <a
-                  className="text-parraflight dark:text-white transition hover:text-parraf/75"
-                  href="#about-me"
-                >
+                  className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+                  href='#about-me'>
                   {' '}
                   Sobre mí{' '}
                 </a>
@@ -54,9 +37,8 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
 
               <li>
                 <a
-                  className="text-parraflight dark:text-white transition hover:text-parraf/75"
-                  href="#skills"
-                >
+                  className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+                  href='#skills'>
                   {' '}
                   Habilidades{' '}
                 </a>
@@ -64,22 +46,18 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
-              <a
-                className="border h-[40px] bg-titlecolordark dark:text-bghomelight text-bghomelight dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto  w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-bghomelight hover:dark:text-titlecolordark hover:text-titlecolordark   font-bold"
-                href="#projects"
-              >
-                Proyectos
-              </a>
+          <div className='flex items-center gap-4'>
 
               <a
-                className="border h-[40px] hidden sm:inline-block font-bold dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold"
-                href="#contact"
-              >
+                  className='border relative h-[40px] grid place-content-center rounded-xl px-[10px]  dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight  border-titlecolordark p-2  mt-5 xl:mt-auto  text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+                  href='#contact'>
                 Contáctame
               </a>
-            </div>
+              <a
+                className='border h-[40px] bg-titlecolordark dark:hover:text-bghomelight dark:text-bghomelight text-bghomelight dark:border-titlecolordark dark:hover:bg-titlecolordark/70 border-titlecolordark px-10 py-3 rounded-xl   w-[140px] text-center   hover:bg-titlecolor/50  hover:text-titlecolordark   font-bold grid place-content-center'
+                href='#projects'>
+                Proyectos
+              </a>
 
             <button
               className={clsx(
@@ -89,11 +67,9 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
               onClick={(event) => {
                 event.stopPropagation()
                 setOpenToogleMenu(!openToogleMenu)
-              }}
-            >
+              }}>
               <IconContext.Provider
-                value={{ size: '30px', color: 'rgb(21, 179, 179)' }}
-              >
+                value={{ size: '30px', color: 'rgb(21, 179, 179)' }}>
                 <IoMdMenu />
               </IconContext.Provider>
             </button>

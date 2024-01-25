@@ -11,11 +11,11 @@ function ProjectInformation ({
     <>
       {' '}
       {projectName && projectDescription && projectTec && (
-        <aside className="flex flex-col justify-center items-center h-[300px] bg-bghomelight dark:bg-bghometwo rounded-2xl w-full xl:w-1/3 gap-3 mt-10 lg:mt-0   text-pretty z-50 ">
+        <aside className="flex flex-col justify-center items-center h-[300px] bg-bghomelight dark:bg-bghometwo rounded-2xl w-full xl:w-1/3 gap-3 mt-10 lg:mt-0   text-pretty z-40 ">
           <h3 className="flex items-center justify-center w-full text-xl  dark:text-titlecolor text-titlecolorlight xl:text-xl dark:bg-bghome/50 bg-titlecolordark/5  font-bevan mt-3">
             {projectName}
           </h3>
-          <p className="text-parraflight dark:text-parraf z-20 xl:w-full px-3 xl:px-6  h-full font-open-san">
+          <p className="text-parraflight dark:text-parraf z-20 w-full px-3 xl:px-6 2xl:text-xl  h-full font-open-san text-pretty">
             {projectDescription}
             <TecProjects tecs={projectTec} />
           </p>

@@ -13,7 +13,7 @@ function EducationSection () {
       className="dark:text-bghomelight text-bghometwo font-open-san relative flex flex-col justify-center items-center dark:bg-dark-background"
     >
       <div className="py-8 sm:px-6 sm:py-12 lg:py-16 flex flex-col justify-center items-center w-[80%]">
-        <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10">
+      <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 text-bghomelight  text-left dark:text-titlecolor bg-titlecolordarklight/50 mt-10">
           Sobre mí
         </h2>
         <div className="max-w-full flex flex-col gap-5 lg:flex-row items-center justify-center xl:justify-between mt-5">
@@ -47,7 +47,7 @@ function EducationSection () {
           />
         </div>
 
-        <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10">
+        <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 text-bghomelight  text-left dark:text-titlecolor bg-titlecolordarklight/50 mt-10">
           Estudios{' '}
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
@@ -98,8 +98,8 @@ function EducationSection () {
 
         <div className="mt-12 text-center">
           <button
-            className="inline-block rounded bg-titlecolordark px-12 py-3 text-sm font-bold text-white transition border hover:border-titlecolordark dark:border-none hover:bg-bghomelight hover:text-titlecolordark focus:outline-none focus:ring focus:ring-yellow-400"
-            onClick={() => setCetificatesOpen(true)}
+                className="border h-[40px] bg-titlecolordark dark:text-bghomelight text-bghomelight dark:border-titlecolordark border-titlecolordark px-10 py-3 rounded-xl mt-5 lg:mt-auto  w-auto text-center  hover:dark:bg-bghometwolight hover:bg-bghomelight hover:dark:text-titlecolordark hover:text-titlecolordark   font-bold grid place-content-center"
+                onClick={() => setCetificatesOpen(true)}
           >
             Ver certificados
           </button>

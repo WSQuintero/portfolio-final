@@ -8,10 +8,10 @@ function Home ({ openToogleMenu }) {
       className=" w-[80%] min-h-[100vh] lg:h-[100vh]  flex flex-col justify-around items-center"
       id="home"
     >
-      <div className="flex justify- gap-20 lg:justify-between items-center   mt-20  w-full lg:flex-row flex-col  h-full">
+      <div className="flex  gap-20 lg:justify-between items-center   mt-20  w-full lg:flex-row flex-col  h-full">
         <div className=" flex flex-col items-left justify-around gap-3 w-[50%] min-w-[300px] h-[30%]  ">
-          <div className="flex flex-col items-center  justify-between border-l border-r border-gray-300/20   ">
-            <h1 className="w-full p-2 text-xl border-b text-center text-titlecolordark/80 dark:text-titlecolor xl:text-4xl whitespace-break-spaces font-bevan animate-pulse dark:border-parraf">
+          <div className="flex flex-col items-center  justify-between border-l border-r border-titlecolordark dark:border-gray-300/20 w-full   ">
+            <h1 className="w-full p-2 text-2xl xl:text-4xl   whitespace-nowrap border-b text-titlecolordark/80 dark:text-titlecolor  text-center font-bevan animate-pulse border-titlecolordark dark:border-parraf">
               Santiago Quintero
             </h1>
             <img
@@ -22,16 +22,16 @@ function Home ({ openToogleMenu }) {
           </div>
         </div>
 
-        <div className="flex flex-col items-start justify-around   h-auto xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px]">
+        <div className="flex flex-col items-start justify-around   h-auto xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px] max-h-[300px]">
           <ul>
-            <li className="w-full text-lg text-bghometwo dark:text-title sm:text-2xl font-bevan">
+            <li className="w-full text-lg text-bghometwo dark:text-title sm:text-2xl font-bevan 2xl:text-4xl">
               Desarrollador front-end
             </li>
-            <li className="text-lg text-titlecolordark/60 dark:text-titlecolor xl:text-xl font-bevan">
+            <li className="text-lg text-titlecolordark/60 dark:text-titlecolor xl:text-xl font-bevan 2xl:text-2xl">
               Diseñador visual
             </li>
           </ul>
-          <p className="dark:text-parraf text-parraflight text-md  w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san">
+          <p className="dark:text-parraf text-parraflight text-md 2xl:text-xl  w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san">
             Fuertes habilidades en JavaScript, React, y tecnologías modernas
             como Tailwind CSS y Redux. Puedo construir sitios web totalmente
             funcionales con un diseño atractivo y efectivo

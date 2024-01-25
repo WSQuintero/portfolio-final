@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 function Toogle () {
-  const [isChecked, setIsChecked] = useState(false)
+  const [isChecked, setIsChecked] = useState(true)
 
   const handleCheckboxChange = (event) => {
     event.stopPropagation()

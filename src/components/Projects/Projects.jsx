@@ -65,11 +65,11 @@ function Projects ({ skillSection }) {
       onMouseOver={handleMouseLeave}
       id="projects"
     >
-      <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10">
+        <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 text-bghomelight  text-left dark:text-titlecolor bg-titlecolordarklight/50 mt-10">
         Proyectos
       </h2>
       <div
-        className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start lg:justify-center mt-10'} mt-16 xl:flex-row  w-full overflow-hidden lg:h-full`}
+        className={`flex flex-col items-center ${projectName ? 'justify-center' : 'justify-start lg:justify-center mt-10'} mt-16 xl:flex-row  w-full  lg:h-full`}
         ref={skillSection}
       >
         <div className={galleryContainer}>

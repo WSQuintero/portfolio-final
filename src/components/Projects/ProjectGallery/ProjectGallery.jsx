@@ -24,7 +24,7 @@ function ProjectGallery ({
           onClick={handleHoverImg}
           onMouseOver={handleHoverImg}
         >
-          <div className=" flex justify-center items-center relative w-full  overflow-hidden rounded-3xl object-cover ">
+          <div className=" flex justify-center items-center relative w-full  rounded-3xl object-cover ">
             <img
               src={project.imgDesktop}
               data-name={project.project}

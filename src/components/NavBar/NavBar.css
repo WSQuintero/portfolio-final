@@ -1,0 +1,48 @@
+.container li a{
+
+  @apply relative h-[40px] grid place-content-center rounded-xl px-[10px] border dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight;
+}
+
+.container div ul a{
+
+  @apply relative h-[40px] grid place-content-center rounded-xl px-[10px] border dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight;
+}
+
+
+.animation {
+  animation: open-menu 500ms ease-in-out;
+  visibility: visible;
+
+}
+
+@keyframes open-menu {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+
+
+  }
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+
+  }
+}
+
+.close-animation {
+  animation: close-menu 500ms ease-in-out;
+  visibility: hidden;
+
+}
+
+@keyframes close-menu {
+  0% {
+    transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
+
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

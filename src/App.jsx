@@ -26,14 +26,14 @@ function App () {
   })
 
   const headerStyles = clsx(
-    'flex justify-center lg:justify-end  fixed w-full lg:pr-20 py-7 z-50 lg:h-[80px] bg-bghomelight/50 dark:bg-bghome/50 ',
+    'flex justify-center lg:justify-end  fixed w-full lg:pr-20 py-7 z-50 lg:h-[80px]  dark:bg-bghome ',
     openToogleMenu
       ? 'h-[99vh] bg-bghomelight dark:bg-bghome flex-col pt-3'
       : 'h-[40px] dark:bg-bghome items-center ',
     isOpenHeader
-      ? 'bg-bghomelight/100 dark:bg-bghome/100 transform-opacity '
-      : 'bg-bghomelight transform-opacity duration-200',
-    window.innerWidth < 1040 && isOpenHeader && 'bg-bghomelight/100 '
+      ? 'bg-bghomeligth/100 dark:bg-bghome transform-opacity '
+      : 'bg-bghomelight/50 dark:bg-bghome/50 transform-opacity duration-200',
+    window.innerWidth < 1040 && isOpenHeader && 'bg-bghomelight '
   )
 
   return (

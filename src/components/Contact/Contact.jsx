@@ -21,7 +21,7 @@ function Contact () {
         ? (
         <>
           <div className=" w-full xl:w-[80%] h-full flex justify-center items-center p-5 flex-col ">
-            <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 bg-titlecolorlight/10  text-left dark:text-titlecolor text-titlecolordark/70 mt-10">
+          <h2 className="text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 text-bghomelight  text-left dark:text-titlecolor bg-titlecolordarklight/50 mt-10">
               Contáctame
             </h2>
             <form
@@ -80,7 +80,7 @@ function Contact () {
               />
 
               <button
-                className="dark:border-none inline-block rounded mt-10 bg-titlecolordark px-12 py-3 text-sm font-bold text-white transition border hover:border-titlecolordark hover:bg-bghomelight hover:text-titlecolordark focus:outline-none focus:ring focus:ring-yellow-400"
+                className="border h-[40px] bg-titlecolordark dark:text-bghomelight text-bghomelight dark:border-titlecolordark border-titlecolordark px-10 py-3 rounded-xl  lg:mt-10  w-[140px]   hover:dark:bg-bghometwolight hover:bg-bghomelight hover:dark:text-titlecolordark hover:text-titlecolordark   font-bold grid place-content-center"
                 type="submit"
                 disabled={state.submitting}
               >
