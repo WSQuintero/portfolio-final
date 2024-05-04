@@ -1,21 +1,22 @@
 import { useEffect } from 'react'
 
-function useShowVideo ({
+function useShowVideo({
   setShowVideo,
   setProjectName,
   setProjectDescription,
   setProjectLink,
   setProjectRepo,
   setProjectTec,
-  swiperRef
+  swiperRef,
+  category
 }) {
   useEffect(() => {
-    const swiperInstance = swiperRef.current.swiper
+    const swiperInstance = swiperRef?.current?.swiper
 
     const handleSlideChange = () => {
-      const activeSlide = swiperInstance.slides[swiperInstance.activeIndex]
-      const img = activeSlide.querySelector('img')
-      const video = activeSlide.querySelector('video')
+      const activeSlide = swiperInstance?.slides[swiperInstance.activeIndex]
+      const img = activeSlide?.querySelector('img')
+      const video = activeSlide?.querySelector('video')
 
       setShowVideo(false)
       if (img) {
@@ -32,13 +33,14 @@ function useShowVideo ({
         setProjectTec(video.dataset.tec || [])
       }
     }
-
-    swiperInstance.on('slideChange', handleSlideChange)
+    swiperInstance?.on('slideChange', handleSlideChange)
 
     return () => {
-      swiperInstance.off('slideChange', handleSlideChange)
+      if (swiperRef) {
+        swiperInstance?.off('slideChange', handleSlideChange)
+      }
     }
-  }, [])
+  }, [swiperRef, category])
 }
 
 export { useShowVideo }

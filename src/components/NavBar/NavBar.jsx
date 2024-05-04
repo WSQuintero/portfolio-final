@@ -4,12 +4,12 @@ import { IoMdMenu } from 'react-icons/io'
 import clsx from 'clsx'
 import './NavBar.css'
 
-function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
+function NavBar({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
   return (
     <>
       <div
         className={clsx(
-          'mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container',
+          'mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container bg-black z-50',
           isOpenHeader
             ? 'animation opacity-100'
             : 'close-animation -translate-x-full opacity-0 font-open-sans ',
@@ -47,17 +47,16 @@ function NavBar ({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
           </nav>
 
           <div className='flex items-center gap-4'>
-
-              <a
-                  className='border hidden sm:grid relative h-[40px]  place-content-center rounded-xl px-[10px]  dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight  border-titlecolordark p-2  mt-5 xl:mt-auto  text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
-                  href='#contact'>
-                Contáctame
-              </a>
-              <a
-                className='border h-[40px] bg-titlecolordark dark:hover:text-bghomelight dark:text-bghomelight text-bghomelight dark:border-titlecolordark dark:hover:bg-titlecolordark/70 border-titlecolordark px-10 py-3 rounded-xl   w-[140px] text-center   hover:bg-titlecolor/50  hover:text-titlecolordark   font-bold grid place-content-center'
-                href='#projects'>
-                Proyectos
-              </a>
+            <a
+              className='border hidden sm:grid relative h-[40px]  place-content-center rounded-xl px-[10px]  dark:text-bghomelight dark:hover:text-bghometwo dark:border-bghomelight  border-titlecolordark p-2  mt-5 xl:mt-auto  text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'
+              href='#contact'>
+              Contáctame
+            </a>
+            <a
+              className='border h-[40px] bg-titlecolordark dark:hover:text-bghomelight dark:text-bghomelight text-bghomelight dark:border-titlecolordark dark:hover:bg-titlecolordark/70 border-titlecolordark px-10 py-3 rounded-xl   w-[140px] text-center   hover:bg-titlecolor/50  hover:text-titlecolordark   font-bold grid place-content-center'
+              href='#projects'>
+              Proyectos
+            </a>
 
             <button
               className={clsx(
