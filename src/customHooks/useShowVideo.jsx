@@ -8,12 +8,14 @@ function useShowVideo({
   setProjectRepo,
   setProjectTec,
   swiperRef,
-  category
+  category,
+  reset
 }) {
   useEffect(() => {
     const swiperInstance = swiperRef?.current?.swiper
 
     const handleSlideChange = () => {
+      reset()
       const activeSlide = swiperInstance?.slides[swiperInstance.activeIndex]
       const img = activeSlide?.querySelector('img')
       const video = activeSlide?.querySelector('video')

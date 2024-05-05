@@ -26,7 +26,7 @@ function Home({ openToogleMenu }) {
           </div>
         </div>
 
-        <div className='flex flex-col items-start justify-around   h-auto xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[600px] max-h-[300px]'>
+        <div className='flex flex-col items-start justify-around   h-auto xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[630px] max-h-[300px]'>
           <ul>
             <li className='w-full text-lg text-bghometwo dark:text-title sm:text-2xl font-bevan 2xl:text-4xl'>
               Desarrollador front-end
@@ -36,9 +36,12 @@ function Home({ openToogleMenu }) {
             </li>
           </ul>
           <p className='dark:text-parraf text-parraflight text-md 2xl:text-xl  w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
-            Fuertes habilidades en JavaScript, React, y tecnologías modernas
-            como Tailwind CSS y Redux. Puedo construir sitios web totalmente
-            funcionales con un diseño atractivo y efectivo
+            Fuertes habilidades en JavaScript, Typescript, React, y tecnologías
+            modernas como Tailwind CSS, Material Ui, Zustand, Redux, entre
+            otras.
+            <br /> <br /> Puedo construir sitios web totalmente funcionales con
+            un diseño atractivo, y siguiendo estándares correctos a la hora de
+            escribir código.
           </p>
 
           <div className='flex sm:flex-row flex-col w-full  items-start h-auto mt-3 xl:mt-auto sm:gap-2'>

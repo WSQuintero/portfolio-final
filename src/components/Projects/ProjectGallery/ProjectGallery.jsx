@@ -30,6 +30,7 @@ function ProjectGallery({
               data-link={project.link}
               data-repo={project.repo}
               data-tec={project.tec}
+              data-vid={project.video}
               alt='project'
               className='object-contain h-full w-full rounded-3xl animate-fade-in-once z-0   '
               loading='lazy'
