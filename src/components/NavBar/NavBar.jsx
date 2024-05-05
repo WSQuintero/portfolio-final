@@ -9,15 +9,15 @@ function NavBar({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
     <>
       <div
         className={clsx(
-          'mx-auto flex w-[80%] h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container bg-black z-50',
+          'mx-auto flex w-[80%]   h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container bg-black z-50',
           isOpenHeader
             ? 'animation opacity-100'
             : 'close-animation -translate-x-full opacity-0 font-open-sans ',
           openToogleMenu && 'opacity-100 h-full'
         )}>
         <div className='flex flex-1 items-center justify-end gap-5 h-full '>
-          <nav aria-label='Global' className='hidden md:block'>
-            <ul className='flex items-center gap-6 text-md '>
+          <nav aria-label='Global' className='hidden md:block '>
+            <ul className='flex items-center gap-6 text-md bg-black z-50'>
               <li>
                 <a
                   className='border h-[40px] dark:border-titlecolordark border-titlecolordark p-2 rounded-xl mt-5 xl:mt-auto dark:text-titlecolordark text-titlecolordark w-[120px] text-center  hover:dark:bg-bghometwolight hover:bg-titlecolordark hover:dark:text-titlecolordark hover:text-bghometwolight hover:font-bold'

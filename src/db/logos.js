@@ -7,7 +7,7 @@ export const logos = {
   git: '/svg/git.svg',
   'git-hub': '/svg/github.svg',
   'React navite': '/img/react-native.png',
-  expo: '/public/img/expo.png',
+  expo: '/img/expo.png',
   sass: '/svg/sass.svg',
   tailwind: '/svg/tailwind.svg',
   redux: '/svg/redux.svg',

@@ -103,7 +103,7 @@ function Projects({ skillSection }) {
       <h2 className='text-xl py-2 px-5 font-bevan font-medium w-full dark:bg-titlecolor/5 text-bghomelight  text-left dark:text-titlecolor bg-titlecolordarklight/50 mt-10'>
         Proyectos
       </h2>
-      <div className='z-50 w-full  lg:h-full'>
+      <div className=' w-full  lg:h-full'>
         {category && (
           <div className='w-full flex justify-end'>
             <select
