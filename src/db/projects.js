@@ -8,7 +8,7 @@ export const webProjects = [
     repo: 'https://github.com/WSQuintero/avovite',
     link: 'https://appdev.avovite.com/signin',
     tec: ['/svg/javascript.svg', '/svg/react.svg', '/svg/mui.svg'],
-    video: '/video/avovite.mp4'
+    video: 'https://www.youtube.com/embed/21c4tqPh1MY?si=OHgXMHGNBWhk6-jB'
   },
   {
     imgMobile: '/img/desktop/ultra.png',
@@ -31,7 +31,7 @@ export const webProjects = [
     repo: 'https://github.com/WSQuintero/admin-transferx',
     link: 'https://admin-transferx.vercel.app',
     tec: ['/svg/javascript.svg', '/svg/react.svg', '/svg/tailwind.svg'],
-    video: '/video/admin-transferx.mp4'
+    video: 'https://www.youtube.com/embed/EeaKJ6MVW0Q?si=qJi4RUM5UyeJ4-fU'
   },
   {
     imgMobile: '/img/chatu.jpg',
@@ -48,7 +48,7 @@ export const webProjects = [
       '/svg/firebase.svg',
       '/svg/redux.svg'
     ],
-    video: '/video/chatu.mp4'
+    video: 'https://www.youtube.com/embed/nGq-GQTBHLQ?si=MTRQelMx1n3UtyNt'
   },
   {
     imgMobile: '/img/desktop/spa.png',
@@ -65,7 +65,7 @@ export const webProjects = [
       '/svg/tailwind.svg',
       '/img/node.png'
     ],
-    video: '/video/spa.mp4'
+    video: 'https://www.youtube.com/embed/WuGyrePsxwY?si=D_bAnRRNqEuLYoAw'
   },
   {
     imgMobile: '/img/shop.jpg',
@@ -81,7 +81,7 @@ export const webProjects = [
       '/svg/tailwind.svg',
       '/svg/firebase.svg'
     ],
-    video: '/video/shopi.mp4'
+    video: 'https://www.youtube.com/embed/6KYQkwnVtlI?si=rFVJfMjxoZnhOuyn'
   }
 ]
 
@@ -100,7 +100,7 @@ export const mobileProjects = [
       '/svg/css.svg',
       '/img/expo.png'
     ],
-    video: '/video/transferx.mp4'
+    video: 'https://www.youtube.com/embed/xyGyvu1SWAw?si=V6BiDLe0O3rtb4-c'
   }
 ]
 
@@ -114,7 +114,7 @@ export const backProjects = [
     repo: 'https://github.com/WSQuintero/administrator-spa-backend',
     link: 'https://spa-proyect-front-rdmj.vercel.app/login',
     tec: ['/svg/javascript.svg', '/img/node.png', '/img/exp.png'],
-    video: '/video/spa.mp4'
+    video: 'https://www.youtube.com/embed/WuGyrePsxwY?si=D_bAnRRNqEuLYoAw'
   },
   {
     imgMobile: '/img/expressjs.png',
@@ -125,6 +125,6 @@ export const backProjects = [
     repo: 'https://github.com/WSQuintero/Chatu-backend',
     link: 'https://chatu-two.vercel.app/',
     tec: ['/svg/javascript.svg', '/img/node.png', '/img/exp.png'],
-    video: '/video/chatu.mp4'
+    video: 'https://www.youtube.com/embed/nGq-GQTBHLQ?si=MTRQelMx1n3UtyNt'
   }
 ]

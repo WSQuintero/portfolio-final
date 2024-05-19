@@ -48,24 +48,27 @@ function ProjectGallery({
           </div>
 
           {showVideo && (
-            <video
-              width='100%'
-              height='100%'
+            <iframe
+              alt='project'
+              className='object-contain h-full w-full rounded-3xl animate-fade-in-once z-0 absolute top-0  '
               loading='lazy'
               muted
-              autoPlay
               controls={false}
               data-name={project.project}
               data-description={project.description}
               data-link={project.link}
               data-repo={project.repo}
               data-tec={project.tec}
-              alt='project'
               onMouseLeave={handleMouseLeave}
-              className='object-contain h-full w-full rounded-3xl animate-fade-in-once z-0 absolute top-0  '>
-              <source src={project.video} type='video/mp4' />
-              Tu navegador no soporta el tag de video.
-            </video>
+              width='560'
+              height='315'
+              src={`${project.video}?autoplay=1&loop=1&mute=1&controls=0`}
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              referrerPolicy='strict-origin-when-cross-origin'
+              allowFullScreen
+            />
           )}
         </SwiperSlide>
       ))}

@@ -112,7 +112,7 @@ function Projects({ skillSection }) {
               value={category}
               onChange={(event) => setCategory(event.target.value)}
               className='px-4 py-2 mt-2 border border-titlecolordark bg-transparent rounded-xl text-titlecolordark'>
-              <option value='' disabled selected>
+              <option value='' disabled>
                 Seleccione
               </option>
               <option value='web' className='text-black'>
@@ -124,7 +124,6 @@ function Projects({ skillSection }) {
               <option value='back' className='text-black'>
                 Aplicaciones Backend
               </option>
-              //{' '}
             </select>
           </div>
         )}
