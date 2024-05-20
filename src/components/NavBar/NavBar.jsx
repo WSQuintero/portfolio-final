@@ -9,7 +9,7 @@ function NavBar({ openToogleMenu, setOpenToogleMenu, isOpenHeader }) {
     <>
       <div
         className={clsx(
-          'mx-auto flex w-[80%]   h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container bg-black z-50',
+          'mx-auto flex w-[80%]   h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 container bg-bghomelight dark:bg-black  z-50',
           isOpenHeader
             ? 'animation opacity-100'
             : 'close-animation -translate-x-full opacity-0 font-open-sans ',
