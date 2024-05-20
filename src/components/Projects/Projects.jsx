@@ -105,7 +105,7 @@ function Projects({ skillSection }) {
       </h2>
       <div className=' w-full  lg:h-full'>
         {category && (
-          <div className='w-full flex justify-end'>
+          <div className='w-full flex justify-end m-5'>
             <select
               name='projects'
               id='projects'

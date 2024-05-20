@@ -5,14 +5,14 @@ import './Home.css'
 function Home({ openToogleMenu }) {
   return (
     <section
-      className=' w-[80%] h-screen pt-40  sm:pt-20 flex flex-col justify-center items-center'
+      className=' w-[80%] min-h-screen   sm:pt-20 flex flex-col justify-center items-center'
       id='home'>
       <img
         src='/img/smoke.png'
         alt='smoke'
         className='absolute z-0 opacity-50 object-contain w-full h-full'
       />
-      <div className='flex gap-20 lg:justify-center items-center w-full lg:flex-row flex-col  h-full z-40'>
+      <div className='flex gap-10 lg:justify-center items-center w-full lg:flex-row flex-col  h-full z-40'>
         <div className=' flex flex-col items-left justify-center gap-3 w-[50%] min-w-[300px] h-[30%]  '>
           <div className='flex flex-col items-center  justify-between border-l border-r border-titlecolordark dark:border-gray-300/20 w-full   '>
             <h1 className='w-full p-2 text-2xl xl:text-4xl   whitespace-nowrap border-b text-titlecolordark/80 dark:text-titlecolor  text-center font-bevan animate-pulse border-titlecolordark dark:border-parraf'>
@@ -26,7 +26,7 @@ function Home({ openToogleMenu }) {
           </div>
         </div>
 
-        <div className='flex flex-col items-start justify-around   h-auto xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[630px] max-h-[300px]'>
+        <div className='flex flex-col items-start justify-around   h-auto xl:h-[60%] xl:gap-5 w-full px-5 xl:p-0 xl:w-[630px] '>
           <ul>
             <li className='w-full text-lg text-bghometwo dark:text-title sm:text-2xl font-bevan 2xl:text-4xl'>
               Desarrollador front-end
@@ -35,7 +35,7 @@ function Home({ openToogleMenu }) {
               Diseñador visual
             </li>
           </ul>
-          <p className='dark:text-parraf text-parraflight text-md 2xl:text-xl  w-full xl:pr-5 xl:w-[90%]  mt-5 xl:mt-0 font-open-san'>
+          <p className=' mt-5 dark:text-parraf text-parraflight text-md 2xl:text-xl  w-full xl:pr-5 xl:w-[90%]  xl:mt-0 font-open-san'>
             Fuertes habilidades en JavaScript, Typescript, React, y tecnologías
             modernas como Tailwind CSS, Material Ui, Zustand, Redux, entre
             otras.
@@ -57,7 +57,7 @@ function Home({ openToogleMenu }) {
                 Contáctame
               </a>
             </div>
-            <div className='w-[50%] text-center   h-[40px] mt-5 xl:mt-0'>
+            <div className='sm:w-[50%] w-full text-center  xl:mt-0 mt-5'>
               <ul className='flex flex-row items-center justify-center w-full gap-3 xl:h-full'>
                 <li>
                   <a
