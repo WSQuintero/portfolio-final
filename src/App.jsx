@@ -13,7 +13,7 @@ import { useInitialAnimate } from './customHooks/useInitialAnimate'
 import clsx from 'clsx'
 import { Toogle } from './components/Toogle/Toogle'
 
-function App () {
+function App() {
   const [initialAnimate, setInitialAnimate] = useState(false)
   const [isOpenHeader, setIsOpenHeader] = useState(true)
   const [openToogleMenu, setOpenToogleMenu] = useState()
@@ -26,9 +26,9 @@ function App () {
   })
 
   const headerStyles = clsx(
-    'flex justify-center lg:justify-end  fixed w-full lg:pr-20 py-7 z-50 lg:h-[80px]  dark:bg-bghome ',
+    'flex justify-center lg:justify-end p-4  fixed w-full lg:pr-20 py-7 z-50 lg:h-[80px]  dark:bg-bghome ',
     openToogleMenu
-      ? 'h-[99vh] bg-bghomelight dark:bg-bghome flex-col pt-3'
+      ? 'h-[99vh] bg-bghomelight dark:bg-bghome flex-col pt-3 px-0'
       : 'h-[40px] dark:bg-bghome items-center ',
     isOpenHeader
       ? 'bg-bghomeligth/100 dark:bg-bghome transform-opacity '
@@ -38,30 +38,26 @@ function App () {
 
   return (
     <>
-      {!initialAnimate
-        ? (
+      {!initialAnimate ? (
         <InitialAnimate />
-          )
-        : (
+      ) : (
         <>
           <header className={headerStyles}>
             <button
-              className="w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordark dark:border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghomelight dark:bg-bghome "
+              className='w-[50px] h-[50px] hidden md:grid rounded-full border-2 z-50  place-content-center border-titlecolordark dark:border-titlecolordark fixed top-1 right-2  lg:top-4 lg:right-4 bg-bghomelight dark:bg-bghome '
               onClick={(event) => {
                 event.stopPropagation()
                 setIsOpenHeader(!isOpenHeader)
-              }}
-            >
+              }}>
               <IconContext.Provider
                 value={{
                   size: '30px',
                   className: 'dark:text-titlecolordark text-titlecolordark'
-                }}
-              >
+                }}>
                 <IoMdMenu />
               </IconContext.Provider>
             </button>
-            <div className="ml-5">
+            <div className='ml-5'>
               <Toogle />
             </div>
             <NavBar
@@ -71,7 +67,7 @@ function App () {
             />
           </header>
 
-          <main className="min-h-[100vh] w-full font-opens-sans text-titlecolor bg-bghomelight dark:bg-bghometwo flex flex-col justify-center items-center   z-0 ">
+          <main className='min-h-[100vh] w-full font-opens-sans text-titlecolor bg-bghomelight dark:bg-bghometwo flex flex-col justify-center items-center   z-0 '>
             <Home openToogleMenu={openToogleMenu} />
             <Projects skillSection={skillSection} />
             <EducationSection />
@@ -79,7 +75,7 @@ function App () {
             <Contact />
           </main>
         </>
-          )}
+      )}
     </>
   )
 }
