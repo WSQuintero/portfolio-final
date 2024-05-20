@@ -13,6 +13,36 @@ import clsx from 'clsx'
 import { backProjects, mobileProjects, webProjects } from '../../db/projects'
 import CardSelectCategory from '../CardSelectCategory/CardSelectCategory'
 
+const categories = [
+  {
+    title: 'Aplicaciones móviles',
+    img: '/img/mobile.png',
+    description: ['/img/react-native.png', '/img/expo.png'],
+    footer: 'Proyectos móviles',
+    open: 'mobile'
+  },
+  {
+    title: 'Aplicaciones web',
+    img: '/img/pc.png',
+    description: [
+      '/svg/react.svg',
+      '/svg/tailwind.svg',
+      '/svg/typescript.svg',
+      '/svg/redux.svg',
+      '/svg/sass.svg'
+    ],
+    footer: 'Proyectos web',
+    open: 'web'
+  },
+  {
+    title: 'Backend',
+    img: '/img/back.png',
+    description: ['/img/node.png', '/svg/firebase.svg'],
+    footer: 'Proyectos backend',
+    open: 'back'
+  }
+]
+
 function Projects({ skillSection }) {
   const [projectName, setProjectName] = useState('')
   const [projectDescription, setProjectDescription] = useState('')
@@ -154,40 +184,18 @@ function Projects({ skillSection }) {
           )}
         </div>
         <div className='w-full flex  mt-10 justify-around flex-wrap gap-5'>
-          <CardSelectCategory
-            title={'Aplicaciones móviles'}
-            img={'/img/mobile.png'}
-            description={['/img/react-native.png', '/img/expo.png']}
-            footer={'Proyetos móviles'}
-            setCategory={setCategory}
-            open={'mobile'}
-            reset={reset}
-          />
-          <CardSelectCategory
-            title={'Aplicaciones web'}
-            img={'/img/pc.png'}
-            description={[
-              '/svg/react.svg',
-              '/svg/tailwind.svg',
-              '/svg/typescript.svg',
-              '/svg/redux.svg',
-              '/svg/sass.svg'
-            ]}
-            setCategory={setCategory}
-            open={'web'}
-            footer={'Proyectos web'}
-            reset={reset}
-          />
-
-          <CardSelectCategory
-            title={'Backend'}
-            img={'/img/back.png'}
-            description={['/img/node.png', '/svg/firebase.svg']}
-            footer={'Proyectos backend'}
-            setCategory={setCategory}
-            open={'back'}
-            reset={reset}
-          />
+          {categories.map((category) => (
+            <CardSelectCategory
+              key={category.open}
+              title={category.title}
+              img={category.img}
+              description={category.description}
+              footer={category.footer}
+              setCategory={setCategory}
+              open={category.open}
+              reset={reset}
+            />
+          ))}
         </div>
       </div>
     </section>

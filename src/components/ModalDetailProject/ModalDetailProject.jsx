@@ -14,7 +14,20 @@ function ModalDetailProject({ actualProject, open, setOpen }) {
               </button>
             </div>
             <div className='flex justify-center'>
-              <video controls muted src={actualProject?.projectVid} />
+              <iframe
+                alt='project'
+                className='object-contain  w-full rounded-3xl animate-fade-in-once z-0 '
+                loading='lazy'
+                muted
+                controls={false}
+                width='560'
+                height='560'
+                src={`${actualProject.projectVid}`}
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                referrerPolicy='strict-origin-when-cross-origin'
+              />
             </div>
             <h2 className='w-full p-3 border-white border mt-5 border-dashed text-center text-xl lg:text-4xl text-titlecolordark'>
               {actualProject?.projectName}

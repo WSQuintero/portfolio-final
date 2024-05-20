@@ -19,7 +19,7 @@ export const webProjects = [
     repo: 'https://github.com/WSQuintero/ultra',
     link: 'https://ultracomunidad.com',
     tec: ['/svg/javascript.svg', '/svg/react.svg', '/svg/mui.svg'],
-    video: '/video/ultra.mp4'
+    video: 'https://www.youtube.com/embed/w9Wc1RBvDrk?si=0TnW9KahxzuxYEkF'
   },
 
   {

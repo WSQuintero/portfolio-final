@@ -2,7 +2,7 @@ import { FaFileDownload } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import './Home.css'
 
-function Home({ openToogleMenu }) {
+function Home() {
   return (
     <section
       className=' w-[80%] min-h-screen   sm:pt-20 flex flex-col justify-center items-center'
