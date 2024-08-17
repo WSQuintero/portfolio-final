@@ -22,11 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-img
-*.jpg
-*.jpeg
-*.png
-rostro.png
-video
-CVSantiagoQuintero.pdf
-TransferX.apk
+# img
+# *.jpg
+# *.jpeg
+# *.png
+# rostro.png
+# video
+# CVSantiagoQuintero.pdf
+# TransferX.apk
